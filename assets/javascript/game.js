@@ -1,7 +1,12 @@
-// JavaScript function that wraps everything
+// JavaScript function that wraps controls
 $(document).ready(function() {
 
     var stickFigure = $(".stick");
+
+    $(this).keypress(e=>
+      e.which==38?
+      alert('hi.'):null
+  );
 
 
     // Keyboard move controls
@@ -9,22 +14,22 @@ $(document).ready(function() {
       switch (e.which) {
 
       // Move Buttons (Keyboard Down)
-      case 40:
+      case 83:
         stickFigure.animate({ top: "+=106.2px" }, 150);
         break;
 
         // Move Buttons (Keyboard Right)
-      case 39:
+      case 68:
         stickFigure.animate({ left: "+=100.4px" }, 150);
         break;
 
         // Move Buttons (Keyboard Up)
-      case 38:
+      case 87:
         stickFigure.animate({ top: "-=106.2px" }, 150);
         break;
 
         // Move Buttons (Keyboard Left)
-      case 37:
+      case 65:
         stickFigure.animate({ left: "-=100.4px" }, 150);
         break;
 
@@ -33,3 +38,12 @@ $(document).ready(function() {
       }
     });
   });
+
+//Constantly record and update player coordinates every 50 ms
+setInterval(function(){ 
+var left = document.getElementById("stickfigure").offsetLeft;
+console.log(left);
+var top = document.getElementById("stickfigure").offsetTop;
+console.log(top); 
+                  }, 50);
+
