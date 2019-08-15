@@ -41,9 +41,43 @@ $(document).ready(function() {
 
 //Constantly record and update player coordinates every 50 ms
 setInterval(function(){ 
-var left = document.getElementById("stickfigure").offsetLeft;
-console.log(left);
-var top = document.getElementById("stickfigure").offsetTop;
-console.log(top); 
-                  }, 50);
+  var left = document.getElementById("stickfigure").offsetLeft;
+  console.log(left);
+  var top = document.getElementById("stickfigure").offsetTop;
+  console.log(top); 
+  var player = document.getElementById("stickfigure");
+  if (top < 113){
+    console.log("too far")
+        player.style.top = 114.3+"px";
+  };
+                    }, 50);
+
+function tileSet() {
+  for(let i = 0; i < 153; i++) {
+    const tile = document.createElement("div");
+    tile.classList.add("grid-item");
+    console.log(tile);
+  
+    const img = document.createElement("img");
+    img.setAttribute("src", "./assets/images/grass.png");
+    img.setAttribute("class", "grass");
+  console.log(img);
+  
+    const neutral = document.createElement("img");
+    neutral.setAttribute("src", "./assets/images/rock.png");
+    neutral.setAttribute("class", "rock");
+    console.log(neutral);
+  
+    let neutralGenerator = Math.floor(Math.random() * 41);
+    if(neutralGenerator === 15 && neutralGenerator !== 17) {
+      tile.append(neutral);
+    }
+
+    tile.append(img);
+    document.querySelector(".grid-container").append(tile);
+  }
+}
+
+tileSet();
+
 
