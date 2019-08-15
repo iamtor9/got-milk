@@ -52,6 +52,33 @@ setInterval(function(){
   };
                     }, 50);
 
+
+function borderTop() {
+  for(let i = 1; i <18; i++) {
+    const tile = document.createElement("div");
+    tile.classList.add("grid-item");
+
+    const img = document.createElement("img");
+    img.setAttribute("src", "./assets/images/grass.png");
+    img.setAttribute("class", "grass");
+
+    // console.log(tile);
+
+    const brock = document.createElement("img");
+    brock.setAttribute("id", "Brock" + i);
+    brock.setAttribute("class", "borderRock");
+    brock.setAttribute("src", "./assets/images/rock.png");
+    // console.log(brock);
+
+    tile.append(img);
+    tile.append(brock);
+    console.log(tile);
+    document.querySelector(".grid-container").append(tile);
+  }
+}
+borderTop();
+
+
 function tileSet() {
   for(let i = 0; i < 153; i++) {
     const tile = document.createElement("div");
@@ -61,7 +88,7 @@ function tileSet() {
     const img = document.createElement("img");
     img.setAttribute("src", "./assets/images/grass.png");
     img.setAttribute("class", "grass");
-  console.log(img);
+    console.log(img);
   
     const neutral = document.createElement("img");
     neutral.setAttribute("src", "./assets/images/rock.png");
