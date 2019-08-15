@@ -1,0 +1,70 @@
+  .grid-container {
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+    background-color: #2196F3;
+    position: absolute;
+    z-index: -1;
+    display: all;
+  }
+  
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 0px;
+    border: 1px solid rgba(255, 0, 0, 0.8);
+    font-size: 30px;
+    text-align: center;
+  }
+
+  #stickfigure {
+    position: absolute;
+    z-index: 1; 
+    top:220.5px; 
+    left: 310.4px;
+    height: 100px;
+    width: 80px;
+  }
+
+  .rock {
+    position: absolute;
+    z-index: 0;
+    height: 100px;
+    width: 80px;
+  }
+
+  #rock1 {
+    top: 318.9px; 
+    left: 310.4px;
+  }
+
+  #rock2 {
+    top: 637.5px; 
+    left: 812.4px;
+  }
+
+  #rock3 {
+    top: 106.5px; 
+    left: 1013.2px;
+  }
+
+  .politician {
+    position: absolute;
+    z-index: 0;
+    height: 100px;
+  }
+
+  #putin {
+    width: 80px;
+    top: 427.5px;
+    left: 712px;
+  }
+
+  #trump {
+    width: 45px;
+    top: 747.1px;
+    left: 1331.9px;
+  }
+
+  .grass {
+    height: 104.2px;
+    width: 98.4px;
+  }
