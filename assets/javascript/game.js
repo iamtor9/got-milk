@@ -52,33 +52,6 @@ if (top < 113){
 };
                   }, 50);
 
-
-function borderTop() {
-for(let i = 1; i <18; i++) {
-  const tile = document.createElement("div");
-  tile.classList.add("grid-item");
-
-  const img = document.createElement("img");
-  img.setAttribute("src", "./assets/images/grass.png");
-  img.setAttribute("class", "grass");
-
-  // console.log(tile);
-
-  const brock = document.createElement("img");
-  brock.setAttribute("id", "Brock" + i);
-  brock.setAttribute("class", "borderRock");
-  brock.setAttribute("src", "./assets/images/rock.png");
-  // console.log(brock);
-
-  tile.append(img);
-  tile.append(brock);
-  console.log(tile);
-  document.querySelector(".grid-container").append(tile);
-}
-}
-borderTop();
-
-
 function tileSet() {
 for(let i = 0; i < 153; i++) {
   const tile = document.createElement("div");
@@ -95,9 +68,29 @@ for(let i = 0; i < 153; i++) {
   neutral.setAttribute("class", "rock");
   console.log(neutral);
 
-  let neutralGenerator = Math.floor(Math.random() * 41);
+  const enemy = document.createElement("img");
+  enemy.setAttribute("src", "./assets/images/trump.png");
+  enemy.setAttribute("class", "politician");
+  console.log(enemy);
+
+  if(i < 17) {
+    tile.append(neutral);
+  }
+
+  if(i === 0 || i === 17 || i === 34 || i === 51 || i === 68 || i === 85 || i === 102 || i === 119 || i === 136) {
+  tile.append(neutral);
+}
+
+  let rng = Math.floor(Math.random() * 41);
+
+  let neutralGenerator = rng
   if(neutralGenerator === 15 && neutralGenerator !== 17) {
     tile.append(neutral);
+  }
+
+  let enemyGenerator = rng
+  if(enemyGenerator === 17 && enemyGenerator !== 15) {
+    tile.append(enemy);
   }
 
   tile.append(img);
