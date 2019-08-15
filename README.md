@@ -8,11 +8,18 @@
 - When user loses, Restart the app
 
 # MVP Basics:
-[Projects: User Stories and To-do](Projects) <br>
-[Contribution guidelines for this project](docs/CONTRIBUTING.md)<br>
-[Wire-frame View](docs/index.html)<br>
+[Projects: User Stories and To-do](https://github.com/iamtor9/got-milk/projects) <br>
+[Contribution guidelines for this project](Contributing.md)<br>
+[Wire-frame View](index.html)<br>
 
-API's to use:<br>
+#API's to use:
+
+[Magic: The Gathering REST](https://www.programmableweb.com/api/magic-gathering-rest) <br>
+This is an unofficial REST interface for Magic: The Gathering. The API can be used to return a maximum of 100 cards per call with names, blocks, and IDs. The preferred data format is JSON. HTTPS is used for authentication. Third-party applications are currently throttled to 5000 requests per hour.
+Jul 13th, 2018
+<br>
+[Giphy](https://giphy.com/) <br>
+GIPHY is the best way to search, share, discover and create GIFs on the Internet. The content on GIPHY's website, app, and API is all of the best and most popular GIFs on the web, along with content created by talented GIF artists and world-class brands. Our goal is to help make finding and sharing the good GIFs easier.
 
 # Bio for game (Brainstorming)
  Dragon warrior-esque, FF
