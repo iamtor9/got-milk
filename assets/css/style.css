@@ -1,70 +1,170 @@
-  .grid-container {
-    display: inline-grid;
-    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
-    background-color: #2196F3;
-    position: absolute;
-    z-index: -1;
-    display: all;
-  }
-  
-  .grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 0px;
-    border: 1px solid rgba(255, 0, 0, 0.8);
-    font-size: 30px;
-    text-align: center;
-  }
+.grid-container {
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+  background-color: #2196F3;
+  position: absolute;
+  z-index: -1;
+  display: all;
+}
 
-  #stickfigure {
-    position: absolute;
-    z-index: 1; 
-    top:220.5px; 
-    left: 310.4px;
-    height: 100px;
-    width: 80px;
-  }
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0px;
+  border: 1px solid rgba(255, 0, 0, 0.8);
+  font-size: 30px;
+  text-align: center;
+  /* position: relative; */
+}
 
-  .rock {
-    position: absolute;
-    z-index: 0;
-    height: 100px;
-    width: 80px;
-  }
+#stickfigure {
+  position: absolute;
+  z-index: 2; 
+  top:220.5px; 
+  left: 310.4px;
+  height: 100px;
+  width: 80px;
+}
 
-  #rock1 {
-    top: 318.9px; 
-    left: 310.4px;
-  }
+.rock {
+  position: absolute;
+  top: 0;
+  left: 11px;
+  z-index: 1;
+  height: 100px;
+  width: 80px;
+  background: transparent;
+}
 
-  #rock2 {
-    top: 637.5px; 
-    left: 812.4px;
-  }
+.borderRock {
+  position: absolute;
+  top: 0;
+  left: 11px;
+  z-index: 1;
+  height: 100px;
+  width: 80px;
+  background: transparent;
+}
 
-  #rock3 {
-    top: 106.5px; 
-    left: 1013.2px;
-  }
+#rock1 {
+  top: 318.9px; 
+  left: 310.4px;
+}
 
-  .politician {
-    position: absolute;
-    z-index: 0;
-    height: 100px;
-  }
+#rock2 {
+  top: 637.5px; 
+  left: 812.4px;
+}
 
-  #putin {
-    width: 80px;
-    top: 427.5px;
-    left: 712px;
-  }
+#rock3 {
+  top: 106.5px; 
+  left: 1013.2px;
+}
 
-  #trump {
-    width: 45px;
-    top: 747.1px;
-    left: 1331.9px;
-  }
+.politician {
+  position: absolute;
+  z-index: 2;
+  height: 100px;
+}
 
-  .grass {
-    height: 104.2px;
-    width: 98.4px;
-  }
+#putin {
+  width: 80px;
+  top: 427.5px;
+  left: 712px;
+}
+
+#trump {
+  width: 45px;
+  top: 747.1px;
+  left: 1331.9px;
+}
+
+.grass {
+  z-index: 0;
+  position: relative;
+  height: 104.2px;
+  width: 98.4px;
+}
+
+/* ============================= */
+#Brock1 {
+  top: -0.15px; 
+  left: 8.5px;
+}
+#Brock2 {
+  top: -0.15px; 
+  left: 108.9px;
+}
+#Brock3 {
+  top: -0.15px; 
+  left: 209.3px;
+}
+
+#Brock4 {
+  top: -0.15px; 
+  left: 309.7px;
+}
+
+#Brock5 {
+  top: -0.15px; 
+  left: 410.1px;
+}
+
+#Brock6 {
+  top: -0.15px; 
+  left: 510.5px;
+}
+
+#Brock7 {
+  top: -0.15px; 
+  left: 610.9px;
+}
+
+#Brock8 {
+  top: -0.15px; 
+  left: 711.3px;
+}
+
+#Brock9 {
+  top: -0.15px; 
+  left: 811.7px;
+}
+
+#Brock10 {
+  top: -0.15px; 
+  left: 912.1px;
+}
+
+#Brock11 {
+  top: -0.15px; 
+  left: 1012.5px;
+}
+
+#Brock12 {
+  top: -0.15px; 
+  left: 1112.9px;
+}
+
+#Brock13 {
+  top: -0.15px; 
+  left: 1213.3px;
+}
+
+#Brock14 {
+  top: -0.15px; 
+  left: 1313.7px;
+}
+
+#Brock15 {
+  top: -0.15px; 
+  left: 1414.1px;
+}
+
+#Brock16 {
+  top: -0.15px; 
+  left: 1514.5px;
+}
+
+#Brock17 {
+  top: -0.15px; 
+  left: 1614.9px;
+}
