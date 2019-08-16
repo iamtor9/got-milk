@@ -3,10 +3,10 @@ $(document).ready(function() {
 
   var stickFigure = $(".stick");
 
-  $(this).keypress(e=>
-    e.which==38?
-    alert('hi.'):null
-);
+//  $(this).keypress(e=>
+  //  e.which==38?
+    //alert('hi.'):null
+//);
 
 
   // Keyboard move controls
@@ -66,39 +66,35 @@ else if (left < 8 && worldsector >= 2) {
 else if (top > 748) {
   player.style.top = 746.5+"px";
 }
-
 else if (top < 108) {
   player.style.top = 109.3+"px";
 }
-
 else if (left < 108 && worldsector === 1) {
   player.style.left = 109.6+"px";
 };
-
-
                   }, 50);
 
 function tileSet() {
 for(let i = 0; i < 153; i++) {
   const tile = document.createElement("div");
   tile.classList.add("grid-item");
-
+//Grass Tile IMG
   const img = document.createElement("img");
   img.setAttribute("src", "./assets/images/grass.png");
   img.setAttribute("class", "grass");
-
+//Rock IMG
   const neutral = document.createElement("img");
   neutral.setAttribute("src", "./assets/images/rock.png");
   neutral.setAttribute("class", "rock");
-
+//Border Rock IMG
   const brock = document.createElement("img");
   brock.setAttribute("src", "./assets/images/rock.png");
   brock.setAttribute("class", "brock");
-
+//Trump IMG
   const enemy = document.createElement("img");
   enemy.setAttribute("src", "./assets/images/trump.png");
   enemy.setAttribute("class", "politician");
-
+//Generates rocks on the first 17 tiles
   if(i < 17) {
     tile.append(neutral);
   };
@@ -115,15 +111,21 @@ for(let i = 0; i < 153; i++) {
   function myFunction() {
     setInterval(function(){
 
-      if(worldsector >= 2){
+      if(worldsector === 2){
         brock.style.display="none";
+        img.setAttribute("src", "./assets/images/grass.png");
+        neutral.setAttribute("src", "./assets/images/rock.png");
       }
-
       else if(worldsector === 1){
-        brock.style.display="all";
+        brock.style.display="";
+      }
+      else if(worldsector === 3){
+        img.setAttribute("src", "./assets/images/road.jpg");
+        neutral.setAttribute("src", "./assets/images/taxi.png");
       };
+      
 
-    }, 10);
+    }, 1);
   }
   myFunction();
 
@@ -146,5 +148,3 @@ for(let i = 0; i < 153; i++) {
 };
 
 tileSet();
-
-
