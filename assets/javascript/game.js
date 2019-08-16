@@ -3,11 +3,6 @@ $(document).ready(function() {
 
   var stickFigure = $(".stick");
 
-//  $(this).keypress(e=>
-  //  e.which==38?
-    //alert('hi.'):null
-//);
-
 
   // Keyboard move controls
   $(document).keyup(function(e) {
