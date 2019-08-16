@@ -69,3 +69,7 @@
   height: 104.2px;
   width: 98.4px;
 }
+
+.flex {
+  display: flex;
+}

@@ -3,12 +3,15 @@ $(document).ready(function() {
 
   var stickFigure = $(".stick");
 
-  $(this).keypress(e=>
-    e.which==38?
-    alert('hi.'):null
-);
+//   $(this).keypress(e=>
+//     e.which==38?
+//     alert('hi.'):null
+// );
 
 
+
+// ====================================================================================
+// ====================================================================================
   // Keyboard move controls
   $(document).keyup(function(e) {
     switch (e.which) {
@@ -39,6 +42,9 @@ $(document).ready(function() {
   });
 });
 
+
+// ====================================================================================
+// ====================================================================================
 //global variable to determine what sector of the world the player is in
 let worldsector = 1;
 console.log(worldsector);
@@ -69,6 +75,9 @@ else if (left < 108 && worldsector === 1) {
 
                   }, 50);
 
+// ====================================================================================
+// ====================================================================================
+// This is dynamically creates the map for the character to move on
 function tileSet() {
 for(let i = 0; i < 153; i++) {
   const tile = document.createElement("div");
@@ -134,3 +143,40 @@ tileSet();
 
 
 // Giphy API (Using it for the attack animations that we will have)
+// https://developers.giphy.com/docs/api/endpoint#search Link to Documentation
+function callGiphy() {
+
+  // ====================================================================================
+  // We're letting carebear to be = to gif rn because we haven't set up variables to equal alot of characters atm
+  let gif = "carebear"
+  // ====================================================================================
+
+  const APIKey = "SF5z5yrS08Hg6RXmKUUTuAVDOH4j0GqG";
+  let amount = 100;
+  // We want to create a const that is equal to the query that we are going to reference
+  const queryURL = "https://api.giphy.com/v1/gifs/search?q=" + gif + "&api_key=" + APIKey + "&limit=" + amount;
+  console.log(queryURL, "FULL LINK TO URL");
+
+  fetch(queryURL).then(function(response) {
+    return response.json();
+  }).then(function(responseJSON) {
+    const results = responseJSON.data;
+    console.log(results);
+
+    // We need to find the right kind of carebear animation, so we need a for loop for these things
+    const gifContainer = document.createElement("div");
+    gifContainer.setAttribute("class", "flex");
+
+    for( let i = 0; i < results.length; i++) {
+      const gifDiv = docuemnt.createElement("div");
+      const gifImg = document.createElement("img");
+
+      gifImg.setAttribute("src", results[i].images.fixed_height_still.url);
+
+    }
+
+
+  })
+}
+
+callGiphy();
