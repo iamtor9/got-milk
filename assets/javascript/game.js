@@ -1,109 +1,119 @@
 // JavaScript function that wraps controls
 $(document).ready(function() {
 
-    var stickFigure = $(".stick");
+  var stickFigure = $(".stick");
 
-    $(this).keypress(e=>
-      e.which==38?
-      alert('hi.'):null
-  );
+  $(this).keypress(e=>
+    e.which==38?
+    alert('hi.'):null
+);
 
 
-    // Keyboard move controls
-    $(document).keyup(function(e) {
-      switch (e.which) {
+  // Keyboard move controls
+  $(document).keyup(function(e) {
+    switch (e.which) {
 
-      // Move Buttons (Keyboard Down)
-      case 83:
-        stickFigure.animate({ top: "+=106.2px" }, 150);
-        break;
+    // Move Buttons (Keyboard Down)
+    case 83:
+      stickFigure.animate({ top: "+=106.2px" }, 1);
+      break;
 
-        // Move Buttons (Keyboard Right)
-      case 68:
-        stickFigure.animate({ left: "+=100.4px" }, 150);
-        break;
+      // Move Buttons (Keyboard Right)
+    case 68:
+      stickFigure.animate({ left: "+=100.4px" }, 1);
+      break;
 
-        // Move Buttons (Keyboard Up)
-      case 87:
-        stickFigure.animate({ top: "-=106.2px" }, 150);
-        break;
+      // Move Buttons (Keyboard Up)
+    case 87:
+      stickFigure.animate({ top: "-=106.2px" }, 1);
+      break;
 
-        // Move Buttons (Keyboard Left)
-      case 65:
-        stickFigure.animate({ left: "-=100.4px" }, 150);
-        break;
+      // Move Buttons (Keyboard Left)
+    case 65:
+      stickFigure.animate({ left: "-=100.4px" }, 1);
+      break;
 
-      default:
-        break;
-      }
-    });
+    default:
+      break;
+    }
   });
+});
+
+//global variable to determine what sector of the world the player is in
+let worldsector = 1;
+console.log(worldsector);
 
 //Constantly record and update player coordinates every 50 ms
-setInterval(function(){ 
-  var left = document.getElementById("stickfigure").offsetLeft;
-  console.log(left);
-  var top = document.getElementById("stickfigure").offsetTop;
-  console.log(top); 
-  var player = document.getElementById("stickfigure");
-  if (top < 113){
-    console.log("too far")
-        player.style.top = 114.3+"px";
-  };
-                    }, 50);
+setInterval(function(){   
+//Players horizontal coordinate
+var left = document.getElementById("stickfigure").offsetLeft;
 
+//Players vertical coordinate
+var top = document.getElementById("stickfigure").offsetTop;
+var player = document.getElementById("stickfigure");
 
-function borderTop() {
-  for(let i = 1; i <18; i++) {
-    const tile = document.createElement("div");
-    tile.classList.add("grid-item");
-
-    const img = document.createElement("img");
-    img.setAttribute("src", "./assets/images/grass.png");
-    img.setAttribute("class", "grass");
-
-    // console.log(tile);
-
-    const brock = document.createElement("img");
-    brock.setAttribute("id", "Brock" + i);
-    brock.setAttribute("class", "borderRock");
-    brock.setAttribute("src", "./assets/images/rock.png");
-    // console.log(brock);
-
-    tile.append(img);
-    tile.append(brock);
-    console.log(tile);
-    document.querySelector(".grid-container").append(tile);
-  }
+//Moves the player over to the next section
+if (left > 1617) {
+         worldsector = worldsector+1;
+         player.style.left = 9.2+"px";
+         console.log(worldsector);
 }
-borderTop();
+else if (left < 9.2 && worldsector >= 2) {
+         player.style.left = 1615.6+"px";
+         worldsector = worldsector-1;
+         console.log(worldsector);
+}
+else if (left < 108 && worldsector === 1) {
+  player.style.left = 109.6+"px";
+};
 
+                  }, 50);
 
 function tileSet() {
-  for(let i = 0; i < 153; i++) {
-    const tile = document.createElement("div");
-    tile.classList.add("grid-item");
-    console.log(tile);
-  
-    const img = document.createElement("img");
-    img.setAttribute("src", "./assets/images/grass.png");
-    img.setAttribute("class", "grass");
-    console.log(img);
-  
-    const neutral = document.createElement("img");
-    neutral.setAttribute("src", "./assets/images/rock.png");
-    neutral.setAttribute("class", "rock");
-    console.log(neutral);
-  
-    let neutralGenerator = Math.floor(Math.random() * 41);
-    if(neutralGenerator === 15 && neutralGenerator !== 17) {
-      tile.append(neutral);
-    }
+for(let i = 0; i < 153; i++) {
+  const tile = document.createElement("div");
+  tile.classList.add("grid-item");
 
-    tile.append(img);
-    document.querySelector(".grid-container").append(tile);
-  }
-}
+  const img = document.createElement("img");
+  img.setAttribute("src", "./assets/images/grass.png");
+  img.setAttribute("class", "grass");
+
+  const neutral = document.createElement("img");
+  neutral.setAttribute("src", "./assets/images/rock.png");
+  neutral.setAttribute("class", "rock");
+
+  const enemy = document.createElement("img");
+  enemy.setAttribute("src", "./assets/images/trump.png");
+  enemy.setAttribute("class", "politician");
+
+  if(i < 17) {
+    tile.append(neutral);
+  };
+
+  if(i > 135) {
+    tile.append(neutral);
+  };
+
+  if(i === 17 || i === 34 || i === 51 || i === 68 || i === 85 || i === 102 || i === 119) {
+  tile.append(neutral);
+};
+
+  let rng = Math.floor(Math.random() * 41);
+
+  let neutralGenerator = rng
+  if(neutralGenerator === 15 && neutralGenerator !== 17) {
+    tile.append(neutral);
+  };
+
+  let enemyGenerator = rng
+  if(enemyGenerator === 17 && enemyGenerator !== 15) {
+    tile.append(enemy);
+  };
+
+  tile.append(img);
+  document.querySelector(".grid-container").append(tile);
+};
+};
 
 tileSet();
 
