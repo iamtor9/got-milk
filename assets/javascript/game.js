@@ -118,3 +118,19 @@ for(let i = 0; i < 153; i++) {
 tileSet();
 
 
+// ====================================================================================
+// ====================================================================================
+// API Keys & Codes
+
+// Deezer API (a music catalog)
+//  https://developers.deezer.com/api Link to the documentation
+
+
+
+// Tronald Dump (API with all the dumb things that He has ever said)
+// https://docs.tronalddump.io/#quotes Link to Documentation
+
+
+
+
+// Giphy API (Using it for the attack animations that we will have)
