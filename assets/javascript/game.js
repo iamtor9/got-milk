@@ -53,19 +53,28 @@ var top = document.getElementById("stickfigure").offsetTop;
 var player = document.getElementById("stickfigure");
 
 //Moves the player over to the next section
-if (left > 1617) {
+if (left > 1650) {
          worldsector = worldsector+1;
          player.style.left = 9.2+"px";
          console.log(worldsector);
 }
-else if (left < 9.2 && worldsector >= 2) {
+else if (left < 8 && worldsector >= 2) {
          player.style.left = 1615.6+"px";
          worldsector = worldsector-1;
          console.log(worldsector);
 }
+else if (top > 748) {
+  player.style.top = 746.5+"px";
+}
+
+else if (top < 108) {
+  player.style.top = 109.3+"px";
+}
+
 else if (left < 108 && worldsector === 1) {
   player.style.left = 109.6+"px";
 };
+
 
                   }, 50);
 
@@ -82,6 +91,10 @@ for(let i = 0; i < 153; i++) {
   neutral.setAttribute("src", "./assets/images/rock.png");
   neutral.setAttribute("class", "rock");
 
+  const brock = document.createElement("img");
+  brock.setAttribute("src", "./assets/images/rock.png");
+  brock.setAttribute("class", "brock");
+
   const enemy = document.createElement("img");
   enemy.setAttribute("src", "./assets/images/trump.png");
   enemy.setAttribute("class", "politician");
@@ -95,8 +108,25 @@ for(let i = 0; i < 153; i++) {
   };
 
   if(i === 17 || i === 34 || i === 51 || i === 68 || i === 85 || i === 102 || i === 119) {
-  tile.append(neutral);
-};
+  tile.append(brock);
+  };
+
+
+  function myFunction() {
+    setInterval(function(){
+
+      if(worldsector >= 2){
+        brock.style.display="none";
+      }
+
+      else if(worldsector === 1){
+        brock.style.display="all";
+      };
+
+    }, 10);
+  }
+  myFunction();
+
 
   let rng = Math.floor(Math.random() * 41);
 
