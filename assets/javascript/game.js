@@ -115,15 +115,25 @@ for(let i = 0; i < 153; i++) {
   function myFunction() {
     setInterval(function(){
 
-      if(worldsector >= 2){
+      if(worldsector === 2){
         brock.style.display="none";
+        img.setAttribute("src", "./assets/images/grass.png");
+        neutral.setAttribute("src", "./assets/images/rock.png");
       }
 
       else if(worldsector === 1){
-        brock.style.display="all";
-      };
+        brock.style.display="";
+      }
 
-    }, 10);
+
+
+      else if(worldsector === 3){
+        img.setAttribute("src", "./assets/images/road.jpg");
+        neutral.setAttribute("src", "./assets/images/taxi.png");
+      };
+      
+
+    }, 1);
   }
   myFunction();
 
