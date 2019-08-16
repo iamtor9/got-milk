@@ -19,8 +19,8 @@
 #stickfigure {
   position: absolute;
   z-index: 2; 
-  top:220.5px; 
-  left: 310.4px;
+  top:215.5px; 
+  left: 314.4px;
   height: 100px;
   width: 80px;
 }
@@ -35,7 +35,7 @@
   background: transparent;
 }
 
-.borderRock {
+.brock {
   position: absolute;
   top: 0;
   left: 11px;
@@ -43,24 +43,13 @@
   height: 100px;
   width: 80px;
   background: transparent;
+  display: all;
 }
 
 .politician {
   position: absolute;
   z-index: 2;
   height: 100px;
-}
-
-#putin {
-  width: 80px;
-  top: 427.5px;
-  left: 712px;
-}
-
-#trump {
-  width: 45px;
-  top: 747.1px;
-  left: 1331.9px;
 }
 
 .grass {
