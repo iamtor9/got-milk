@@ -114,9 +114,6 @@ for(let i = 0; i < 153; i++) {
       else if(worldsector === 1){
         brock.style.display="";
       }
-
-
-
       else if(worldsector === 3){
         img.setAttribute("src", "./assets/images/road.jpg");
         neutral.setAttribute("src", "./assets/images/taxi.png");
