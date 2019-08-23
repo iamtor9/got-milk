@@ -27,8 +27,8 @@ body {
   /* This sets allows us to transform the text on a 3D plane, and is somewhat a magic number */
   perspective: 400px;
   /* The rest is totally up to personal styling preferences */
-  color: black;
-  font-family: 'Pathway Gothic One', sans-serif;
+  color: whitesmoke;
+  font-family: fantasy;
   font-size: 500%;
   font-weight: 600;
   letter-spacing: 6px;
