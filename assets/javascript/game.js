@@ -108,35 +108,35 @@ for(let i = 0; i < 153; i++) {
   tile.classList.add("grid-item");
 //Grass Tile IMG
   const img = document.createElement("img");
-  img.setAttribute("src", "./assets/images/grass.png");
+  img.setAttribute("src", "./assets/images/tiles/grass.png");
   img.setAttribute("class", "grass");
 //Mount Rushmore IMG
   const neutral = document.createElement("img");
-  neutral.setAttribute("src", "./assets/images/mountRushmore.png");
+  neutral.setAttribute("src", "./assets/images/tiles/rock.png");
   neutral.setAttribute("class", "rock");
 //Border Rock IMG
   const brock = document.createElement("img");
-  brock.setAttribute("src", "./assets/images/rock.png");
+  brock.setAttribute("src", "./assets/images/tiles/rock.png");
   brock.setAttribute("class", "brock");
 //Taxi IMG
   const taxi = document.createElement("img");
-  taxi.setAttribute("src", "./assets/images/taxi.png");
+  taxi.setAttribute("src", "./assets/images/neutrals/taxi.png");
   taxi.setAttribute("class", "hide");
   //Skull IMG
   const skull = document.createElement("img");
-  skull.setAttribute("src", "./assets/images/skull.png");
+  skull.setAttribute("src", "./assets/images/neutrals/skull.png");
   skull.setAttribute("class", "hide");
   //Fish IMG
   const fish = document.createElement("img");
-  fish.setAttribute("src", "./assets/images/fish.png");
+  fish.setAttribute("src", "./assets/images/neutrals/fish.png");
   fish.setAttribute("class", "hide");
   //Lava IMG
   const lava = document.createElement("img");
-  lava.setAttribute("src", "./assets/images/fulllava.png");
+  lava.setAttribute("src", "./assets/images/tiles/fulllava.png");
   lava.setAttribute("class", "hide");
 //Trump IMG
   const enemy = document.createElement("img");
-  enemy.setAttribute("src", "./assets/images/trump.png");
+  enemy.setAttribute("src", "./assets/images/presidents/trump.png");
   enemy.setAttribute("class", "politician");
 //Generates a rock border on the top of the world
   if(i < 17) {
@@ -170,8 +170,8 @@ if(i === 69 || i === 70 || i === 71 || i === 72 || i === 73 || i === 74 || i ===
     setInterval(function(){
       if(worldsector === 2){
         brock.style.display="none";
-        img.setAttribute("src", "./assets/images/grass.png");
-        neutral.setAttribute("src", "./assets/images/rock.png");
+        img.setAttribute("src", "./assets/images/tiles/grass.png");
+        neutral.setAttribute("src", "./assets/images/tiles/rock.png");
         neutral.setAttribute("class", "rock");
         taxi.setAttribute("class", "hide");
       }
@@ -179,32 +179,32 @@ if(i === 69 || i === 70 || i === 71 || i === 72 || i === 73 || i === 74 || i ===
         brock.style.display="";
       }
       else if(worldsector === 3){
-        img.setAttribute("src", "./assets/images/road.jpg");
-        neutral.setAttribute("src", "./assets/images/taxi.png");
+        img.setAttribute("src", "./assets/images/tiles/road.jpg");
+        neutral.setAttribute("src", "./assets/images/neutrals/taxi.png");
         neutral.setAttribute("class", "taxi");
         taxi.setAttribute("class", "taxi");
         skull.setAttribute("class", "hide");
 
       }
       else if(worldsector === 4){
-        img.setAttribute("src", "./assets/images/dessert2.jpg");
-        neutral.setAttribute("src", "./assets/images/skull.png");
+        img.setAttribute("src", "./assets/images/tiles/dessert2.jpg");
+        neutral.setAttribute("src", "./assets/images/neutrals/skull.png");
         neutral.setAttribute("class", "skull");
         skull.setAttribute("class", "skull");
         taxi.setAttribute("class", "hide");
         fish.setAttribute("class", "hide");
       }
       else if(worldsector === 5){
-        img.setAttribute("src", "./assets/images/water.png");
-        neutral.setAttribute("src", "./assets/images/fish.png");
+        img.setAttribute("src", "./assets/images/tiles/water.png");
+        neutral.setAttribute("src", "./assets/images/neutrals/fish.png");
         neutral.setAttribute("class", "fish");
         skull.setAttribute("class", "hide");
         fish.setAttribute("class", "fish");
         lava.setAttribute("class", "hide");
       }
       else if(worldsector === 6){
-        img.setAttribute("src", "./assets/images/lava.png");
-        neutral.setAttribute("src", "./assets/images/fulllava.png");
+        img.setAttribute("src", "./assets/images/tiles/lava.png");
+        neutral.setAttribute("src", "./assets/images/tiles/fulllava.png");
         neutral.setAttribute("class", "fulllava");
         fish.setAttribute("class", "hide");
         lava.setAttribute("class", "fulllava");
