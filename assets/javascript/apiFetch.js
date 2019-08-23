@@ -40,15 +40,19 @@ function callGiphyCareBear() {
         const gifDiv = document.createElement("div");
         const gifImg = document.createElement("img");
   
-        // if (i === 2 || i === 5 || i === 6 || i === 7 || i === 15 || 
-        //     i === 16 || i === 18 || i === 25 || i === 39 || i === 43 || 
-        //     i === 66 || i === 69) {
+        if (results[i].id === "yyrxrArcC32H6" || results[i].id === "3ZZaR4gZOClWHRaswH" || 
+            results[i].id === "WaVzsw5V12VoI" || results[i].id === "IJTCcELAbVgHK" ||
+            results[i].id === "11z8mwhw0jxQiI" || results[i].id === "cmxSur7kFJKvYC2g8H" ||
+            results[i].id === "Tzyme1YtTEVkQ" || results[i].id === "FTJqnhiSNf1BK" ||
+            results[i].id === "XFpxLVkoVeMI9wnW7Y" || results[i].id === "WncGVVRo3CynC" ||
+            results[i].id === "hAl4rb3WFcheE" || results[i].id === "w572ZzzpJAGqY" ||
+            results[i].id === "3oKIPaIpoSWWcVhsv6") {
           gifImg.setAttribute("src", results[i].images.fixed_height.url);
   
           gifDiv.append(gifImg);
           console.log(gifDiv);
           document.querySelector(".giphy").append(gifDiv);
-        // }
+        }
   
         // gifImg.setAttribute("src", results[i].images.fixed_height.url);
   
@@ -59,7 +63,7 @@ function callGiphyCareBear() {
     })
   }
   
-  callGiphyCareBear();
+  // callGiphyCareBear();
   
   
 
@@ -88,26 +92,30 @@ function callGiphyCareBear() {
         const gifDiv = document.createElement("div");
         const gifImg = document.createElement("img");
   
-        if (i === 4 || i === 8 || i === 13 || i === 26 || i === 28 ||
-            i === 35 || i === 41 || i === 46 || i === 50 || i === 57 ||
-            i === 64 || i === 90) {
-          gifImg.setAttribute("src", results[i].images.fixed_height.url);
+        // if (results[i].id === "yyrxrArcC32H6" || results[i].id === "3ZZaR4gZOClWHRaswH" || 
+        //     results[i].id === "WaVzsw5V12VoI" || results[i].id === "IJTCcELAbVgHK" ||
+        //     results[i].id === "11z8mwhw0jxQiI" || results[i].id === "cmxSur7kFJKvYC2g8H" ||
+        //     results[i].id === "Tzyme1YtTEVkQ" || results[i].id === "FTJqnhiSNf1BK" ||
+        //     results[i].id === "XFpxLVkoVeMI9wnW7Y" || results[i].id === "WncGVVRo3CynC" ||
+        //     results[i].id === "hAl4rb3WFcheE" || results[i].id === "w572ZzzpJAGqY" ||
+        //     results[i].id === "3oKIPaIpoSWWcVhsv6") {
+        //   gifImg.setAttribute("src", results[i].images.fixed_height.url);
   
-          gifDiv.append(gifImg);
-          console.log(gifDiv);
-          document.querySelector(".giphy").append(gifDiv);
-        }
+        //   gifDiv.append(gifImg);
+        //   console.log(gifDiv);
+        //   document.querySelector(".giphy").append(gifDiv);
+        // }
   
-        // gifImg.setAttribute("src", results[i].images.fixed_height.url);
+        gifImg.setAttribute("src", results[i].images.fixed_height.url);
   
-        // gifDiv.append(gifImg);
-        // console.log(gifDiv);
-        // document.querySelector(".giphy").append(gifDiv);
+        gifDiv.append(gifImg);
+        console.log(gifDiv);
+        document.querySelector(".giphy").append(gifDiv);
       }
     })
   }
   
-  // callGiphyCareSpaceBear();
+  callGiphyCareSpaceBear();
 
 
 
