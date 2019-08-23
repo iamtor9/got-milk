@@ -77,9 +77,9 @@ for(let i = 0; i < 153; i++) {
   const img = document.createElement("img");
   img.setAttribute("src", "./assets/images/grass.png");
   img.setAttribute("class", "grass");
-//Rock IMG
+//Mount Rushmore IMG
   const neutral = document.createElement("img");
-  neutral.setAttribute("src", "./assets/images/rock.png");
+  neutral.setAttribute("src", "./assets/images/mountRushmore.png");
   neutral.setAttribute("class", "rock");
 //Border Rock IMG
   const brock = document.createElement("img");
