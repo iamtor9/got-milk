@@ -1,0 +1,64 @@
+/* This is where the Modal Menu is for seeing instructions and breif story again */
+.modalMenu {
+    background: url("../images/modalMenu.png");
+    background-size: 75px 75px;
+    width: 75px;
+    height: 75px;
+    position: fixed;
+    left: 1%;
+    top: 2%;
+
+}
+
+/* This is the World Environment stats box */
+.statsBox {
+    background: rgb(244, 244, 244, 0.3);
+    width: fit-content;
+    height: fit-content;
+    position: fixed; 
+    left: 1%;
+    top: 12%;
+    z-index: 1;
+}
+
+/* Avatar's icon */
+.icon {
+    height: 150px;
+    width: 150px;
+    margin: 1.5px 0px;
+    /* background: black; */
+    border: solid black 2px;
+    background: url("../images/carebears/carebare.png");
+    background-size: 175px 265px;
+    z-index: 2;
+
+}
+
+/* Healthbar */
+.healthBar {
+    /* margin: 1.5px 0px; */
+    background: rgb(0, 182, 97);
+    border: solid rgb(0, 182, 97) 2px; 
+    width: 150px;
+    /* height: fit-content; */
+    border-radius: 3px;
+    text-align: center;
+    z-index: 2;
+
+}
+
+.expBarDiv {
+    margin: 10px 0px 3px;
+    z-index: 2;
+
+}
+
+/* experience Bar */
+.expBar {
+    /* margin: 3px 0px; */
+    width: 151px;
+    z-index: 2;
+
+}
+
+/* ======================================================================== */

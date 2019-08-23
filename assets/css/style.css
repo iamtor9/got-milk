@@ -110,3 +110,11 @@
 .flex {
   display: flex;
 }
+
+
+
+/* This is general classes to be used */
+/* ================================================================================ */
+.noMargin {
+  margin: 0px;
+}
