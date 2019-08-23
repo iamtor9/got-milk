@@ -18,11 +18,15 @@
 
 #stickfigure {
   position: absolute;
-  z-index: 2; 
+  z-index: 20; 
   top:215.5px; 
   left: 314.4px;
   height: 100px;
   width: 80px;
+}
+
+.hide {
+  display: none;
 }
 
 .rock {
@@ -35,10 +39,54 @@
   background: transparent;
 }
 
+.taxi {
+  position: absolute;
+  top: -15px;
+  left: 5px;
+  z-index: 1;
+  height: 100px;
+  width: 90px;
+  background: transparent;
+  display: all;
+}
+
+.skull {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  height: 90px;
+  width: 90px;
+  background: transparent;
+  display: all;
+}
+
+.fish {
+  position: absolute;
+  top: 25px;
+  left: 5px;
+  z-index: 1;
+  height: 50px;
+  width: 90px;
+  background: transparent;
+  display: all;
+}
+
+.fulllava {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  height: 105px;
+  width: 98.5px;
+  background: transparent;
+  display: all;
+}
+
 .brock {
   position: absolute;
   top: 0;
-  left: 11px;
+  left: 5px;
   z-index: 1;
   height: 100px;
   width: 80px;
