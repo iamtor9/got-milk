@@ -40,15 +40,15 @@ function callGiphyCareBear() {
         const gifDiv = document.createElement("div");
         const gifImg = document.createElement("img");
   
-        if (i === 2 || i === 5 || i === 6 || i === 7 || i === 15 || 
-            i === 16 || i === 18 || i === 25 || i === 39 || i === 43 || 
-            i === 66 || i === 69) {
+        // if (i === 2 || i === 5 || i === 6 || i === 7 || i === 15 || 
+        //     i === 16 || i === 18 || i === 25 || i === 39 || i === 43 || 
+        //     i === 66 || i === 69) {
           gifImg.setAttribute("src", results[i].images.fixed_height.url);
   
           gifDiv.append(gifImg);
           console.log(gifDiv);
           document.querySelector(".giphy").append(gifDiv);
-        }
+        // }
   
         // gifImg.setAttribute("src", results[i].images.fixed_height.url);
   
@@ -107,4 +107,59 @@ function callGiphyCareBear() {
     })
   }
   
-  callGiphyCareSpaceBear();
+  // callGiphyCareSpaceBear();
+
+
+
+
+
+function callGiphyTronald() {
+  // We are gonna need to change this to fit the documentation
+  let gif = "care bear"
+
+  // Dont need an API key
+  let subject = "obama";
+  // We want to create a const that is equal to the query that we are going to reference
+  const header = "accept: application/hal+json"
+  const queryURL = "https://api.tronalddump.io/search/quote?query=" + subject;
+  console.log(queryURL, "FULL LINK TO URL");
+
+  fetch(queryURL, {
+    "method": "GET",
+    "headers": {
+      // "x-rapidapi-host": "matchilling-tronald-dump-v1.p.rapidapi.com",
+      // "x-rapidapi-key": "b9267a6a9amshfb545e24443f3ccp1fffcajsn9e0cf027b636",
+      "accept": "application/hal+json"}}).then(function(response) {
+    return response.json();
+  }).then(function(responseJSON) {
+    const results = responseJSON.data;
+    console.log(results);
+
+    // We need to find the right kind of carebear animation, so we need a for loop for these things
+    const gifContainer = document.createElement("div");
+    gifContainer.setAttribute("class", "flex");
+
+    for(let i = 0; i < results.length; i++) {
+      const gifDiv = document.createElement("div");
+      const gifImg = document.createElement("img");
+
+      if (i === 4 || i === 8 || i === 13 || i === 26 || i === 28 ||
+          i === 35 || i === 41 || i === 46 || i === 50 || i === 57 ||
+          i === 64 || i === 90) {
+        gifImg.setAttribute("src", results[i].images.fixed_height.url);
+
+        gifDiv.append(gifImg);
+        console.log(gifDiv);
+        document.querySelector(".giphy").append(gifDiv);
+      }
+
+      // gifImg.setAttribute("src", results[i].images.fixed_height.url);
+
+      // gifDiv.append(gifImg);
+      // console.log(gifDiv);
+      // document.querySelector(".giphy").append(gifDiv);
+    }
+  })
+}
+
+// callGiphyTronald();
