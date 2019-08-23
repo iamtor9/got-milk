@@ -64,7 +64,7 @@ function callGiphyCareBear() {
     })
   }
   
-  callGiphyCareBear();
+  // callGiphyCareBear();
   
   
 
@@ -115,16 +115,13 @@ function callGiphyCareBear() {
     })
   }
   
-  callGiphyCareSpaceBear();
+  // callGiphyCareSpaceBear();
 
 
 
 
 
 function callGiphyTronald() {
-  // We are gonna need to change this to fit the documentation
-  let gif = "care bear"
-
   // Dont need an API key
   let subject = "obama";
   // We want to create a const that is equal to the query that we are going to reference
@@ -133,15 +130,15 @@ function callGiphyTronald() {
   console.log(queryURL, "FULL LINK TO URL");
 
   fetch(queryURL, {
-    "method": "GET",
-    "headers": {
+    method: "GET",
+    headers: {
       // "x-rapidapi-host": "matchilling-tronald-dump-v1.p.rapidapi.com",
       // "x-rapidapi-key": "b9267a6a9amshfb545e24443f3ccp1fffcajsn9e0cf027b636",
       "accept": "application/hal+json"}}).then(function(response) {
     return response.json();
   }).then(function(responseJSON) {
     const results = responseJSON.data;
-    console.log(results);
+    console.log(results, "if you're here then the info made it back to you");
 
     // We need to find the right kind of carebear animation, so we need a for loop for these things
     const gifContainer = document.createElement("div");
@@ -151,15 +148,15 @@ function callGiphyTronald() {
       const gifDiv = document.createElement("div");
       const gifImg = document.createElement("img");
 
-      if (i === 4 || i === 8 || i === 13 || i === 26 || i === 28 ||
-          i === 35 || i === 41 || i === 46 || i === 50 || i === 57 ||
-          i === 64 || i === 90) {
-        gifImg.setAttribute("src", results[i].images.fixed_height.url);
+      // if (i === 4 || i === 8 || i === 13 || i === 26 || i === 28 ||
+      //     i === 35 || i === 41 || i === 46 || i === 50 || i === 57 ||
+      //     i === 64 || i === 90) {
+      //   gifImg.setAttribute("src", results[i].images.fixed_height.url);
 
-        gifDiv.append(gifImg);
-        console.log(gifDiv);
-        document.querySelector(".giphy").append(gifDiv);
-      }
+      //   gifDiv.append(gifImg);
+      //   console.log(gifDiv);
+      //   document.querySelector(".giphy").append(gifDiv);
+      // }
 
       // gifImg.setAttribute("src", results[i].images.fixed_height.url);
 
