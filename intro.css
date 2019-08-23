@@ -6,7 +6,17 @@ body {
   /* Hide elements that flow outside the viewable space */
   overflow: hidden;
   /* Black background for the screen */
-  background-image: "#skyintro.png";
+  /*background-image: "/Users/victoriasorone/Desktop/got-milk/got-milk/assets/images/skyintro.png";*/
+}
+
+#skyintro {
+  height: 100%;
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
+  position: absolute;
+  /*background-size:*/
+
 }
 .star-wars {
   /* Flexbox to center the entire element on the screen */
@@ -17,7 +27,7 @@ body {
   /* This sets allows us to transform the text on a 3D plane, and is somewhat a magic number */
   perspective: 400px;
   /* The rest is totally up to personal styling preferences */
-  color: #feda4a;
+  color: black;
   font-family: 'Pathway Gothic One', sans-serif;
   font-size: 500%;
   font-weight: 600;
