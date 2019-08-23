@@ -4,6 +4,7 @@
 
 // Deezer API (a music catalog)
 //  https://developers.deezer.com/api Link to the documentation
+// Audio get
 
 
 // Tronald Dump (API with all the dumb things that He has ever said)
@@ -63,7 +64,7 @@ function callGiphyCareBear() {
     })
   }
   
-  // callGiphyCareBear();
+  callGiphyCareBear();
   
   
 
@@ -92,25 +93,24 @@ function callGiphyCareBear() {
         const gifDiv = document.createElement("div");
         const gifImg = document.createElement("img");
   
-        // if (results[i].id === "yyrxrArcC32H6" || results[i].id === "3ZZaR4gZOClWHRaswH" || 
-        //     results[i].id === "WaVzsw5V12VoI" || results[i].id === "IJTCcELAbVgHK" ||
-        //     results[i].id === "11z8mwhw0jxQiI" || results[i].id === "cmxSur7kFJKvYC2g8H" ||
-        //     results[i].id === "Tzyme1YtTEVkQ" || results[i].id === "FTJqnhiSNf1BK" ||
-        //     results[i].id === "XFpxLVkoVeMI9wnW7Y" || results[i].id === "WncGVVRo3CynC" ||
-        //     results[i].id === "hAl4rb3WFcheE" || results[i].id === "w572ZzzpJAGqY" ||
-        //     results[i].id === "3oKIPaIpoSWWcVhsv6") {
-        //   gifImg.setAttribute("src", results[i].images.fixed_height.url);
+        if (results[i].id === "cm8ly9wi5eQ0g" || results[i].id === "l0G16t8rkBvnljSta" || 
+            results[i].id === "T9wQWimOZa1tS" || results[i].id === "XcsODeRzHVfFe" ||
+            results[i].id === "v7L4uQWY8Ntvi" || results[i].id === "IMjiylQuLlhba" ||
+            results[i].id === "1k1yidAauPocM" || results[i].id === "iW6RoMatcmQ12" ||
+            results[i].id === "tnivTK2URZm7e" || results[i].id === "6S2oHojYRiQWA" ||
+            results[i].id === "l2JegbZTHiwXgRM1a") {
+          gifImg.setAttribute("src", results[i].images.fixed_height.url);
   
-        //   gifDiv.append(gifImg);
-        //   console.log(gifDiv);
-        //   document.querySelector(".giphy").append(gifDiv);
-        // }
+          gifDiv.append(gifImg);
+          console.log(gifDiv);
+          document.querySelector(".giphy").append(gifDiv);
+        }
   
-        gifImg.setAttribute("src", results[i].images.fixed_height.url);
+        // gifImg.setAttribute("src", results[i].images.fixed_height.url);
   
-        gifDiv.append(gifImg);
-        console.log(gifDiv);
-        document.querySelector(".giphy").append(gifDiv);
+        // gifDiv.append(gifImg);
+        // console.log(gifDiv);
+        // document.querySelector(".giphy").append(gifDiv);
       }
     })
   }
@@ -170,4 +170,4 @@ function callGiphyTronald() {
   })
 }
 
-// callGiphyTronald();
+callGiphyTronald();
