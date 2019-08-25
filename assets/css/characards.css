@@ -113,7 +113,27 @@
 
 /* Style the back side */
 .flip-card-back {
-  background-color: dodgerblue;
-  color: white;
+  background-color: #bbb;
+  color: black;
   transform: rotateY(180deg);
 }
+/* Health and Damage skill bars - Make sure that padding behaves as expected */
+* {box-sizing:border-box}
+
+/* Container for health and damage skill bars */
+.container {
+  width: 100%; /* Full width */
+  background-color: #ddd; /* Grey background */
+}
+
+/* Health and Damage skills bars */
+.skills {
+  text-align: right; /* Right-align text */
+  padding-top: 10px; /* Add top padding */
+  padding-bottom: 10px; /* Add bottom padding */
+  color: white; /* White text color */
+}
+
+/*GRUMPY BEAR SPECIFIC Health and Damage */
+.healthPercent {width: 35%; background-color: #4CAF50;} /* Green */
+.damagePercent {width: 65%; background-color: #f44336;} /* Red */
