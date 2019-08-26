@@ -1,6 +1,6 @@
 /* Characards Modal (background) */
 .modal {
-  display: none; /* Hidden by default - change to none after we get a button connected */
+  display: none; /* Hidden by default - remember to change to none after we get a button connected */
   position: fixed; /* Stay in place */
   z-index: 4; /* Sit on top */
   padding-top: 100px; /* Location of the box */
@@ -135,5 +135,13 @@
 }
 
 /*GRUMPY BEAR SPECIFIC Health and Damage */
-.healthPercent {width: 35%; background-color: #4CAF50;} /* Green */
-.damagePercent {width: 65%; background-color: #f44336;} /* Red */
+.GBhealthPercent {width: 35%; background-color: #4CAF50;} /* Green */
+.GBdamagePercent {width: 65%; background-color: #f44336;} /* Red */
+
+/*PINK HEART BEAR SPECIFIC Health and Damage */
+.PHhealthPercent {width: 75%; background-color: #4CAF50;} /* Green */
+.PHdamagePercent {width: 35%; background-color: #f44336;} /* Red */
+
+/*BIRTHDAY BEAR SPECIFIC Health and Damage */
+.BBhealthPercent {width: 40%; background-color: #4CAF50;} /* Green */
+.BBdamagePercent {width: 50%; background-color: #f44336;} /* Red */
