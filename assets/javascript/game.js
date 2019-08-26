@@ -4,52 +4,140 @@ var stickFigure = $(".stick");
 
 //global variable to determine what sector of the world the player is in
 let worldsector = 1;
-console.log(worldsector);
+console.log(worldsector, "world Sector");
 
 // This function is seperated so that we can disable it at some other point in time
 // We have it first so we refer to it
-function charMovement(e) {
+function charMovement() {
   // changed to down so players can hold down the movement buttons to move quickly
   document.addEventListener("keydown", function(e) {
     var left = document.getElementById("stickfigure").offsetLeft;
-  console.log(left)
-  //Players vertical coordinate
-  var top = document.getElementById("stickfigure").offsetTop;
-  console.log(top)
-  var player = document.getElementById("stickfigure");
+    console.log(left)
+    //Players vertical coordinate
+    var top = document.getElementById("stickfigure").offsetTop;
+    console.log(top)
+    var player = document.getElementById("stickfigure");
+
+
+    switch (e.which) {
+      case 87: // Move Buttons (Keyboard Up)
+          if(top === 109) {
+            stickFigure.animate({ top: "-=0px" }, 1);
+          }
+          else { 
+            // basic up movement
+            stickFigure.animate({ top: "-=106.2px" }, 1);
+        }
+
+        // ==========================================
+        // Taxi Impassable Sector3
+        if (top <= 217 && worldsector === 3) {
+          stickFigure.animate({ top: "-=0px"}, 1);
+          // player.style.top = 215.5+"px";
+        }
+      break;
+
+
+
+      case 68: // Move Buttons (Keyboard Right)
+        // basic right movement
+          stickFigure.animate({ left: "+=100.4px" }, 1);
+
+        // ==========================================
+        // This is for moving forwards between world sectors
+        // when you pass this threshold,
+          if (left > 1519) {
+            // increase worldsector number
+            worldsector = worldsector+1;
+            // and move player back this many pixels to the left
+            stickFigure.animate({ left: "-=1708px"}, 1);
+            console.log(worldsector);
+          }
+      break;
+
+
+
+      case 65: // Move Buttons (Keyboard Left)
+        // This is the left border only for the first sector
+          if(left <= 115 && worldsector === 1) {
+            stickFigure.animate({ left: "-=0px" }, 1);
+          }
+          else { // basic left movement
+            stickFigure.animate({ left: "-=100.4px" }, 1);
+          }
+
+          // ==========================================
+          // This is moving backwards between world sectors
+          // when you this this pixel threshold
+          if (left <= 13 && worldsector >= 2) {
+            // move player to the right by this many pixels
+            stickFigure.animate({left: "+1620px"}, 1);
+            // decrease the worldSector number
+            worldsector = worldsector-1;
+            console.log(worldsector);
+          }
+      break;
+
+
+
+      case 83: // Move Buttons (Keyboard Down)
+          // This is the border for the bottom
+          if(top === 747) { 
+            stickFigure.animate({ top: "+=0px" }, 1);
+          }
+          else { // basic down movement 
+            stickFigure.animate({ top: "+=106.2px" }, 1);
+          }
+      break;
+
+
+
+      default:
+      break;
+
+    }
+    
+
+
 
 
   //Moves the player over to the next section
-  if (left > 1650) {
-          worldsector = worldsector+1;
-          player.style.left = 9.2+"px";
-          console.log(worldsector);
-  }
-  else if (left < 8 && worldsector >= 2) {
-          player.style.left = 1615.6+"px";
-          worldsector = worldsector-1;
-          console.log(worldsector);
-  }
+  // if (left > 1519) {
+  //         worldsector = worldsector+1;
+  //         player.style.left = 9.2+"px";
+  //         console.log(worldsector);
+  // }
+  // else if (left < 8 && worldsector >= 2) {
+  //         player.style.left = 1615.6+"px";
+  //         worldsector = worldsector-1;
+  //         console.log(worldsector);
+  // }
 
   // Impassables
-  if (top > 642) {
-    player.style.top = 746.5+"px";
-    // stickFigure.animate({ top: "+747px"}, 1);
-    console.log("this happened");
-  }
-  if (top < 108) {
-    player.style.top = 109.3+"px";
-  }
-  if (left < 108 && worldsector === 1) {
-    player.style.left = 109.6+"px";
-  }
+  // if (top >= 747) {
+  //   player.style.top = 746.5+"px";
+  //   // stickFigure.animate({ top: "+747px"}, 1);
+  //   console.log("this happened");
+  // }
+  // if (top < 108) {
+  //   player.style.top = 109.3+"px";
+  // }
+
+  // ==========================================
+  // ==========================================
+  // I dont know what these are for ~~ Daniel 
+  // if (left < 108 && worldsector === 1) {
+  //   player.style.left = 109.6+"px";
+  // }
   //Walls for level 3
   if (left > 108 && top === 640 && worldsector === 3) {
-    player.style.top = 534.1+"px";
+    stickFigure.animate({ top: "=534.1px"}, 1);
+    // player.style.top = 534.1+"px";
   }
-  if (left > 108 && top < 120 && worldsector === 3) {
-    player.style.top = 215.5+"px";
-  }
+  // if (left > 108 && top <= 216 && worldsector === 3) {
+  //   stickFigure.animate({ top: "-=0px"}, 1);
+  //   // player.style.top = 215.5+"px";
+  // }
   //Walls for level 4
   if (left < 612 && top === 640 && worldsector === 4) {
     player.style.top = 534.1+"px";
@@ -65,31 +153,6 @@ function charMovement(e) {
     player.style.top = 109.3+"px";
     player.style.left = 9.2+"px";
   };
-    switch (e.which) {
-
-      // Move Buttons (Keyboard Down)
-      case 83:
-        stickFigure.animate({ top: "+=106.2px" }, 1);
-        break;
-  
-        // Move Buttons (Keyboard Right)
-      case 68:
-        stickFigure.animate({ left: "+=100.4px" }, 1);
-        break;
-  
-        // Move Buttons (Keyboard Up)
-      case 87:
-        stickFigure.animate({ top: "-=106.2px" }, 1);
-        break;
-  
-        // Move Buttons (Keyboard Left)
-      case 65:
-        stickFigure.animate({ left: "-=100.4px" }, 1);
-        break;
-  
-      default:
-        break;
-      }
   })
 }
 
