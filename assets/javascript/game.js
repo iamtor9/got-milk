@@ -2,11 +2,69 @@
 // Confused at what the class stick is referring to since it only appears here - How does it function? ~~ Daniel
 var stickFigure = $(".stick");
 
+//global variable to determine what sector of the world the player is in
+let worldsector = 1;
+console.log(worldsector);
+
 // This function is seperated so that we can disable it at some other point in time
 // We have it first so we refer to it
 function charMovement(e) {
   // changed to down so players can hold down the movement buttons to move quickly
   document.addEventListener("keydown", function(e) {
+    var left = document.getElementById("stickfigure").offsetLeft;
+  console.log(left)
+  //Players vertical coordinate
+  var top = document.getElementById("stickfigure").offsetTop;
+  console.log(top)
+  var player = document.getElementById("stickfigure");
+
+
+  //Moves the player over to the next section
+  if (left > 1650) {
+          worldsector = worldsector+1;
+          player.style.left = 9.2+"px";
+          console.log(worldsector);
+  }
+  else if (left < 8 && worldsector >= 2) {
+          player.style.left = 1615.6+"px";
+          worldsector = worldsector-1;
+          console.log(worldsector);
+  }
+
+  // Impassables
+  if (top > 642) {
+    player.style.top = 746.5+"px";
+    // stickFigure.animate({ top: "+747px"}, 1);
+    console.log("this happened");
+  }
+  if (top < 108) {
+    player.style.top = 109.3+"px";
+  }
+  if (left < 108 && worldsector === 1) {
+    player.style.left = 109.6+"px";
+  }
+  //Walls for level 3
+  if (left > 108 && top === 640 && worldsector === 3) {
+    player.style.top = 534.1+"px";
+  }
+  if (left > 108 && top < 120 && worldsector === 3) {
+    player.style.top = 215.5+"px";
+  }
+  //Walls for level 4
+  if (left < 612 && top === 640 && worldsector === 4) {
+    player.style.top = 534.1+"px";
+  }
+  if (left === 712 && top > 320 && worldsector === 4) {
+    player.style.left = 611.6+"px";
+  }
+  if (left > 812 && left < 1215 && top === 322 && worldsector === 4) {
+    player.style.top = 215.5+"px";
+  }
+  //Walls for level 5
+  if (left === 109 && top === 109 && worldsector === 5) {
+    player.style.top = 109.3+"px";
+    player.style.left = 9.2+"px";
+  };
     switch (e.which) {
 
       // Move Buttons (Keyboard Down)
@@ -44,64 +102,64 @@ window.addEventListener("load", (function() {
 
 // ========================================================================================================================================
 // ========================================================================================================================================
-//global variable to determine what sector of the world the player is in
-let worldsector = 1;
-console.log(worldsector);
+// //global variable to determine what sector of the world the player is in
+// let worldsector = 1;
+// console.log(worldsector);
 
 //Constantly record and update player coordinates every 50 ms
-setInterval(function(){   
-//Players horizontal coordinate
-var left = document.getElementById("stickfigure").offsetLeft;
-console.log(left)
-//Players vertical coordinate
-var top = document.getElementById("stickfigure").offsetTop;
-console.log(top)
-var player = document.getElementById("stickfigure");
+// setInterval(function(){   
+// //Players horizontal coordinate
+// var left = document.getElementById("stickfigure").offsetLeft;
+// console.log(left)
+// //Players vertical coordinate
+// var top = document.getElementById("stickfigure").offsetTop;
+// console.log(top)
+// var player = document.getElementById("stickfigure");
 
 
-//Moves the player over to the next section
-if (left > 1650) {
-         worldsector = worldsector+1;
-         player.style.left = 9.2+"px";
-         console.log(worldsector);
-}
-else if (left < 8 && worldsector >= 2) {
-         player.style.left = 1615.6+"px";
-         worldsector = worldsector-1;
-         console.log(worldsector);
-}
-else if (top > 748) {
-  player.style.top = 746.5+"px";
-}
-else if (top < 108) {
-  player.style.top = 109.3+"px";
-}
-else if (left < 108 && worldsector === 1) {
-  player.style.left = 109.6+"px";
-}
-//Walls for level 3
-else if (left > 108 && top === 640 && worldsector === 3) {
-  player.style.top = 534.1+"px";
-}
-else if (left > 108 && top < 120 && worldsector === 3) {
-  player.style.top = 215.5+"px";
-}
-//Walls for level 4
-else if (left < 612 && top === 640 && worldsector === 4) {
-  player.style.top = 534.1+"px";
-}
-else if (left === 712 && top > 320 && worldsector === 4) {
-  player.style.left = 611.6+"px";
-}
-else if (left > 812 && left < 1215 && top === 322 && worldsector === 4) {
-  player.style.top = 215.5+"px";
-}
-//Walls for level 5
-else if (left === 109 && top === 109 && worldsector === 5) {
-  player.style.top = 109.3+"px";
-  player.style.left = 9.2+"px";
-};
-                  }, 50);
+// //Moves the player over to the next section
+// if (left > 1650) {
+//          worldsector = worldsector+1;
+//          player.style.left = 9.2+"px";
+//          console.log(worldsector);
+// }
+// else if (left < 8 && worldsector >= 2) {
+//          player.style.left = 1615.6+"px";
+//          worldsector = worldsector-1;
+//          console.log(worldsector);
+// }
+// else if (top > 748) {
+//   player.style.top = 746.5+"px";
+// }
+// else if (top < 108) {
+//   player.style.top = 109.3+"px";
+// }
+// else if (left < 108 && worldsector === 1) {
+//   player.style.left = 109.6+"px";
+// }
+// //Walls for level 3
+// else if (left > 108 && top === 640 && worldsector === 3) {
+//   player.style.top = 534.1+"px";
+// }
+// else if (left > 108 && top < 120 && worldsector === 3) {
+//   player.style.top = 215.5+"px";
+// }
+// //Walls for level 4
+// else if (left < 612 && top === 640 && worldsector === 4) {
+//   player.style.top = 534.1+"px";
+// }
+// else if (left === 712 && top > 320 && worldsector === 4) {
+//   player.style.left = 611.6+"px";
+// }
+// else if (left > 812 && left < 1215 && top === 322 && worldsector === 4) {
+//   player.style.top = 215.5+"px";
+// }
+// //Walls for level 5
+// else if (left === 109 && top === 109 && worldsector === 5) {
+//   player.style.top = 109.3+"px";
+//   player.style.left = 9.2+"px";
+// };
+//                   }, 50);
 
 
 
@@ -128,15 +186,15 @@ for(let i = 0; i < 153; i++) {
   const taxi = document.createElement("img");
   taxi.setAttribute("src", "./assets/images/neutrals/taxi.png");
   taxi.setAttribute("class", "hide");
-  //Skull IMG
+//Skull IMG
   const skull = document.createElement("img");
   skull.setAttribute("src", "./assets/images/neutrals/skull.png");
   skull.setAttribute("class", "hide");
-  //Fish IMG
+//Fish IMG
   const fish = document.createElement("img");
   fish.setAttribute("src", "./assets/images/neutrals/fish.png");
   fish.setAttribute("class", "hide");
-  //Lava IMG
+//Lava IMG
   const lava = document.createElement("img");
   lava.setAttribute("src", "./assets/images/tiles/fulllava.png");
   lava.setAttribute("class", "hide");
@@ -198,7 +256,7 @@ for(let i = 0; i < 153; i++) {
   
   function myFunction() {
     setInterval(function(){
-      console.log("this is always tracking? YES IT IS - thats how the images are always changing regarless of the appended items from the function tileSet()");
+      // console.log("this is always tracking? YES IT IS - thats how the images are always changing regarless of the appended items from the function tileSet()");
 
       if(worldsector === 2){
         brock.style.display="none";
@@ -241,9 +299,10 @@ for(let i = 0; i < 153; i++) {
         fish.setAttribute("class", "hide");
         lava.setAttribute("class", "fulllava");
       };
-    }, 10);
+    }, 50);
   }
   myFunction();
+
 
   //let rng = Math.floor(Math.random() * 41);
 
@@ -263,3 +322,32 @@ for(let i = 0; i < 153; i++) {
 };
 
 tileSet();
+
+
+
+
+// ========================================================================================================================================
+// ========================================================================================================================================
+
+function enemyGenerator() {
+  const tile = document.createElement("div");
+  tile.classList.add("grid-item");
+
+  const enemy = document.createElement("img");
+  enemy.setAttribute("src", "./assets/images/presidents/trump.png");
+  enemy.setAttribute("class", "politician");
+
+  if(worldsector === 1) {
+    for(let i = 0; i < 153; i++) {
+
+      if(i > 17 && i < 135) {
+        // let rng = Math.floor(Math.random() * 41);
+        // console.log(rng);
+        // if(rng === 17) {
+          tile.append(enemy);
+        // }
+      }
+    }
+  }
+}
+enemyGenerator();
