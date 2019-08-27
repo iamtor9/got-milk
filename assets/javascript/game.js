@@ -20,6 +20,26 @@ worldSector();
 
 
 
+
+
+const testFunc = function testingThisFunction(i) {
+  console.log("Yo this is a test" + i);
+  // return console.log(i);
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // This function is seperated so that we can disable it at some other point in time
 // We have it first so we refer to it
 function charMovement() {
@@ -41,6 +61,9 @@ function charMovement() {
         else { 
           // basic up movement
           stickFigure.animate({ top: "-=106.2px" }, 1);
+        }
+        for(let i = 0; i<4; i++) {
+          testFunc(i);
         }
       break;
 
