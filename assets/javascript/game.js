@@ -21,11 +21,12 @@ function ObamaFunction() {
   lock = false;
 };
 
-//Function to disable reactivation of obamas textbox
+//Function to disable reactivation of putins textbox
 function PutinFunction() {
   document.getElementById("putintextbox").style.display = "none";
   putinbox = false;
   lock = false;
+  exp = exp + 50;
 };
 
 //Function to fight putin
@@ -94,6 +95,9 @@ var top = document.getElementById("stickfigure").offsetTop;
 console.log(top)
 var player = document.getElementById("stickfigure");
 
+document.getElementById("php").innerHTML = "Health: " + hp;
+document.getElementById("pexp").innerHTML = "EXP: " + exp;
+
 
 //Moves the player over to the next section
 if (left > 1650) {
@@ -159,14 +163,8 @@ else if (left > 812 && left < 1219 && top === 322 && worldsector === 4) {
 else if (left > 812 && left < 1219 && top === 428 && worldsector === 4) {
   player.style.top = 534.1+"px";
 }
-else if (left === 716 && top === 322 && worldsector === 4) {
-  player.style.left = 615.6+"px";
-}
-else if (left === 716 && top === 428 && worldsector === 4) {
-  player.style.left = 615.6+"px";
-}
-else if (left === 716 && top === 534 && worldsector === 4) {
-  player.style.left = 615.6+"px";
+else if (left === 712 && top > 321 && worldsector === 4) {
+  player.style.left = 611.6+"px";
 }
 else if (left === 817 && top === 640 && worldsector === 4) {
   player.style.left = 916.8+"px";
@@ -176,6 +174,12 @@ else if (left === 817 && top === 534 && worldsector === 4) {
 }
 else if (left === 817 && top === 747 && worldsector === 4) {
   player.style.left = 916.8+"px";
+}
+else if (left === 611 && top === 747 && worldsector === 4) {
+  player.style.top = 534.1+"px";
+}
+else if (left === 813 && top > 533 && worldsector === 4) {
+  player.style.left = 912.8+"px";
 }
 //Walls for level 5
 else if (left === 109 && top === 109 && worldsector === 5) {
@@ -276,8 +280,60 @@ else if (left === 1315 && top === 747 && worldsector === 5) {
 }
 else if (left === 1515 && top === 747 && worldsector === 5) {
   player.style.left = 1214+"px";
+}
+//Walls for level 6
+else if (left === 210 && top === 109 && worldsector === 6) {
+  hp = hp-2;
+}
+else if (left === 311 && top === 109 && worldsector === 6) {
+  hp = hp-2;
+}
+else if (left === 813 && top === 109 && worldsector === 6) {
+  hp = hp-2;
+}
+else if (left === 913 && top === 109 && worldsector === 6) {
+  hp = hp-2;
+}
+else if (left === 1415 && top === 109 && worldsector === 6) {
+  hp = hp-2;
+}
+else if (left === 1515 && top === 109 && worldsector === 6) {
+  hp = hp-2;
+}
+else if (left === 511 && top === 322 && worldsector === 6) {
+  hp = hp-2;
+}
+else if (left === 611 && top === 322 && worldsector === 6) {
+  hp = hp-2;
+}
+else if (left === 1113 && top === 322 && worldsector === 6) {
+  hp = hp-2;
+}
+else if (left === 1214 && top === 322 && worldsector === 6) {
+  hp = hp-2;
+}
+else if (left > 108 && top === 428 && worldsector === 6) {
+  hp = hp-2;
+}
+else if (left === 109 && top === 534 && worldsector === 6) {
+  hp = hp-2;
+}
+else if (left === 712 && top === 534 && worldsector === 6) {
+  hp = hp-2;
+}
+else if (left === 1315 && top === 534 && worldsector === 6) {
+  hp = hp-2;
+}
+else if (left === 109 && top === 747 && worldsector === 6) {
+  hp = hp-2;
+}
+else if (left === 712 && top === 747 && worldsector === 6) {
+  hp = hp-2;
+}
+else if (left === 1315 && top === 747 && worldsector === 6) {
+  hp = hp-2;
 };
-                  }, 50);
+                  }, 25);
 
 function tileSet() {
 for(let i = 0; i < 153; i++) {
