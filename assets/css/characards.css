@@ -145,3 +145,7 @@
 /*BIRTHDAY BEAR SPECIFIC Health and Damage */
 .BBhealthPercent {width: 40%; background-color: #4CAF50;} /* Green */
 .BBdamagePercent {width: 50%; background-color: #f44336;} /* Red */
+
+#characterBtn:hover {
+cursor: pointer;
+};
