@@ -20,7 +20,7 @@ body, html {
   
   .bg-image {
     /* The image used */
-    background-image: url("/Users/victoriasorone/Desktop/got-milk/got-milk/assets/images/skyintro.png");
+    background-image: url("../images/skyintro.jpg");
     
     /* Add the blur effect */
     filter: blur(8px);

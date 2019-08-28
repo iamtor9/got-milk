@@ -3,10 +3,11 @@ body {
   /* Force the body to fill the entire screen */
   width: 100%;
   height: 100%;
+  margin: 0%;
   /* Hide elements that flow outside the viewable space */
   overflow: hidden;
   /* Black background for the screen */
-  /*background-image: "/Users/victoriasorone/Desktop/got-milk/got-milk/assets/images/skyintro.png";*/
+  /*background-image: "/Users/victoriasorone/Desktop/got-milk/got-milk/assets/images/skyintro.jpg";*/
 }
 
 #skyintro {
@@ -53,7 +54,7 @@ body {
 }
 100% { 
   /* This is a magic number, but using a big one to make sure the text is fully off the screen at the end */
-  top: -6000px;
+  top: -6200px;
   /* Slightly increasing the rotation at the end and moving the text far away from the viewer */
   transform: rotateX(25deg) translateZ(-2500px);
 }
@@ -64,7 +65,7 @@ body {
   /* Defines the skew origin at the very center when we apply transforms on the animation */
   transform-origin: 50% 100%;
   /* Adds the crawl animation, which plays for one minute */
-  animation: crawl 60s linear;
+  animation: crawl 50s linear;
 }
 .fade {
   position: relative;
