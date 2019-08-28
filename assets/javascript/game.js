@@ -35,7 +35,7 @@ function PutinFunction() {
 function putinfight() {
 putinhealth = putinhealth - Math.floor(Math.random() * 10) - atk;
 
-hp = hp - Math.floor(Math.random() * 10);
+hp = hp - Math.floor(Math.random() * (10-def));
 };
 
 // JavaScript function that wraps controls
@@ -91,26 +91,26 @@ let putinbox = true;
 setInterval(function(){   
 //Players horizontal coordinate
 var left = document.getElementById("stickfigure").offsetLeft;
-console.log(left)
+//console.log(left)
 //Players vertical coordinate
 var top = document.getElementById("stickfigure").offsetTop;
-console.log(top)
+//console.log(top)
 var player = document.getElementById("stickfigure");
 
-document.getElementById("php").innerHTML = "Health: " + hp;
-document.getElementById("pexp").innerHTML = "EXP: " + exp;
+document.getElementById("php").innerHTML = hp + "/100";
+//document.getElementById("pexp").innerHTML = "EXP: " + exp;
 
 
 //Moves the player over to the next section
 if (left > 1650) {
          worldsector = worldsector+1;
          player.style.left = 9.2+"px";
-         console.log(worldsector);
+         //console.log(worldsector);
 }
 else if (left < 8 && worldsector >= 2) {
          player.style.left = 1615.6+"px";
          worldsector = worldsector-1;
-         console.log(worldsector);
+         //console.log(worldsector);
 }
 else if (top > 748) {
   player.style.top = 746.5+"px";

@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <!-- JQuery -->
   <script src="https://code.jquery.com/jquery.js"></script>
+  <!-- stats Box CSS -->
+  <link rel="stylesheet" href="./assets/css/stats.css">
 
 </head>
 
@@ -18,9 +20,6 @@
       <!------------------------------Grid Layout for First Overworld------------------------------>
             <div class="grid-container">     </div>
         <!----------------------------------------------------------------------------------------->
-
-        <div id="php" style="color: blueviolet; background-color: cornsilk; font-size: 20px; width: 100px;"></div>
-        <div id="pexp" style="color: blueviolet; background-color: cornsilk; font-size: 20px; width: 100px;"></div>
 
       <!------------------Text Boxes-------------------->
       <div id=trumptextbox>
@@ -45,6 +44,30 @@
       </div>
 
      <!----> 
+
+<!-- Modal menu -->
+<div class="modalMenu">
+    <!-- <p> das</p> -->
+  </div>
+  
+  <!-- stats box -->
+  <div class="statsBox">
+    <!-- icon -->
+    <div class="icon">
+        <!-- <img src="./assets/images/carebears/carebare.png"> -->
+    </div>
+    <!-- Health bar -->
+    <div class="healthBar">
+          <p id="php" class="noMargin">100/100</p>
+    </div>
+    <!-- Exp bar -->
+    <div class="expBarDiv">
+        <p class="noMargin">Experience</p>
+        <!-- WE ARE GOING TO HAVE TO DYNAMICALLY CHANGE THIS WHEN WE DEFEAT ENEMIES, OTHER PNGS IN THE FOLDER -->
+        <img src="assets/images/expBars/0_7Exp.png" class="expBar">
+    </div>
+  </div>
+
 
         <!-- Character Image -->
         <img src="./assets/images/carebears/carebare.png" alt="" id="stickfigure" class="img stick">
