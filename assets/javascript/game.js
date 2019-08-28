@@ -7,6 +7,8 @@ exp = 0
 
 putinhealth = 50
 
+
+
 //Function to disable reactivation of trumps textbox
 function TrumpFunction() {
   document.getElementById("trumptextbox").style.display = "none";
@@ -496,3 +498,61 @@ if(i === 69 || i === 70 || i === 71 || i === 72 || i === 73 || i === 74 || i ===
 };
 
 tileSet();
+
+//Menu Script ---------------------------------------------------------------------------------------------
+// Get the modal
+var modal = document.getElementById("characterModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("characterBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+  lock = true;
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+  lock = false;
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+//Bootstrap Carousel javascript
+// $(document).ready(function(){
+//     // Activate Carousel
+//     $("#myCarousel").carousel();
+      
+//     // Enable Carousel Indicators
+//     $(".item1").click(function(){
+//       $("#myCarousel").carousel(0);
+//     });
+//     $(".item2").click(function(){
+//       $("#myCarousel").carousel(1);
+//     });
+//     $(".item3").click(function(){
+//       $("#myCarousel").carousel(2);
+//     });
+//     $(".item4").click(function(){
+//       $("#myCarousel").carousel(3);
+//     });
+      
+//     // Enable Carousel Controls
+//     $(".left").click(function(){
+//       $("#myCarousel").carousel("prev");
+//     });
+//     $(".right").click(function(){
+//       $("#myCarousel").carousel("next");
+//     });
+//   });
+
+//Menu Script End ---------------------------------------------------------------------------------------------
