@@ -83,7 +83,7 @@ function move(e) {
 
 
 //global variable to determine what sector of the world the player is in
-let worldsector = 1;
+let worldsector = 3;
 //Variables for text boxes. True means they can be activated.
 let trumpbox = true;
 let obamabox = true;
