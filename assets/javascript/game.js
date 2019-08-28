@@ -12,6 +12,7 @@ function TrumpFunction() {
   document.getElementById("trumptextbox").style.display = "none";
   trumpbox = false;
   lock = false;
+  exp = exp + 5;
 };
 
 //Function to disable reactivation of obamas textbox
@@ -19,6 +20,7 @@ function ObamaFunction() {
   document.getElementById("obamatextbox").style.display = "none";
   obamabox = false;
   lock = false;
+  exp = exp + 10;
 };
 
 //Function to disable reactivation of putins textbox
