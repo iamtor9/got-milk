@@ -18,15 +18,9 @@
 
 #stickfigure {
   position: absolute;
-<<<<<<< HEAD
-  z-index: 2; 
-  top:215.5px; 
-  left: 314.4px;
-=======
   z-index: 20; 
   top: 427.9px; 
   left: 310.4px;
->>>>>>> bc385e76123195e97cbaa8616fd539dddaa98dba
   height: 100px;
   width: 80px;
 }
