@@ -6,23 +6,175 @@
   <title>Game Grid Movment</title>
   <!--CSS File-->
   <link rel="stylesheet" href="./assets/css/style.css">
-  <!-- Bootstrap File -->
+  <!-- Bootstrap CSS File -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <!-- JQuery -->
   <script src="https://code.jquery.com/jquery.js"></script>
+  <!-- Game Menu CSS File-->
+  <link rel="stylesheet" href="assets/css/gameMenu.css">
+  <!-- W3 School CSS File -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!-- Characards Modal CSS File-->
+  <link rel="stylesheet" href="./assets/css/characards.css">
 
 </head>
 
 <body>
 
       <!------------------------------Grid Layout for First Overworld------------------------------>
-            <div class="grid-container">     </div>
+            <div class="grid-container">    </div>
         <!----------------------------------------------------------------------------------------->
 
         <!-- Character Image -->
-        <img src="./assets/images/carebears/carebare.png" alt="" id="stickfigure" class="img stick">
+        <img src="./assets/images/carebears/carebare.png" alt="" id="stickfigure" class="img stick">  
 
+<!--------------------------------------MODAL CAROUSEL Character Select------------------------------->
+        <!--Game Options and Trigger/Open-->
+        <div class="dropdown">
+          <button class="dropbtn">Game Options</button>
+          <div class="dropdown-content">
+            <a href="#">Game Intro</a>
+            <a href="#">How to Play</a>
+            <button id="characterBtn">Character Select</button> <!--Update button css so that it looks like a menu item and not a button-->
+          </div>
+        </div>
+        <!-- The Character Select Modal -->
+        <div id="characterModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+        <div id="grad1" class="modal-header"> <!-- Rainbow gradient header -->
+          <span class="close">&times;</span>
+          <h2></h2>
+        </div>
+        <!-- Modal Card Row -->
+        <div class="w3-row-padding">
+        
+        <!-- GRUMPY BEAR CARD -->
+        <div class="modal-body w3-container w3-third">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/images/carebears/grumpybear-removebg-preview.png" alt="GrumpyBearAvatar" style="width:300px;height:300px;">
+              </div>
+              <div class="flip-card-back">
+                <h1>Grumpy Bear</h1> 
+                <p>Something about grumpy....some other things that are cool about him.....maybe he blasts presidents with doom and gloom?</p> 
+                <p>We love that guy</p>
+                <p></p>
+                <div class="container">
+                  <div class="skills GBhealthPercent">Health 35%</div>
+                </div>
+                <p></p>
+                <div class="container">
+                  <div class="skills GBdamagePercent">Damage 65%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- LOVE-A-LOT BEAR CARD-->
+        <div class="modal-body w3-container w3-third">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/images/carebears/lovealotbear-removebg-preview.png" alt="LovealotBearAvatar" style="width:300px;height:300px;">
+              </div>
+              <div class="flip-card-back">
+                <h1>Love-a-lot Bear</h1> 
+                <p>Something about love-a-lot bear....some other things that are cool about him.....maybe he blasts enemies with overwhelming love??</p> 
+                <p>We love that guy</p>
+                <p></p>
+                <div class="container">
+                  <div class="skills PHhealthPercent">Health 75%</div>
+                </div>
+                <p></p>
+                <div class="container">
+                  <div class="skills PHdamagePercent">Damage 35%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- FUNSHINE BEAR CARD-->
+        <div class="modal-body w3-container w3-third">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/images/carebears/funshine-bear-edited.png" alt="FunshineBearAvatar" style="width:300px;height:300px;">
+              </div>
+              <div class="flip-card-back">
+                <h1>Funshine Bear</h1> 
+                <p>Something about Funshine bear....some other things that are cool about him.....maybe he blasts enemies with cupcakes in the face??</p> 
+                <p>We love that guy</p>
+                <p></p>
+                <div class="container">
+                  <div class="skills BBhealthPercent">Health 40%</div>
+                </div>
+                <p></p>
+                <div class="container">
+                  <div class="skills BBdamagePercent">Damage 50%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+         <!-- FRIEND BEAR CARD-->
+         <div class="modal-body w3-container w3-third">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/images/carebears/friend-bear-removebg-preview.png" alt="FriendBearAvatar" style="width:300px;height:300px;">
+              </div>
+              <div class="flip-card-back">
+                <h1>Friend Bear</h1> 
+                <p>Something about Friend bear....some other things that are cool about him.....maybe he blasts enemies with overwhelming love??</p> 
+                <p>We love that guy</p>
+                <p></p>
+                <div class="container">
+                  <div class="skills SBhealthPercent">Health 75%</div>
+                </div>
+                <p></p>
+                <div class="container">
+                  <div class="skills SBdamagePercent">Damage 35%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- CHEER BEAR CARD-->
+        <div class="modal-body w3-container w3-third">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/images/carebears/cheer-bear-removebg-preview.png" alt="CheerBearAvatar" style="width:300px;height:300px;">
+              </div>
+              <div class="flip-card-back">
+                <h1>Cheer Bear </h1> 
+                <p>Something about Cheer bear....some other things that are cool about him.....maybe he blasts enemies with overwhelming love??</p> 
+                <p>We love that guy</p>
+                <p></p>
+                <div class="container">
+                  <div class="skills SBhealthPercent">Health 75%</div>
+                </div>
+                <p></p>
+                <div class="container">
+                  <div class="skills SBdamagePercent">Damage 35%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div id="grad1" class="modal-footer"> <!-- Rainbow gradient footer -->
+          <h3></h3>
+        </div>
+        </div>
+<!------------------------------------------------------------------------------------------------------>
+        <!--Overworld javascript-->  
         <script src="./assets/javascript/game.js"></script>
+
+        <!--Character Select javascript and cards with flip functionality-->
+        <script src="./assets/javascript/characards.js"></script>
 
 </body>
 </html>
