@@ -18,12 +18,135 @@
 
 #stickfigure {
   position: absolute;
-  z-index: 20; 
-  top:215.5px; 
-  left: 314.4px;
+  z-index: 2; 
+  top: 427.9px; 
+  left: 310.4px;
   height: 100px;
   width: 80px;
 }
+
+#trumptextbox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: black;
+  display: "";
+  height: 100px;
+  width: 300px;
+  display: none;
+  z-index: 21;
+}
+
+#trumpert {
+  height: 110px;
+  width: 100px;
+  position: absolute;
+    margin-top: -10px;
+}
+
+#obamatextbox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: black;
+  display: "";
+  height: 100px;
+  width: 300px;
+  display: none;
+  z-index: 21;
+}
+
+#obamert {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+    margin-top: 0px;
+    margin-left: -5px;
+}
+
+#putintextbox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: black;
+  display: "";
+  height: 200px;
+  width: 300px;
+  display: none;
+  z-index: 21;
+}
+
+#putinert {
+  height: 110px;
+  width: 100px;
+  position: absolute;
+    margin-top: -5px;
+    margin-left: 200px;
+}
+
+#battlebear {
+  height: 80px;
+  width: 90px;
+  position: absolute;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+#health {
+  position: absolute;
+    margin-top: 110px;
+    margin-left: 40px;
+}
+
+#attack {
+  position: absolute;
+    margin-top: 160px;
+    margin-left: 25px;
+}
+
+#putinhealth {
+  position: absolute;
+    margin-top: 110px;
+    margin-left: 241px;
+}
+
+#endbutton {
+  position: absolute;
+  height: 40px;
+  z-index: 25;
+  margin-top: 60px;
+  margin-left: 259.2px;
+}
+
+#endbuttonfight {
+  position: absolute;
+  height: 40px;
+  z-index: 25;
+  margin-top: 160px;
+  margin-left: 259.2px;
+  display: none;
+}
+
+.texter{
+  position: absolute;
+    margin-top: 25px;
+    margin-left: 85px;
+    font-family: dialoguefont;
+}
+
+.texter2{
+  position: absolute;
+    margin-top: 25px;
+    margin-left: 0px;
+    font-family: dialoguefont;
+}
+
 
 .hide {
   display: none;
@@ -98,6 +221,31 @@
   position: absolute;
   z-index: 2;
   height: 100px;
+  margin-left: 32.5px;
+  margin-top: 2.5px;
+}
+
+#trump {
+  position: absolute;
+  z-index: 2;
+  height: 100px;
+  margin-left: 32.5px;
+  margin-top: 2.5px;
+  display: "";
+}
+
+.obama {
+  position: absolute;
+  z-index: 2;
+  height: 105px;
+  width: 95px;
+}
+
+.putin {
+  position: absolute;
+  z-index: 2;
+  height: 105px;
+  width: 95px;
 }
 
 .grass {
@@ -105,4 +253,14 @@
   position: relative;
   height: 104.2px;
   width: 98.4px;
+}
+
+@font-face {
+  font-family: dialoguefont;
+  src: url(./DTM-Mono.otf);
+}
+
+@font-face {
+  font-family: menufont;
+  src: url(./DTM-Sans.otf);
 }
