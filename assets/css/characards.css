@@ -68,7 +68,7 @@
   animation-duration: 0.4s
 }
 
-/* Add Animation */
+/* Add Animation (i.e. modal flies in from the top)*/
 @keyframes animatetop {
   from {top: -300px; opacity: 0}
   to {top: 0; opacity: 1}
