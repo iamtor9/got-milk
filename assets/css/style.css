@@ -25,6 +25,26 @@
   width: 80px;
 }
 
+#controls{
+  position: fixed;
+  top: 49.95%;
+  left: 49.99%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: black;
+  display: "";
+  height: 318px;
+  width: 502.5px;
+  display: none;
+  z-index: 21;
+  font-family: dialoguefont;
+}
+
+#exitcontrols:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
 #trumptextbox {
   position: fixed;
   top: 50%;
