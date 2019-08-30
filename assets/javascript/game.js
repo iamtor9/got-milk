@@ -12,6 +12,8 @@ putinhealth = 50
     console.log(event);
     if (event.target === document.querySelector(".character1")) {
       document.getElementById("stickfigure").src = "./assets/images/carebears/grumpybear.png";
+      document.getElementById("battlebear").src = "./assets/images/carebears/grumpybear.png";
+      document.getElementById("profile").setAttribute("class", "icon1");
       atk = 6;
       def = 3;
       document.getElementById("pdef").innerHTML = "Defense: " + def;
@@ -23,6 +25,8 @@ putinhealth = 50
     console.log(event);
     if (event.target === document.querySelector(".character2")) {
       document.getElementById("stickfigure").src = "./assets/images/carebears/lovealotbear.png";
+      document.getElementById("battlebear").src = "./assets/images/carebears/lovealotbear.png";
+      document.getElementById("profile").setAttribute("class", "icon2");
       atk = 3;
       def = 7;
       document.getElementById("pdef").innerHTML = "Defense: " + def;
@@ -34,6 +38,8 @@ putinhealth = 50
     console.log(event);
     if (event.target === document.querySelector(".character3")) {
       document.getElementById("stickfigure").src = "./assets/images/carebears/funshine.png";
+      document.getElementById("battlebear").src = "./assets/images/carebears/funshine.png";
+      document.getElementById("profile").setAttribute("class", "icon3");
       atk = 5;
       def = 4;
       document.getElementById("pdef").innerHTML = "Defense: " + def;
@@ -45,6 +51,8 @@ putinhealth = 50
     console.log(event);
     if (event.target === document.querySelector(".character4")) {
       document.getElementById("stickfigure").src = "./assets/images/carebears/friend-bear.png";
+      document.getElementById("battlebear").src = "./assets/images/carebears/friend-bear.png";
+      document.getElementById("profile").setAttribute("class", "icon4");
       atk = 3;
       def = 5;
       document.getElementById("pdef").innerHTML = "Defense: " + def;
@@ -56,6 +64,8 @@ putinhealth = 50
     console.log(event);
     if (event.target === document.querySelector(".character5")) {
       document.getElementById("stickfigure").src = "./assets/images/carebears/cheer-bear.png";
+      document.getElementById("battlebear").src = "./assets/images/carebears/cheer-bear.png";
+      document.getElementById("profile").setAttribute("class", "icon5");
       atk = 2;
       def = 6;
       document.getElementById("pdef").innerHTML = "Defense: " + def;

@@ -5,12 +5,12 @@
     padding: 16px;
     font-size: 16px;
     border: none;
-    left: 94.9%;
+    left: 91%;
   }
   
   /* The container <div> - needed to position the dropdown content */
   .dropdown {
-    position: relative;
+    position: fixed;
     left: 91%;
   }
   
