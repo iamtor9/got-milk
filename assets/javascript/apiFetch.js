@@ -130,7 +130,7 @@ function callGifAttack() {
     const APIKey = "SF5z5yrS08Hg6RXmKUUTuAVDOH4j0GqG";
     let amount = 100;
     let gif;
-    console.log(totalGifArray);
+    // console.log(totalGifArray);
 
     // if statements to differentiate between the carebear choices
     if(i === 0) {
@@ -140,7 +140,7 @@ function callGifAttack() {
       gif = "care bear"
     }
     const queryURL = "https://api.giphy.com/v1/gifs/search?q=" + gif + "&api_key=" + APIKey + "&limit=" + amount;
-    console.log(queryURL);
+    // console.log(queryURL);
 
 
     fetch(queryURL).then(function(response) {
@@ -148,7 +148,7 @@ function callGifAttack() {
     }).then(function(responseJSON) {
       const results = responseJSON.data;
       // console.log(r)
-      console.log(results);
+      // console.log(results);
 
       // const gifContainer = document.createElement("div");
       //   gifContainer.setAttribute("class", "flex");
@@ -204,8 +204,9 @@ function callGifAttack() {
 
   function showGif() {
       // This stuff is to choose the gif that we want
-      const gifChoice = Math.floor(Math.random() * 30)
+      const gifChoice = Math.floor(Math.random() * 30);
       console.log(gifChoice);
+      console.log(totalGifArray);
     
 
       // Testing console logs
@@ -234,6 +235,17 @@ function callGifAttack() {
         const giphyClass = document.querySelector(".giphy");
         giphyClass.removeChild(gifDiv);
       }, 3000);
+
+
+      // Trying to have a manual switch off function
+      // ============================================================
+      // document.addEventListener("keyup", function(event) {
+      //   const giphyClass = document.querySelector(".giphy");
+      //   console.log(event);
+      //   if(event === "Enter") {
+      //     giphyClass.removeChild(gifDiv);
+      //   }
+      // })
   }
 
   // function deleteGif() {
