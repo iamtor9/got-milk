@@ -17,16 +17,18 @@
     width: fit-content;
     height: fit-content;
     position: fixed; 
+    border: solid black 1px;
     left: 1%;
-    top: 12%;
-    z-index: 1;
+    top: 2%;
+    z-index: 30;
 }
 
 /* Avatar's icon */
 .icon {
     height: 150px;
     width: 150px;
-    margin: 1.5px 0px;
+    margin-left: 0px;
+    margin-top: 2px;
     /* background: black; */
     border: solid black 2px;
     background: url("../images/carebears/carebare.png");
@@ -40,7 +42,8 @@
     /* margin: 1.5px 0px; */
     background: rgb(0, 182, 97);
     border: solid rgb(0, 182, 97) 2px; 
-    width: 150px;
+    width: 149px;
+    margin-left: 0.75px;
     /* height: fit-content; */
     border-radius: 3px;
     text-align: center;
@@ -57,7 +60,8 @@
 /* experience Bar */
 .expBar {
     /* margin: 3px 0px; */
-    width: 151px;
+    width: 149px;
+    margin-left: 0.75px;
     z-index: 2;
 
 }
