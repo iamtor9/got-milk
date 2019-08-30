@@ -223,11 +223,23 @@ function callGifAttack() {
       const gifImg = document.createElement("img");
     
       gifImg.setAttribute("src", totalGifArray[gifChoice]);
+      console.log(totalGifArray[gifChoice]);
+      gifDiv.setAttribute("class", "DynamicGif");
     
       gifDiv.append(gifImg);
       console.log(gifDiv);
       document.querySelector(".giphy").append(gifDiv);
+
+      setTimeout(function() {
+        const giphyClass = document.querySelector(".giphy");
+        giphyClass.removeChild(gifDiv);
+      }, 3000);
   }
 
+  // function deleteGif() {
+  //   const giphyClass = document.querySelector(".giphy");
+  //   giphyClass.removeChild(document.querySelectorAll(".DynamicGif"));
+  // }
+
 }
-callGifAttack();
+// callGifAttack();

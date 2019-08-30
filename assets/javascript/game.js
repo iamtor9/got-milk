@@ -45,6 +45,7 @@ function PutinFunction() {
 //Function to fight putin
 function putinfight() {
 putinhealth = putinhealth - Math.floor(Math.random() * 10) - atk;
+callGifAttack();
 
 
 hp = hp - Math.floor(Math.random() * (10-def));
