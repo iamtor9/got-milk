@@ -4,10 +4,75 @@ hp = 100
 atk = 1
 def = 1
 exp = 0
-
+php
 putinhealth = 50
 
 
+  document.addEventListener("click", function (event){
+    console.log(event);
+    if (event.target === document.querySelector(".character1")) {
+      document.getElementById("stickfigure").src = "./assets/images/carebears/grumpybear.png";
+      atk = 6;
+      def = 3;
+      document.getElementById("pdef").innerHTML = "Defense: " + def;
+      document.getElementById("patk").innerHTML = "Attack: " + atk;
+  }
+  });
+
+  document.addEventListener("click", function (event){
+    console.log(event);
+    if (event.target === document.querySelector(".character2")) {
+      document.getElementById("stickfigure").src = "./assets/images/carebears/lovealotbear.png";
+      atk = 3;
+      def = 7;
+      document.getElementById("pdef").innerHTML = "Defense: " + def;
+      document.getElementById("patk").innerHTML = "Attack: " + atk;
+  }
+  });
+
+  document.addEventListener("click", function (event){
+    console.log(event);
+    if (event.target === document.querySelector(".character3")) {
+      document.getElementById("stickfigure").src = "./assets/images/carebears/funshine.png";
+      atk = 5;
+      def = 4;
+      document.getElementById("pdef").innerHTML = "Defense: " + def;
+      document.getElementById("patk").innerHTML = "Attack: " + atk;
+  }
+  });
+
+  document.addEventListener("click", function (event){
+    console.log(event);
+    if (event.target === document.querySelector(".character4")) {
+      document.getElementById("stickfigure").src = "./assets/images/carebears/friend-bear.png";
+      atk = 3;
+      def = 5;
+      document.getElementById("pdef").innerHTML = "Defense: " + def;
+      document.getElementById("patk").innerHTML = "Attack: " + atk;
+  }
+  });
+
+  document.addEventListener("click", function (event){
+    console.log(event);
+    if (event.target === document.querySelector(".character5")) {
+      document.getElementById("stickfigure").src = "./assets/images/carebears/cheer-bear.png";
+      atk = 2;
+      def = 6;
+      document.getElementById("pdef").innerHTML = "Defense: " + def;
+      document.getElementById("patk").innerHTML = "Attack: " + atk;
+  }
+  });
+
+//Function to show controls
+function showcontrols() {
+  document.getElementById("controls").style.display = "block";
+  lock = true;
+};
+//Function to hide controls
+function hidecontrols() {
+  document.getElementById("controls").style.display = "none";
+  lock = false;
+};
 
 //Function to disable reactivation of trumps textbox
 function TrumpFunction() {
@@ -89,7 +154,7 @@ let trumpbox = true;
 let obamabox = true;
 let putinbox = true;
 
-//Constantly record and update player coordinates every 50 ms
+//Constantly record and update player coordinates every 25 ms
 setInterval(function(){   
 //Players horizontal coordinate
 var left = document.getElementById("stickfigure").offsetLeft;
@@ -100,6 +165,8 @@ var top = document.getElementById("stickfigure").offsetTop;
 var player = document.getElementById("stickfigure");
 
 document.getElementById("php").innerHTML = hp + "/100";
+document.getElementById("pdef").innerHTML = "Defense: " + def;
+document.getElementById("patk").innerHTML = "Attack: " + atk;
 //document.getElementById("pexp").innerHTML = "EXP: " + exp;
 
 
@@ -436,6 +503,7 @@ if(i === 69 || i === 70 || i === 71 || i === 72 || i === 73 || i === 74 || i ===
         obama.setAttribute("class", "obama");
         taxi.setAttribute("class", "hide");
         putin.setAttribute("class", "hide");
+        neutral.setAttribute("class", "rock");
       }
       else if(worldsector === 1){
         brock.style.display="";
