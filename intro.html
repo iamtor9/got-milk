@@ -4,6 +4,9 @@
 
   <title>Carebare Game</title>
 
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+
 </head>
 
 <body>
@@ -36,7 +39,7 @@
        <p>Today, there only remains five Care Bears who have been in hiding, unknown as to where the rest of their Care Bear Crew has vanished to… while the thirteen colonies have prospered in unity of a grand patriotic ceremony. </p>
         
          <p> The Presidents know nothing of what is about to come. 
-           The fiery and passion of the Care in the Bears is back. The Care Bears are ready to use their powers and stares that scare… to take back the land that was once lollipops and chocolate trees… and maybe just maybe… find the rest of the Care Bears and declare their independence to have the land of Care de Casa free of the suited man again….</p> 
+           The fiery and passion of the Care in the Bears is back. The Care Bears are ready to use their powers and stares that scare… to take back the land that was once lollipops and chocolate trees… and maybe just maybe… find the rest of the Care Bears and declare their independence to have the land of Care de Casa free of the suited man again...</p> 
         
   
     </div>
@@ -44,6 +47,12 @@
   </body>
 
     <script>
+
+$('*').click(function(event) {
+    if (this === event.target) {
+      window.location.href = './index.html';
+    }
+});
     
     setTimeout(function() {
       window.location.href = './index.html';
@@ -52,5 +61,5 @@
     </script>
   
   </section>
-  
+
   </html>

@@ -7,7 +7,16 @@ exp = 0
 
 putinhealth = 50
 
-
+//Function to show controls
+function showcontrols() {
+  document.getElementById("controls").style.display = "block";
+  lock = true;
+};
+//Function to hide controls
+function hidecontrols() {
+  document.getElementById("controls").style.display = "none";
+  lock = false;
+};
 
 //Function to disable reactivation of trumps textbox
 function TrumpFunction() {
