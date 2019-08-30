@@ -48,14 +48,15 @@
 
     <script>
 
+
 $('*').click(function(event) {
     if (this === event.target) {
-      window.location.href = './index.html';
+        window.top.close();
     }
 });
     
     setTimeout(function() {
-      window.location.href = './index.html';
+        window.top.close();
     }, 49 * 1000);
     
     </script>
