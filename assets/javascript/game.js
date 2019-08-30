@@ -166,14 +166,9 @@ var top = document.getElementById("stickfigure").offsetTop;
 //console.log(top)
 var player = document.getElementById("stickfigure");
 
-<<<<<<< HEAD
 document.getElementById("php").innerHTML = hp + "/100";
 document.getElementById("pdef").innerHTML = "Defense: " + def;
 document.getElementById("patk").innerHTML = "Attack: " + atk;
-=======
-document.getElementById("php").innerHTML = 
- + "/100";
->>>>>>> f682ffb25d0a431655d93ab466733a7dd0977253
 //document.getElementById("pexp").innerHTML = "EXP: " + exp;
 
 
