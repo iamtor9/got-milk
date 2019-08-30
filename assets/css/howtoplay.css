@@ -1,5 +1,9 @@
 /* directions for how to play the game css file*/
 
+#wanttoplay {
+  font-family: menufont;
+}
+
 #skyintro {
     height: 100%;
     width: 100%;
@@ -20,7 +24,7 @@ body, html {
   
   .bg-image {
     /* The image used */
-    background-image: url("../images/skyintro.jpg");
+    background-image: url("../images/skyintroold.jpg");
     
     /* Add the blur effect */
     filter: blur(8px);
@@ -50,4 +54,14 @@ body, html {
     width: 80%;
     padding: 20px;
     text-align: center;
+  }
+
+  @font-face {
+    font-family: dialoguefont;
+    src: url(./DTM-Mono.otf);
+  }
+  
+  @font-face {
+    font-family: menufont;
+    src: url(./DTM-Sans.otf);
   }

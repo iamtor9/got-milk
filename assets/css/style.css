@@ -18,11 +18,32 @@
 
 #stickfigure {
   position: absolute;
+  z-index: 20; 
   z-index: 2; 
   top: 427.9px; 
   left: 310.4px;
   height: 100px;
   width: 80px;
+}
+
+#controls{
+  position: fixed;
+  top: 49.95%;
+  left: 49.99%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: black;
+  display: "";
+  height: 318px;
+  width: 502.5px;
+  display: none;
+  z-index: 21;
+  font-family: dialoguefont;
+}
+
+#exitcontrols:hover {
+  cursor: pointer;
+  opacity: 0.5;
 }
 
 #trumptextbox {
@@ -266,6 +287,10 @@
 .noMargin {
   margin: 0px;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f682ffb25d0a431655d93ab466733a7dd0977253
 @font-face {
   font-family: dialoguefont;
   src: url(./DTM-Mono.otf);

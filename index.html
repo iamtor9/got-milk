@@ -21,6 +21,8 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <!-- Characards Modal CSS File-->
   <link rel="stylesheet" href="./assets/css/characards.css">
+  <!-- stats Box CSS -->
+  <link rel="stylesheet" href="./assets/css/stats.css">
   <!-- how to play html/css-->
   <link rel="howtoplay.html">
   <link rel="howtoplay.css">
@@ -33,6 +35,17 @@
             <div class="grid-container">     </div>
             <div class="giphy"></div>
         <!----------------------------------------------------------------------------------------->
+
+        <div id=controls>
+                <span id=exitcontrols onclick="hidecontrols()" style="margin-right: 20px; color: white; font-size: 30px; float:right;">&times;</span>
+            <p>W: Moves Up</p>
+            <p>A: Moves Left</p>
+            <p>S: Moves Down</p>
+            <p>D: Moves Right</p>
+            <p>Each enemy defeated adds a color to the experience bar. Complete the rainbow to level up.</p>
+            <p>When HP is zero the game is over.</p>
+            <p>Good Luck!</p>
+        </div>
 
       <!------------------Text Boxes-------------------->
       <div id=trumptextbox>
@@ -59,10 +72,10 @@
      <!----> 
 
 <!-- Modal menu -->
-<div class="modalMenu">
+<!-- <div class="modalMenu"> -->
     <!-- <p> das</p> -->
-  </div>
-  
+  <!-- </div> -->
+
   <!-- stats box -->
   <div class="statsBox">
     <!-- icon -->
@@ -114,7 +127,7 @@
           <button class="modalMenu dropbtn" ></button>
           <div class="dropdown-content">
             <a href="#">Game Intro</a>
-            <a href="#">How to Play</a>
+            <a onclick="showcontrols()" href="#">How to Play</a>
             <a id="characterBtn">Character Select</a>
              <!--Update button css so that it looks like a menu item and not a button-->
           </div>
@@ -129,7 +142,7 @@
         </div>
         <!-- Modal Card Row -->
         <div class="w3-row-padding">
-        
+          
         <!-- GRUMPY BEAR CARD -->
         <div class="modal-body w3-container w3-third">
           <div class="flip-card">
