@@ -92,13 +92,13 @@
 #putintextbox {
   position: fixed;
   top: 50%;
-  left: 50%;
+  left: 49.98%;
   transform: translate(-50%, -50%);
   color: white;
   background-color: black;
   display: "";
-  height: 200px;
-  width: 300px;
+  height: 300px;
+  width: 703px;
   display: none;
   z-index: 21;
 }
@@ -108,7 +108,7 @@
   width: 100px;
   position: absolute;
     margin-top: -5px;
-    margin-left: 200px;
+    margin-left: 600px;
 }
 
 #battlebear {
@@ -134,7 +134,7 @@
 #putinhealth {
   position: absolute;
     margin-top: 110px;
-    margin-left: 241px;
+    margin-left: 640px;
 }
 
 #endbutton {
@@ -149,8 +149,8 @@
   position: absolute;
   height: 40px;
   z-index: 25;
-  margin-top: 160px;
-  margin-left: 255.6px;
+  margin-top: 260px;
+  margin-left: 658px;
   display: none;
 }
 
