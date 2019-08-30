@@ -255,3 +255,34 @@ function callGifAttack() {
 
 }
 // callGifAttack();
+
+
+
+function colorDetect() {
+
+  // fetch("https://apicloud-colortag.p.rapidapi.com/tag-url.json?palette=simple&sort=relevance&url=http%3A%2F%2Fapicloud.me%2Fassets%2Fcolortag%2Fimage1.jpg", {
+
+  let expBar = document.querySelector(".expBar");
+  console.log(expBar);
+  let queryURL = "https://apicloud-colortag.p.rapidapi.com/tag-url.json?palette=simple&sort=relevance&url=" + expBar.getAttribute("src");
+  console.log(queryURL);
+
+  fetch(queryURL, {
+    "method": "GET",
+	  "headers": {
+		"x-rapidapi-host": "apicloud-colortag.p.rapidapi.com",
+		"x-rapidapi-key": "b9267a6a9amshfb545e24443f3ccp1fffcajsn9e0cf027b636"
+	}}).then(function(response) {
+    // return response.json();
+    console.log(response);
+  })
+  .catch(function err() {
+    console.log(err);
+  })
+  // .then(function(responseJSON) {
+  //   const results = responseJSON.data;
+  //   console.log(results);
+
+  // })
+}
+// colorDetect();
