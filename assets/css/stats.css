@@ -5,7 +5,7 @@
     width: 75px;
     height: 75px;
     position: fixed;
-    left: 1%;
+    left: 94.9%;
     top: 2%;
     /* margin: 10px 0px; */
 
@@ -32,6 +32,66 @@
     /* background: black; */
     border: solid black 2px;
     background: url("../images/carebears/carebare.png");
+    background-size: 175px 265px;
+    z-index: 2;
+
+}
+.icon1 {
+    height: 150px;
+    width: 150px;
+    margin-left: 0px;
+    margin-top: 2px;
+    /* background: black; */
+    border: solid black 2px;
+    background: url("../images/carebears/grumpybear.png");
+    background-size: 175px 265px;
+    z-index: 2;
+
+}
+.icon2 {
+    height: 150px;
+    width: 150px;
+    margin-left: 0px;
+    margin-top: 2px;
+    /* background: black; */
+    border: solid black 2px;
+    background: url("../images/carebears/lovealotbear.png");
+    background-size: 175px 265px;
+    z-index: 2;
+
+}
+.icon3 {
+    height: 150px;
+    width: 150px;
+    margin-left: 0px;
+    margin-top: 2px;
+    /* background: black; */
+    border: solid black 2px;
+    background: url("../images/carebears/funshine.png");
+    background-size: 175px 265px;
+    z-index: 2;
+
+}
+.icon4 {
+    height: 150px;
+    width: 150px;
+    margin-left: 0px;
+    margin-top: 2px;
+    /* background: black; */
+    border: solid black 2px;
+    background: url("../images/carebears/friend-bear.png");
+    background-size: 175px 265px;
+    z-index: 2;
+
+}
+.icon5 {
+    height: 150px;
+    width: 150px;
+    margin-left: 0px;
+    margin-top: 2px;
+    /* background: black; */
+    border: solid black 2px;
+    background: url("../images/carebears/cheer-bear.png");
     background-size: 175px 265px;
     z-index: 2;
 
