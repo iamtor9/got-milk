@@ -26,7 +26,6 @@
   <!-- how to play html/css-->
   <link rel="howtoplay.html">
   <link rel="howtoplay.css">
-
 </head>
 
 <body>
@@ -35,6 +34,36 @@
             <div class="grid-container">     </div>
             <div class="giphy"></div>
         <!----------------------------------------------------------------------------------------->
+        
+        <!-- <section class="star-wars2">
+                <div class="crawl">
+                
+                  <div class="title">
+                  
+                    <p>Beware</p>
+                    <p>Those who shall not care, will end in defeat with the Care Bear stare</p>
+                  </div>
+                  
+                  <p>Once upon a time in a land far away, thousands of years ago, millions of Care Bears thrived across the land we know as Care de Casa…. 
+                    
+                    Care Bears lived here with rainbows, positivity, and chocolate trees… 
+                    
+                    <p>Then one day out of the sky the suited man landed on the land of positivity and made the thirteen colonies. What was once a land full of sunshine and rainbows, became thirteen sectors of concrete, raining taxi cabs, and suited man… a.k.a. presidents… with mystical powers. 
+            
+                    What has happened to the Care Bear population, is unfathomable… </p>
+                    
+                   <p>A moment of silence....</p> 
+                    
+                    
+                   <p>Today, there only remains five Care Bears who have been in hiding, unknown as to where the rest of their Care Bear Crew has vanished to… while the thirteen colonies have prospered in unity of a grand patriotic ceremony. </p>
+                    
+                     <p> The Presidents know nothing of what is about to come. 
+                       The fiery and passion of the Care in the Bears is back. The Care Bears are ready to use their powers and stares that scare… to take back the land that was once lollipops and chocolate trees… and maybe just maybe… find the rest of the Care Bears and declare their independence to have the land of Care de Casa free of the suited man again...</p> 
+                    
+              
+                </div>
+            </section> -->
+
 
         <div id=controls>
                 <span id=exitcontrols onclick="hidecontrols()" style="margin-right: 20px; color: white; font-size: 30px; float:right;">&times;</span>
@@ -46,6 +75,7 @@
             <p>When HP is zero the game is over.</p>
             <p>Good Luck!</p>
         </div>
+
 
       <!------------------Text Boxes-------------------->
       <div id=trumptextbox>
@@ -69,13 +99,6 @@
           <button id="endbuttonfight" onclick="PutinFunction()" type="button">Exit</button>
       </div>
 
-     <!----> 
-
-<!-- Modal menu -->
-<!-- <div class="modalMenu"> -->
-    <!-- <p> das</p> -->
-  <!-- </div> -->
-
   <!-- stats box -->
   <div class="statsBox">
     <!-- icon -->
@@ -86,6 +109,10 @@
     <div class="healthBar">
           <p id="php" class="noMargin">100/100</p>
     </div>
+    <div class="statBar">
+            <p id="pdef" class="noMargin"></p>
+            <p id="patk" class="noMargin"></p>
+      </div>
     <!-- Exp bar -->
     <div class="expBarDiv">
         <p class="noMargin">Experience</p>
@@ -98,35 +125,12 @@
         <!-- Character Image -->
         <img src="./assets/images/carebears/carebare.png" alt="" id="stickfigure" class="img stick">  
 
-        <!-- Modal menu -->
-        <div class="modalMenu">
-          <!-- <p> das</p> -->
-        </div>
-        
-        <!-- stats box -->
-        <div class="statsBox">
-          <!-- icon -->
-          <div class="icon">
-              <!-- <img src="./assets/images/carebears/carebare.png"> -->
-          </div>
-          <!-- Health bar -->
-          <div class="healthBar">
-                <p class="noMargin">100/100</p>
-          </div>
-          <!-- Exp bar -->
-          <div class="expBarDiv">
-              <p class="noMargin">Experience</p>
-              <!-- WE ARE GOING TO HAVE TO DYNAMICALLY CHANGE THIS WHEN WE DEFEAT ENEMIES, OTHER PNGS IN THE FOLDER -->
-              <img src="assets/images/expBars/0:7Exp.png" class="expBar">
-          </div>
-        </div>
-
 <!--------------------------------------MODAL CAROUSEL Character Select------------------------------->
         <!--Game Options and Trigger/Open-->
         <div class="dropdown">
           <button class="modalMenu dropbtn" ></button>
           <div class="dropdown-content">
-            <a href="#">Game Intro</a>
+            <a href="intropopup.html" target="_blank">Game Intro</a>
             <a onclick="showcontrols()" href="#">How to Play</a>
             <a id="characterBtn">Character Select</a>
              <!--Update button css so that it looks like a menu item and not a button-->
@@ -148,7 +152,7 @@
           <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img src="assets/images/carebears/grumpybear-removebg-preview.png" alt="GrumpyBearAvatar" style="width:300px;height:300px;">
+                <img src="assets/images/carebears/grumpybear.png" alt="GrumpyBearAvatar" style="width:300px;height:300px;">
               </div>
               <div class="flip-card-back">
                 <h1>Grumpy Bear</h1> 
@@ -156,12 +160,13 @@
                 <p>We love that guy</p>
                 <p></p>
                 <div class="container">
-                  <div class="skills GBhealthPercent">Health 35%</div>
+                  <div class="skills GBhealthPercent">Defense: 3</div>
                 </div>
                 <p></p>
                 <div class="container">
-                  <div class="skills GBdamagePercent">Damage 65%</div>
+                  <div class="skills GBdamagePercent">Attack: 6</div>
                 </div>
+                <button class="character1">Click Here</button>
               </div>
             </div>
           </div>
@@ -171,7 +176,7 @@
           <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img src="assets/images/carebears/lovealotbear-removebg-preview.png" alt="LovealotBearAvatar" style="width:300px;height:300px;">
+                <img src="assets/images/carebears/lovealotbear.png" alt="LovealotBearAvatar" style="width:300px;height:300px;">
               </div>
               <div class="flip-card-back">
                 <h1>Love-a-lot Bear</h1> 
@@ -179,12 +184,13 @@
                 <p>We love that guy</p>
                 <p></p>
                 <div class="container">
-                  <div class="skills PHhealthPercent">Health 75%</div>
+                  <div class="skills PHhealthPercent">Defense: 7</div>
                 </div>
                 <p></p>
                 <div class="container">
-                  <div class="skills PHdamagePercent">Damage 35%</div>
+                  <div class="skills PHdamagePercent">Attack: 3</div>
                 </div>
+                <button class="character2">Click Here</button>
               </div>
             </div>
           </div>
@@ -194,7 +200,7 @@
           <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img src="assets/images/carebears/funshine-bear-edited.png" alt="FunshineBearAvatar" style="width:300px;height:300px;">
+                <img src="assets/images/carebears/funshine.png" alt="FunshineBearAvatar" style="width:300px;height:300px;">
               </div>
               <div class="flip-card-back">
                 <h1>Funshine Bear</h1> 
@@ -202,12 +208,13 @@
                 <p>We love that guy</p>
                 <p></p>
                 <div class="container">
-                  <div class="skills BBhealthPercent">Health 40%</div>
+                  <div class="skills BBhealthPercent">Defense: 4</div>
                 </div>
                 <p></p>
                 <div class="container">
-                  <div class="skills BBdamagePercent">Damage 50%</div>
+                  <div class="skills BBdamagePercent">Attack: 5</div>
                 </div>
+                <button class="character3">Click Here</button>
               </div>
             </div>
           </div>
@@ -217,7 +224,7 @@
           <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img src="assets/images/carebears/friend-bear-removebg-preview.png" alt="FriendBearAvatar" style="width:300px;height:300px;">
+                <img src="assets/images/carebears/friend-bear.png" alt="FriendBearAvatar" style="width:300px;height:300px;">
               </div>
               <div class="flip-card-back">
                 <h1>Friend Bear</h1> 
@@ -225,12 +232,13 @@
                 <p>We love that guy</p>
                 <p></p>
                 <div class="container">
-                  <div class="skills SBhealthPercent">Health 75%</div>
+                  <div class="skills SBhealthPercent">Defense: 4</div>
                 </div>
                 <p></p>
                 <div class="container">
-                  <div class="skills SBdamagePercent">Damage 35%</div>
+                  <div class="skills SBdamagePercent">Attack: 5</div>
                 </div>
+                <button class="character4">Click Here</button>
               </div>
             </div>
           </div>
@@ -240,7 +248,7 @@
           <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img src="assets/images/carebears/cheer-bear-removebg-preview.png" alt="CheerBearAvatar" style="width:300px;height:300px;">
+                <img src="assets/images/carebears/cheer-bear.png" alt="CheerBearAvatar" style="width:300px;height:300px;">
               </div>
               <div class="flip-card-back">
                 <h1>Cheer Bear </h1> 
@@ -248,12 +256,13 @@
                 <p>We love that guy</p>
                 <p></p>
                 <div class="container">
-                  <div class="skills SBhealthPercent">Health 75%</div>
+                  <div class="skills SBhealthPercent">Defense: 6</div>
                 </div>
                 <p></p>
                 <div class="container">
-                  <div class="skills SBdamagePercent">Damage 35%</div>
+                  <div class="skills SBdamagePercent">Attack: 2</div>
                 </div>
+                <button class="character5">Click Here</button>
               </div>
             </div>
           </div>
@@ -263,6 +272,9 @@
           <h3></h3>
         </div>
         </div>
+
+
+
 <!------------------------------------------------------------------------------------------------------>
         <!--Overworld javascript-->  
         <script src="./assets/javascript/game.js"></script>
