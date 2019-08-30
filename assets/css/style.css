@@ -18,6 +18,7 @@
 
 #stickfigure {
   position: absolute;
+  z-index: 20; 
   z-index: 2; 
   top: 427.9px; 
   left: 310.4px;
@@ -275,6 +276,21 @@
   width: 98.4px;
 }
 
+.flex {
+  display: flex;
+}
+
+
+
+/* This is general classes to be used */
+/* ================================================================================ */
+.noMargin {
+  margin: 0px;
+}
+<<<<<<< HEAD
+=======
+
+>>>>>>> f682ffb25d0a431655d93ab466733a7dd0977253
 @font-face {
   font-family: dialoguefont;
   src: url(./DTM-Mono.otf);

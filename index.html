@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <!-- Bootstrap CSS File -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!-- stats Box CSS -->
+  <link rel="stylesheet" href="./assets/css/stats.css">
+
   <!-- JQuery -->
   <script src="https://code.jquery.com/jquery.js"></script>
   <!-- stats Box CSS -->
@@ -18,6 +21,8 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <!-- Characards Modal CSS File-->
   <link rel="stylesheet" href="./assets/css/characards.css">
+  <!-- stats Box CSS -->
+  <link rel="stylesheet" href="./assets/css/stats.css">
   <!-- how to play html/css-->
   <link rel="howtoplay.html">
   <link rel="howtoplay.css">
@@ -27,7 +32,8 @@
 <body>
 
       <!------------------------------Grid Layout for First Overworld------------------------------>
-            <div class="grid-container">    </div>
+            <div class="grid-container">     </div>
+            <div class="giphy"></div>
         <!----------------------------------------------------------------------------------------->
         
         <!-- <section class="star-wars2">
@@ -94,7 +100,6 @@
           <button id="endbuttonfight" onclick="PutinFunction()" type="button">Exit</button>
       </div>
 
-  
   <!-- stats box -->
   <div class="statsBox">
     <!-- icon -->
@@ -121,7 +126,6 @@
         <!-- Character Image -->
         <img src="./assets/images/carebears/carebare.png" alt="" id="stickfigure" class="img stick">  
 
-
 <!--------------------------------------MODAL CAROUSEL Character Select------------------------------->
         <!--Game Options and Trigger/Open-->
         <div class="dropdown">
@@ -143,7 +147,7 @@
         </div>
         <!-- Modal Card Row -->
         <div class="w3-row-padding">
-        
+          
         <!-- GRUMPY BEAR CARD -->
         <div class="modal-body w3-container w3-third">
           <div class="flip-card">
@@ -275,6 +279,7 @@
 <!------------------------------------------------------------------------------------------------------>
         <!--Overworld javascript-->  
         <script src="./assets/javascript/game.js"></script>
+        <script src="assets/javascript/apiFetch.js"></script>
 
 </body>
 </html>
