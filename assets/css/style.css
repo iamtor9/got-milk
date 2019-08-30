@@ -276,6 +276,18 @@
   width: 98.4px;
 }
 
+.flex {
+  display: flex;
+}
+
+
+
+/* This is general classes to be used */
+/* ================================================================================ */
+.noMargin {
+  margin: 0px;
+}
+
 @font-face {
   font-family: dialoguefont;
   src: url(./DTM-Mono.otf);
