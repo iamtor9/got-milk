@@ -27,12 +27,18 @@
           <br>
           <form>
             How old are you? <input type="number" name="age" min=1 max=100>
-            <input type="submit" value="submit"  onclick="play()">
+            <input type="submit" value="Submit" id="submit" onclick="play()">
           </form><br>
          <button id="start" onclick="window.location.href = './intro.html';"> <h1 style="font-size:80px; font-family: 'menufont'">Play the Game</h1> </button>
 
 
         </div>
-        
+
+        <!-- Local Forage File-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/localforage/1.7.3/localforage.min.js"
+            integrity="sha256-H/ZsHjKSJUnQyCQHZwPmn7VTWFeTTI+qgCP1GkiB9zI=" crossorigin="anonymous"></script>
+        <script>console.log('localforage is: ', localforage);</script>
+        <!-- My javascript file -->
+        <script src="assets/javascript/howtoplay.js"></script>
 </body>
 </html>
