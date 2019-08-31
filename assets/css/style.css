@@ -18,11 +18,159 @@
 
 #stickfigure {
   position: absolute;
+  z-index: 20; 
   z-index: 2; 
-  top:215.5px; 
-  left: 314.4px;
+  top: 427.9px; 
+  left: 310.4px;
   height: 100px;
   width: 80px;
+}
+
+#controls{
+  position: fixed;
+  top: 49.95%;
+  left: 49.99%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: black;
+  display: "";
+  height: 318px;
+  width: 502.5px;
+  display: none;
+  z-index: 21;
+  font-family: dialoguefont;
+}
+
+#exitcontrols:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+#trumptextbox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: black;
+  display: "";
+  height: 105px;
+  width: 300px;
+  display: none;
+  z-index: 21;
+}
+
+#trumpert {
+  height: 110px;
+  width: 100px;
+  position: absolute;
+    margin-top: -10px;
+}
+
+#obamatextbox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: black;
+  display: "";
+  height: 105px;
+  width: 300px;
+  display: none;
+  z-index: 21;
+}
+
+#obamert {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+    margin-top: 0px;
+    margin-left: -5px;
+}
+
+#putintextbox {
+  position: fixed;
+  top: 50%;
+  left: 49.98%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: black;
+  display: "";
+  height: 300px;
+  width: 703px;
+  display: none;
+  z-index: 21;
+}
+
+#putinert {
+  height: 110px;
+  width: 100px;
+  position: absolute;
+    margin-top: -5px;
+    margin-left: 600px;
+}
+
+#battlebear {
+  height: 80px;
+  width: 90px;
+  position: absolute;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+#health {
+  position: absolute;
+    margin-top: 110px;
+    margin-left: 40px;
+}
+
+#attack {
+  position: absolute;
+    margin-top: 160px;
+    margin-left: 25px;
+}
+
+#putinhealth {
+  position: absolute;
+    margin-top: 110px;
+    margin-left: 640px;
+}
+
+#endbutton {
+  position: absolute;
+  height: 40px;
+  z-index: 25;
+  margin-top: 65px;
+  margin-left: 255.6px;
+}
+
+#endbuttonfight {
+  position: absolute;
+  height: 40px;
+  z-index: 25;
+  margin-top: 260px;
+  margin-left: 658px;
+  display: none;
+}
+
+.texter{
+  position: absolute;
+    margin-top: 25px;
+    margin-left: 85px;
+    font-family: dialoguefont;
+}
+
+.texter2{
+  position: absolute;
+    margin-top: 25px;
+    margin-left: 0px;
+    font-family: dialoguefont;
+}
+
+
+.hide {
+  display: none;
 }
 
 .rock {
@@ -35,10 +183,54 @@
   background: transparent;
 }
 
+.taxi {
+  position: absolute;
+  top: -15px;
+  left: 5px;
+  z-index: 1;
+  height: 100px;
+  width: 90px;
+  background: transparent;
+  display: all;
+}
+
+.skull {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  height: 90px;
+  width: 90px;
+  background: transparent;
+  display: all;
+}
+
+.fish {
+  position: absolute;
+  top: 25px;
+  left: 5px;
+  z-index: 1;
+  height: 50px;
+  width: 90px;
+  background: transparent;
+  display: all;
+}
+
+.fulllava {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  height: 105px;
+  width: 98.5px;
+  background: transparent;
+  display: all;
+}
+
 .brock {
   position: absolute;
   top: 0;
-  left: 11px;
+  left: 5px;
   z-index: 1;
   height: 100px;
   width: 80px;
@@ -50,6 +242,31 @@
   position: absolute;
   z-index: 2;
   height: 100px;
+  margin-left: 32.5px;
+  margin-top: 2.5px;
+}
+
+#trump {
+  position: absolute;
+  z-index: 2;
+  height: 100px;
+  margin-left: 32.5px;
+  margin-top: 2.5px;
+  display: "";
+}
+
+.obama {
+  position: absolute;
+  z-index: 2;
+  height: 105px;
+  width: 95px;
+}
+
+.putin {
+  position: absolute;
+  z-index: 2;
+  height: 105px;
+  width: 95px;
 }
 
 .grass {
@@ -57,4 +274,25 @@
   position: relative;
   height: 104.2px;
   width: 98.4px;
+}
+
+.flex {
+  display: flex;
+}
+
+
+
+/* This is general classes to be used */
+/* ================================================================================ */
+.noMargin {
+  margin: 0px;
+}
+@font-face {
+  font-family: dialoguefont;
+  src: url(./DTM-Mono.otf);
+}
+
+@font-face {
+  font-family: menufont;
+  src: url(./DTM-Sans.otf);
 }

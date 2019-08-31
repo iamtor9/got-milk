@@ -1,0 +1,145 @@
+/* This is where the Modal Menu is for seeing instructions and breif story again */
+.modalMenu {
+    background: url("../images/modalMenu.png");
+    background-size: 75px 75px;
+    width: 75px;
+    height: 75px;
+    position: fixed;
+    left: 94.9%;
+    top: 2%;
+    /* margin: 10px 0px; */
+
+}
+
+/* This is the World Environment stats box */
+.statsBox {
+    background: rgb(244, 244, 244, 0.3);
+    width: fit-content;
+    height: fit-content;
+    position: fixed; 
+    border: solid black 1px;
+    left: 1%;
+    top: 2%;
+    z-index: 30;
+}
+
+/* Avatar's icon */
+.icon {
+    height: 150px;
+    width: 150px;
+    margin-left: 0px;
+    margin-top: 2px;
+    /* background: black; */
+    border: solid black 2px;
+    background: url("../images/carebears/carebare.png");
+    background-size: 175px 265px;
+    z-index: 2;
+
+}
+.icon1 {
+    height: 150px;
+    width: 150px;
+    margin-left: 0px;
+    margin-top: 2px;
+    /* background: black; */
+    border: solid black 2px;
+    background: url("../images/carebears/grumpybear.png");
+    background-size: 175px 265px;
+    z-index: 2;
+
+}
+.icon2 {
+    height: 150px;
+    width: 150px;
+    margin-left: 0px;
+    margin-top: 2px;
+    /* background: black; */
+    border: solid black 2px;
+    background: url("../images/carebears/lovealotbear.png");
+    background-size: 175px 265px;
+    z-index: 2;
+
+}
+.icon3 {
+    height: 150px;
+    width: 150px;
+    margin-left: 0px;
+    margin-top: 2px;
+    /* background: black; */
+    border: solid black 2px;
+    background: url("../images/carebears/funshine.png");
+    background-size: 175px 265px;
+    z-index: 2;
+
+}
+.icon4 {
+    height: 150px;
+    width: 150px;
+    margin-left: 0px;
+    margin-top: 2px;
+    /* background: black; */
+    border: solid black 2px;
+    background: url("../images/carebears/friend-bear.png");
+    background-size: 175px 265px;
+    z-index: 2;
+
+}
+.icon5 {
+    height: 150px;
+    width: 150px;
+    margin-left: 0px;
+    margin-top: 2px;
+    /* background: black; */
+    border: solid black 2px;
+    background: url("../images/carebears/cheer-bear.png");
+    background-size: 175px 265px;
+    z-index: 2;
+
+}
+
+/* Healthbar */
+.healthBar {
+    /* margin: 1.5px 0px; */
+    background: rgb(0, 182, 97);
+    border: solid rgb(0, 182, 97) 2px; 
+    width: 149px;
+    margin-left: 0.75px;
+    /* height: fit-content; */
+    border-radius: 3px;
+    text-align: center;
+    z-index: 2;
+
+}
+
+.expBarDiv {
+    margin: 10px 0px 3px;
+    z-index: 2;
+
+}
+
+/* experience Bar */
+.expBar {
+    /* margin: 3px 0px; */
+    width: 149px;
+    margin-left: 0.75px;
+    z-index: 2;
+
+}
+
+/* ======================================================================== */
+
+body {
+    position: absolute;
+}
+
+.giphy {
+    position: relative;
+    top: 370px;
+    left: 690px;
+    z-index: 22;
+}
+
+/* ======================================================================== */
+
+/* Experience Bar Variations */
+
