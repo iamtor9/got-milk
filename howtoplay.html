@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +8,17 @@
     .error {color: #FF0000;}
     </style>
     <link rel="stylesheet" href="./assets/css/howtoplay.css">
-    <link rel="php" href="PHP_SELF.php">
     <link href="./intro.html">
+    <!-- <script language="javascript">
+        var agePrompt=prompt("What is your age?");
+         
+        if (agePrompt>7) alert('Welcome!')
+        else {
+        alert('Sorry! Come back in a few years!')
+        // document.location="http://www.codelibary.com/";
+         
+        }
+        </script>   -->
     <title>Welcome to the Carebare Game</title>
 </head>
 <body>
@@ -18,27 +27,30 @@
 
         <div class="bg-text">
           <h2>Wanna Play a Game?</h2>
-          <br>
-          <p><span class="error">* required field</span></p>
-          <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF.php"]);?>">  
-            Name: <input type="text" name="name" value="<?php echo $name;?>">
-            <span class="error">* <?php echo $nameErr;?></span>
-            <br><br>
-            <?php
-              echo $name;
-              echo "<br>";
-              ?>
-
-          Welcome <?php echo $name; ?>
-          <form action="/welcome_player.php" method="POST">
-            Name: <input type="text" name="name"><br>
-            Select your favorite color:
-            <input type="color" name="favcolor" value="#ff0000">
-            <input type="submit">
+          <!-- <br>
+          <p><span class="error">Minimum age is 8.</span></p> -->
+          <form>
+            <br>
+            <label for="birthdate">How old are you?</label>
+                <input type="number" class="form-control" id="playerAge">
+            <input type="submit" id="submitButton">
           </form>
-         <!-- <button onclick="window.location.href = './intro.html';"> <h1 style="font-size:80px">Enter Here</h1> </button>
-          <p>Directions will be here: let's consider doing a list, keep it clear and concise. :)</p>
-        </div> -->
-    
-</body>
+          <br>
+          <button id="start" onclick="window.location.href = './intro.html';"><h1 style="font-size:80px">Enter Here</h1></button>  <!----> 
+          </div>
+          
+          
+          
+
+        <!-- JQuery.....not needed for my stuff is this needed for Tori's stuff (double check)-->
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Moment js script-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js" integrity="sha256-H9jAz//QLkDOy/nzE9G4aYijQtkLt9FvGmdUTwBk6gs=" crossorigin="anonymous"></script>
+        
+        <!-- Local Forage File-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/localforage/1.7.3/localforage.min.js" integrity="sha256-H/ZsHjKSJUnQyCQHZwPmn7VTWFeTTI+qgCP1GkiB9zI=" crossorigin="anonymous"></script>
+        
+        <!-- Javascript File (if needed)-->
+        <script src="assets/javascript/howtoplay.js"></script>
+  </body>
 </html>
