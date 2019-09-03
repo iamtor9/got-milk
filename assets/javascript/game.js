@@ -107,6 +107,7 @@ function levelChecker(img) {
       // console.log(document.querySelector("#levelUpBox"));
       // document.querySelector("#levelUpBox").removeAttribute("class", "boxDisappear");
       document.querySelector("#levelUpBox").setAttribute("class", "boxAppear");
+      document.querySelector(".expBar").setAttribute("src", imgURL.zeroExp)
       console.log(document.querySelector("#levelUpBox"));
 
     }
@@ -116,9 +117,9 @@ function levelChecker(img) {
     hideLevelUpBox();
 
     // This resets the exp bar back to gray
-    document.querySelector(".expBar").setAttribute("src", imgURL.zeroExp);
+    ;
 
-  }, 2500);
+  }, 3500);
   // setTimeout(clearInterval(levelCheckerInterval), 250)
 }
 // levelChecker();
@@ -174,7 +175,10 @@ function ReaganFunction() {
   reaganbox = false;
   lock = false;
   exp = exp + 1;
-  exp = exp + 50;
+  console.log(document.querySelector(".expBar"));
+  document.querySelector(".expBar").setAttribute("src", imgURL.oneExp);
+  console.log(document.querySelector(".expBar"));
+  colorDetect();
 };
 
 //Function to fight putin
@@ -248,10 +252,10 @@ let reaganbox = true
 setInterval(function(){   
 //Players horizontal coordinate
 var left = document.getElementById("stickfigure").offsetLeft;
-//console.log(left)
+console.log(left)
 //Players vertical coordinate
 var top = document.getElementById("stickfigure").offsetTop;
-//console.log(top)
+console.log(top)
 var player = document.getElementById("stickfigure");
 
 
@@ -541,6 +545,32 @@ else if (left === 1415 && top >= 214 && top <= 748 && worldsector === 7) {
 }
 else if (left === 1515 && top >= 214 && top <= 748 && worldsector === 7) {
   player.style.left = 1615.6+"px";
+}
+//Walls for level 8
+else if (left >= 108 && left <= 312 && top === 428 && worldsector === 8) {
+  player.style.left = 1615.6+"px";
+  worldsector = 7;
+  hp = hp-10;
+}
+else if (left >= 711 && left <= 1014 && top >= 321 && top <= 535 && worldsector === 8) {
+  player.style.left = 1615.6+"px";
+  worldsector = 7;
+  hp = hp-10;
+}
+else if (left >= 108 && top === 109 && worldsector === 8) {
+  player.style.left = 1615.6+"px";
+  worldsector = 7;
+  hp = hp-10;
+}
+else if (left >= 108 && top === 747 && worldsector === 8) {
+  player.style.left = 1615.6+"px";
+  worldsector = 7;
+  hp = hp-10;
+}
+else if (left === 511 && top === 322 && worldsector === 8) {
+  player.style.left = 1615.6+"px";
+  worldsector = 7;
+  hp = hp-10;
 };
                   }, 25);
 
@@ -580,6 +610,10 @@ for(let i = 0; i < 153; i++) {
   const pole = document.createElement("img");
   pole.setAttribute("src", "./assets/images/neutrals/pole.png");
   pole.setAttribute("class", "hide");
+  //Pole IMG
+  const ufo = document.createElement("img");
+  ufo.setAttribute("src", "./assets/images/neutrals/ufo.png");
+  ufo.setAttribute("class", "hide");
 //Trump IMG
   const trump = document.createElement("img");
   trump.setAttribute("src", "./assets/images/presidents/trump.png");
@@ -590,16 +624,16 @@ for(let i = 0; i < 153; i++) {
   obama.setAttribute("src", "./assets/images/presidents/obama.png");
   obama.setAttribute("class", "hide");
   obama.setAttribute("Id", "obama");
-  //Putin IMG
+//Putin IMG
   const putin = document.createElement("img");
   putin.setAttribute("src", "./assets/images/presidents/putin.png");
   putin.setAttribute("class", "hide");
   putin.setAttribute("Id", "putin");
-    //Putin IMG
-    const reagan = document.createElement("img");
-    reagan.setAttribute("src", "./assets/images/presidents/reagan.png");
-    reagan.setAttribute("class", "hide");
-    reagan.setAttribute("Id", "reagan");
+//Putin IMG
+  const reagan = document.createElement("img");
+  reagan.setAttribute("src", "./assets/images/presidents/reagan.png");
+  reagan.setAttribute("class", "hide");
+  reagan.setAttribute("Id", "reagan");
 //Generates a rock border on the top of the world
   if(i < 17) {
     tile.append(neutral);
@@ -649,10 +683,14 @@ if(i >= 69 && i <= 84 ||
     i === 86 || i === 92 || i === 98 || i === 120 || i === 126 || i === 132) {
   tile.append(lava);
   };
-    //Generates poles for the sixth world
+    //Generates poles for the seventh world
 if(i === 36 || i === 53 || i === 70 || i === 87 || i === 104 || i === 121 || i === 37 || i === 54 || i === 71 || i === 88 || i === 105 || i === 122 || i === 22 || i === 39 || i === 56 || i === 73 || i === 90 || i === 107 || i === 23 || i === 40 || i === 57 || i === 74 || i === 91 || i === 108 || i === 42 || i === 59 || i === 76 || i === 93 || i === 110 || i === 127 || i === 43 || i === 60 || i === 77 || i === 94 || i === 111 || i === 128 || i === 28 || i === 45 || i === 62 || i === 79 || i === 96 || i === 113 || i === 29 || i === 46 || i === 63 || i === 80 || i === 97 || i === 114 || i === 48 || i === 65 || i === 82 || i === 99 || i === 116 || i === 133 || i === 49 || i === 66 || i === 83 || i === 100 || i === 117 || i === 134   ) {
 tile.append(pole);
 };
+  //Generates ufos for the eighth world
+  if(i === 0 || i === 136 || i === 17 || i === 34 || i === 51 || i === 68 || i === 85 || i === 102 || i === 119 || i === 52 || i === 53 || i === 54 || i === 55 || i === 72 || i === 86 || i === 87 || i === 88 || i === 89 || i === 73 || i === 40 || i === 41 ||i === 42 || i === 43 || i === 44 || i === 45 ||i === 57 || i === 74 || i === 91 || i == 108 || i === 109 || i === 110 || i === 111 || i === 112 || i === 113 || i === 96 || i === 79 || i === 62 || i === 80 || i === 81 || i === 65 || i === 66 || i === 67 || i === 82 || i === 83 || i === 84 || i === 99 || i === 100 || i === 101) {
+  tile.append(ufo);
+  };
 
   function myFunction() {
     setInterval(function(){
@@ -716,6 +754,14 @@ tile.append(pole);
         neutral.setAttribute("class", "pole");
         pole.setAttribute("class", "pole");
         lava.setAttribute("class", "hide");
+        ufo.setAttribute("class", "hide");
+      }
+      else if(worldsector === 8){
+        img.setAttribute("src", "./assets/images/tiles/space.jpg");
+        neutral.setAttribute("src", "./assets/images/neutrals/pole.png");
+        neutral.setAttribute("class", "hide");
+        pole.setAttribute("class", "hide");
+        ufo.setAttribute("class", "ufo");
       };
     }, 10);
   }

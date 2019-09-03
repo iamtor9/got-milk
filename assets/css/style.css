@@ -311,6 +311,17 @@
   display: all;
 }
 
+.ufo {
+  position: absolute;
+  top: 1.5px;
+  left: -0.75px;
+  z-index: 1;
+  height: 100px;
+  width: 100px;
+  background: transparent;
+  display: all;
+}
+
 .brock {
   position: absolute;
   top: 0;
