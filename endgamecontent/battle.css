@@ -1,0 +1,41 @@
+
+
+
+
+.backgroundDisplay{
+    width: 80%;
+    height: 75%;
+    margin-left: 145px;
+    font-size: 72;
+    align-content: center;
+    text-align: center;
+    border-style: solid;
+    border-color: black;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../got-milk/endgamebackground2.gif");
+    background-repeat: no-repeat;
+
+}
+
+#startoverbtn {
+    width: 80%;
+    height: 75%;
+    margin-left: 145px;
+    margin-top: 20px;
+    background: black;
+    font-size: 72;
+    align-content: center;
+    text-align: center;
+    border-style: solid;
+    border-color: black;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../got-milk/endgame1.gif");
+    background-repeat: no-repeat;
+
+}
+
+   

@@ -5,6 +5,7 @@
   position: absolute;
   z-index: -1;
   display: all;
+  /* height: fit-content; */
 }
 
 .grid-item {
@@ -25,6 +26,7 @@
   height: 100px;
   width: 80px;
 }
+
 
 #controls{
   position: fixed;
@@ -92,14 +94,42 @@
 #putintextbox {
   position: fixed;
   top: 50%;
-  left: 50%;
+  left: 49.98%;
   transform: translate(-50%, -50%);
   color: white;
   background-color: black;
   display: "";
-  height: 200px;
-  width: 300px;
+  height: 300px;
+  width: 703px;
   display: none;
+  z-index: 21;
+}
+
+#reagantextbox {
+  position: fixed;
+  top: 50%;
+  left: 49.98%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: black;
+  display: "";
+  height: 300px;
+  width: 703px;
+  display: none;
+  z-index: 21;
+}
+
+#levelUpBox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: black;
+  /* display: ""; */
+  height: 100px;
+  width: 300px;
+  /* display: none; */
   z-index: 21;
 }
 
@@ -108,10 +138,26 @@
   width: 100px;
   position: absolute;
     margin-top: -5px;
-    margin-left: 200px;
+    margin-left: 600px;
+}
+
+#reaganert {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+    margin-top: 5px;
+    margin-left: 590px;
 }
 
 #battlebear {
+  height: 80px;
+  width: 90px;
+  position: absolute;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+#battlebear2 {
   height: 80px;
   width: 90px;
   position: absolute;
@@ -125,7 +171,19 @@
     margin-left: 40px;
 }
 
+#health2 {
+  position: absolute;
+    margin-top: 110px;
+    margin-left: 40px;
+}
+
 #attack {
+  position: absolute;
+    margin-top: 160px;
+    margin-left: 25px;
+}
+
+#attack2 {
   position: absolute;
     margin-top: 160px;
     margin-left: 25px;
@@ -134,7 +192,13 @@
 #putinhealth {
   position: absolute;
     margin-top: 110px;
-    margin-left: 241px;
+    margin-left: 640px;
+}
+
+#reaganhealth {
+  position: absolute;
+    margin-top: 110px;
+    margin-left: 640px;
 }
 
 #endbutton {
@@ -149,8 +213,17 @@
   position: absolute;
   height: 40px;
   z-index: 25;
-  margin-top: 160px;
-  margin-left: 255.6px;
+  margin-top: 260px;
+  margin-left: 658px;
+  display: none;
+}
+
+#endbuttonfight2 {
+  position: absolute;
+  height: 40px;
+  z-index: 25;
+  margin-top: 260px;
+  margin-left: 658px;
   display: none;
 }
 
@@ -227,6 +300,17 @@
   display: all;
 }
 
+.pole {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  height: 105px;
+  width: 98.5px;
+  background: transparent;
+  display: all;
+}
+
 .brock {
   position: absolute;
   top: 0;
@@ -269,6 +353,15 @@
   width: 95px;
 }
 
+.reagan {
+  position: absolute;
+  z-index: 2;
+  margin-top: -10px;
+  margin-left: -10px;
+  height: 125px;
+  width: 120px;
+}
+
 .grass {
   z-index: 0;
   position: relative;
@@ -287,7 +380,6 @@
 .noMargin {
   margin: 0px;
 }
-
 @font-face {
   font-family: dialoguefont;
   src: url(./DTM-Mono.otf);
@@ -296,4 +388,14 @@
 @font-face {
   font-family: menufont;
   src: url(./DTM-Sans.otf);
+}
+
+
+/* Daniel's version of getting boxes to pop up and disappear */
+.boxAppear {
+  display: block;
+}
+
+.boxDisappear {
+  display: none;
 }
