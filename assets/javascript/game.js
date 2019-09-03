@@ -418,8 +418,35 @@ else if (left === 1315 && top === 747 && worldsector === 6) {
   hp = hp-2;
 }
 //Walls for level 7
-else if (left === 311 && top === 322 && worldsector === 7) {
+else if (left === 210 && top >= 214 && top <= 748 && worldsector === 7) {
+  player.style.left = 109.6+"px";
+}
+else if (left === 311 && top >= 214 && top <= 748 && worldsector === 7) {
   player.style.left = 410.8+"px";
+}
+else if (left === 511 && top >= 108 && top <= 641 && worldsector === 7) {
+  player.style.left = 410.8+"px";
+}
+else if (left === 611 && top >= 108 && top <= 641 && worldsector === 7) {
+  player.style.left = 712+"px";
+}
+else if (left === 813 && top >= 214 && top <= 748 && worldsector === 7) {
+  player.style.left = 712+"px";
+}
+else if (left === 913 && top >= 214 && top <= 748 && worldsector === 7) {
+  player.style.left = 1013.2+"px";
+}
+else if (left === 1113 && top >= 108 && top <= 641 && worldsector === 7) {
+  player.style.left = 1013.2+"px";
+}
+else if (left === 1214 && top >= 108 && top <= 641 && worldsector === 7) {
+  player.style.left = 1314.4+"px";
+}
+else if (left === 1415 && top >= 214 && top <= 748 && worldsector === 7) {
+  player.style.left = 1314.4+"px";
+}
+else if (left === 1515 && top >= 214 && top <= 748 && worldsector === 7) {
+  player.style.left = 1615.6+"px";
 };
                   }, 25);
 
@@ -520,7 +547,7 @@ if(i >= 69 && i <= 84 ||
   tile.append(lava);
   };
     //Generates poles for the sixth world
-if(i === 32 || i === 54) {
+if(i === 36 || i === 53 || i === 70 || i === 87 || i === 104 || i === 121 || i === 37 || i === 54 || i === 71 || i === 88 || i === 105 || i === 122 || i === 22 || i === 39 || i === 56 || i === 73 || i === 90 || i === 107 || i === 23 || i === 40 || i === 57 || i === 74 || i === 91 || i === 108 || i === 42 || i === 59 || i === 76 || i === 93 || i === 110 || i === 127 || i === 43 || i === 60 || i === 77 || i === 94 || i === 111 || i === 128 || i === 28 || i === 45 || i === 62 || i === 79 || i === 96 || i === 113 || i === 29 || i === 46 || i === 63 || i === 80 || i === 97 || i === 114 || i === 48 || i === 65 || i === 82 || i === 99 || i === 116 || i === 133 || i === 49 || i === 66 || i === 83 || i === 100 || i === 117 || i === 134   ) {
 tile.append(pole);
 };
 
