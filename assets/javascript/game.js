@@ -19,15 +19,43 @@ let imgURL = {
 }
 
 // This is an interval timer that is always checking to see if the exp bar is full
-function levelChecker() {
+function levelChecker(img) {
+  // console.log(img);
   setTimeout(function() {
-    if(document.querySelector(".expBar").getAttribute("src") === imgURL.fiveExp) {
-      alert("hey you leveled up!");
+    console.log(img)
+    if(img.tags.length === 7 && 
+      img.tags[0].label === "Green" &&
+      img.tags[1].label === "Cyan" &&
+      img.tags[2].label === "Purple" &&
+      img.tags[3].label === "Red" &&
+      img.tags[4].label === "Orange" &&
+      img.tags[5].label === "Yellow" &&
+      img.tags[6].label === "Blue") {
+      console.log("hey you leveled up!");
+      // console.log(document.querySelector("#levelUpBox"));
+      // document.querySelector("#levelUpBox").removeAttribute("class", "boxDisappear");
+      document.querySelector("#levelUpBox").setAttribute("class", "boxAppear");
+      console.log(document.querySelector("#levelUpBox"));
+
     }
-  }, 250);
+  }, 100);
+
+  setTimeout(function() {
+    hideLevelUpBox();
+
+    // This resets the exp bar back to gray
+    document.querySelector(".expBar").setAttribute("src", imgURL.zeroExp);
+
+  }, 2500);
   // setTimeout(clearInterval(levelCheckerInterval), 250)
 }
 // levelChecker();
+
+function hideLevelUpBox() {
+  document.querySelector("#levelUpBox").removeAttribute("class", "boxAppear");
+  document.querySelector("#levelUpBox").setAttribute("class", "boxDisappear");
+  console.log(document.querySelector("#levelUpBox"));
+};
 
 //Function to show controls
 function showcontrols() {

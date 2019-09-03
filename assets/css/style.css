@@ -104,6 +104,20 @@
   z-index: 21;
 }
 
+#levelUpBox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: black;
+  /* display: ""; */
+  height: 100px;
+  width: 300px;
+  /* display: none; */
+  z-index: 21;
+}
+
 #putinert {
   height: 110px;
   width: 100px;
@@ -297,4 +311,14 @@
 @font-face {
   font-family: menufont;
   src: url(./DTM-Sans.otf);
+}
+
+
+/* Daniel's version of getting boxes to pop up and disappear */
+.boxAppear {
+  display: block;
+}
+
+.boxDisappear {
+  display: none;
 }

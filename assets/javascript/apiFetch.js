@@ -277,7 +277,8 @@ function colorDetect() {
     return response.json();
   }).then(function (img) {
     console.log(img);
-    levelChecker();
+    console.log(img.tags[0].label);
+    levelChecker(img);
   })
   .catch(function err() {
     console.log(err);
