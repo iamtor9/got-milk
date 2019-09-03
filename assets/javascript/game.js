@@ -1,11 +1,12 @@
 //game variables
-lock = false
-hp = 100
-atk = 1
-def = 1
-exp = 0
-putinhealth = 50
-reaganhealth = 75
+let lock = false
+let hp = 100
+let atk = 1
+let def = 1
+let exp = 0
+
+let putinhealth = 50
+let reaganhealth = 75
 
 
   document.addEventListener("click", function (event){
@@ -78,6 +79,56 @@ reaganhealth = 75
   }
   });
 
+
+// This is the object-array for the exp bars
+let imgURL = {
+  zeroExp: "https://i.ibb.co/CVDM471/0-7-Exp-copy.png",
+  oneExp: "https://i.ibb.co/cc0D9yM/1-7-Exp-copy.png",
+  twoExp: "https://i.ibb.co/LPggxW2/2-7-Exp-copy.png",
+  threeExp: "https://i.ibb.co/xsPJqcb/4-7-Exp-copy.png",
+  fourExp: "https://i.ibb.co/Wtmb5Jz/5-7-Exp-copy.png",
+  fiveExp: "https://i.ibb.co/FwRS1hj/6-7-Exp-copy.png",
+}
+
+// This is an interval timer that is always checking to see if the exp bar is full
+function levelChecker(img) {
+  // console.log(img);
+  setTimeout(function() {
+    console.log(img)
+    if(img.tags.length === 7 && 
+      img.tags[0].label === "Green" &&
+      img.tags[1].label === "Cyan" &&
+      img.tags[2].label === "Purple" &&
+      img.tags[3].label === "Red" &&
+      img.tags[4].label === "Orange" &&
+      img.tags[5].label === "Yellow" &&
+      img.tags[6].label === "Blue") {
+      console.log("hey you leveled up!");
+      // console.log(document.querySelector("#levelUpBox"));
+      // document.querySelector("#levelUpBox").removeAttribute("class", "boxDisappear");
+      document.querySelector("#levelUpBox").setAttribute("class", "boxAppear");
+      console.log(document.querySelector("#levelUpBox"));
+
+    }
+  }, 100);
+
+  setTimeout(function() {
+    hideLevelUpBox();
+
+    // This resets the exp bar back to gray
+    document.querySelector(".expBar").setAttribute("src", imgURL.zeroExp);
+
+  }, 2500);
+  // setTimeout(clearInterval(levelCheckerInterval), 250)
+}
+// levelChecker();
+
+function hideLevelUpBox() {
+  document.querySelector("#levelUpBox").removeAttribute("class", "boxAppear");
+  document.querySelector("#levelUpBox").setAttribute("class", "boxDisappear");
+  console.log(document.querySelector("#levelUpBox"));
+};
+
 //Function to show controls
 function showcontrols() {
   document.getElementById("controls").style.display = "block";
@@ -111,6 +162,10 @@ function PutinFunction() {
   putinbox = false;
   lock = false;
   exp = exp + 1;
+  console.log(document.querySelector(".expBar"));
+  document.querySelector(".expBar").setAttribute("src", imgURL.fiveExp);
+  console.log(document.querySelector(".expBar"));
+  colorDetect();
 };
 
 //Function to disable reactivation of Reagans textbox
@@ -119,15 +174,16 @@ function ReaganFunction() {
   reaganbox = false;
   lock = false;
   exp = exp + 1;
+  exp = exp + 50;
 };
 
 //Function to fight putin
 function putinfight() {
-putinhealth = putinhealth - Math.floor(Math.random() * 10) - atk;
-callGifAttack();
+  putinhealth = putinhealth - Math.floor(Math.random() * 10) - atk;
+  callGifAttack();
 
 
-hp = hp - Math.floor(Math.random() * (10-def));
+  hp = hp - Math.floor(Math.random() * (10 - def));
 };
 
 //Function to fight reagan
@@ -140,14 +196,14 @@ function reaganfight() {
   };
 
 // JavaScript function that wraps controls
-var stickFigure = $(".stick");
-$(document).ready(function() {
+const stickFigure = $(".stick");
+$(document).ready(function () {
   // Keyboard move controls
-  $(document).keyup(function(e) {
+  $(document).keyup(function (e) {
 
-if (lock === false){
+    if (lock === false) {
       move(e);
-};
+    };
 
   });
 });
@@ -160,24 +216,24 @@ function move(e) {
       stickFigure.animate({ top: "+=106.2px" }, 1);
       break;
 
-      // Move Buttons (Keyboard Right)
+    // Move Buttons (Keyboard Right)
     case 68:
       stickFigure.animate({ left: "+=100.4px" }, 1);
       break;
-      // Move Buttons (Keyboard Up)
+    // Move Buttons (Keyboard Up)
     case 87:
       stickFigure.animate({ top: "-=106.2px" }, 1);
       break;
 
-      // Move Buttons (Keyboard Left)
+    // Move Buttons (Keyboard Left)
     case 65:
       stickFigure.animate({ left: "-=100.4px" }, 1);
       break;
 
     default:
       break;
-    }
   }
+}
 
 
 //global variable to determine what sector of the world the player is in
@@ -712,74 +768,45 @@ tile.append(pole);
   //let neutralGenerator = rng
   //if(neutralGenerator === 15 && neutralGenerator !== 17) {
     //tile.append(neutral);
-  //};
+    //};
 
-  //let trumpGenerator = rng
-  //if(trumpGenerator === 17 && trumpGenerator !== 15) {
+    //let trumpGenerator = rng
+    //if(trumpGenerator === 17 && trumpGenerator !== 15) {
     //tile.append(trump);
-  //};
+    //};
 
-  tile.append(img);
-  document.querySelector(".grid-container").append(tile);
-};
+    tile.append(img);
+    document.querySelector(".grid-container").append(tile);
+  };
 };
 
 tileSet();
 
 //Menu Script ---------------------------------------------------------------------------------------------
 // Get the modal
-var modal = document.getElementById("characterModal");
+let modal = document.getElementById("characterModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("characterBtn");
+let btn = document.getElementById("characterBtn");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+let span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal 
-btn.onclick = function() {
+btn.onclick = function () {
   modal.style.display = "block";
   lock = true;
 }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+span.onclick = function () {
   modal.style.display = "none";
   lock = false;
 }
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
 }
-//Bootstrap Carousel javascript
-// $(document).ready(function(){
-//     // Activate Carousel
-//     $("#myCarousel").carousel();
-      
-//     // Enable Carousel Indicators
-//     $(".item1").click(function(){
-//       $("#myCarousel").carousel(0);
-//     });
-//     $(".item2").click(function(){
-//       $("#myCarousel").carousel(1);
-//     });
-//     $(".item3").click(function(){
-//       $("#myCarousel").carousel(2);
-//     });
-//     $(".item4").click(function(){
-//       $("#myCarousel").carousel(3);
-//     });
-      
-//     // Enable Carousel Controls
-//     $(".left").click(function(){
-//       $("#myCarousel").carousel("prev");
-//     });
-//     $(".right").click(function(){
-//       $("#myCarousel").carousel("next");
-//     });
-//   });
-
-//Menu Script End ---------------------------------------------------------------------------------------------
