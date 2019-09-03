@@ -5,6 +5,7 @@ atk = 1
 def = 1
 exp = 0
 putinhealth = 50
+reaganhealth = 75
 
 
   document.addEventListener("click", function (event){
@@ -107,6 +108,14 @@ function PutinFunction() {
   exp = exp + 1;
 };
 
+//Function to disable reactivation of Reagans textbox
+function ReaganFunction() {
+  document.getElementById("reagantextbox").style.display = "none";
+  reaganbox = false;
+  lock = false;
+  exp = exp + 1;
+};
+
 //Function to fight putin
 function putinfight() {
 putinhealth = putinhealth - Math.floor(Math.random() * 10) - atk;
@@ -115,6 +124,15 @@ callGifAttack();
 
 hp = hp - Math.floor(Math.random() * (10-def));
 };
+
+//Function to fight reagan
+function reaganfight() {
+  reaganhealth = reaganhealth - Math.floor(Math.random() * 10) - atk;
+  callGifAttack();
+  
+  
+  hp = hp - Math.floor(Math.random() * (10-def));
+  };
 
 // JavaScript function that wraps controls
 var stickFigure = $(".stick");
@@ -157,13 +175,13 @@ function move(e) {
   }
 
 
-
 //global variable to determine what sector of the world the player is in
 let worldsector = 1;
 //Variables for text boxes. True means they can be activated.
 let trumpbox = true;
 let obamabox = true;
 let putinbox = true;
+let reaganbox = true
 
 //Constantly record and update player coordinates every 25 ms
 setInterval(function(){   
@@ -227,6 +245,21 @@ else if (left === 1013 && top === 428 && worldsector === 3 && putinbox === true)
     document.getElementById("putinhealth").style.display = "none";
     document.getElementById("endbuttonfight").style.display = "block";
     document.getElementById("attack").style.display = "none";
+  };
+
+}
+//Interaction for level 4
+else if (left === 1013 && top === 640 && worldsector === 4 && reaganbox === true) {
+  document.getElementById("reagantextbox").style.display = "block";
+  document.getElementById("reagan").style.display = "none";
+  document.getElementById("health2").innerHTML = hp;
+  document.getElementById("reaganhealth").innerHTML = reaganhealth;
+  lock = true
+
+  if (reaganhealth <= 0) {
+    document.getElementById("reaganhealth").style.display = "none";
+    document.getElementById("endbuttonfight2").style.display = "block";
+    document.getElementById("attack2").style.display = "none";
   };
 
 }
@@ -504,7 +537,7 @@ for(let i = 0; i < 153; i++) {
     //Putin IMG
     const reagan = document.createElement("img");
     reagan.setAttribute("src", "./assets/images/presidents/reagan.png");
-    reagan.setAttribute("class", "reagan");
+    reagan.setAttribute("class", "hide");
     reagan.setAttribute("Id", "reagan");
 //Generates a rock border on the top of the world
   if(i < 17) {
@@ -562,6 +595,8 @@ tile.append(pole);
 
   function myFunction() {
     setInterval(function(){
+      if (hp < 0){hp = 0};
+      
       if(worldsector === 2){
         brock.style.display="none";
         img.setAttribute("src", "./assets/images/tiles/grass.png");
@@ -585,6 +620,7 @@ tile.append(pole);
         skull.setAttribute("class", "hide");
         obama.setAttribute("class", "hide");
         putin.setAttribute("class", "putin");
+        reagan.setAttribute("class", "hide");
 
       }
       else if(worldsector === 4){
@@ -595,6 +631,7 @@ tile.append(pole);
         taxi.setAttribute("class", "hide");
         fish.setAttribute("class", "hide");
         putin.setAttribute("class", "hide");
+        reagan.setAttribute("class", "reagan");
       }
       else if(worldsector === 5){
         img.setAttribute("src", "./assets/images/tiles/water.png");
@@ -603,6 +640,7 @@ tile.append(pole);
         skull.setAttribute("class", "hide");
         fish.setAttribute("class", "fish");
         lava.setAttribute("class", "hide");
+        reagan.setAttribute("class", "hide");
       }
       else if(worldsector === 6){
         img.setAttribute("src", "./assets/images/tiles/lava.png");
