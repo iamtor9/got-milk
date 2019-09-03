@@ -501,6 +501,11 @@ for(let i = 0; i < 153; i++) {
   putin.setAttribute("src", "./assets/images/presidents/putin.png");
   putin.setAttribute("class", "hide");
   putin.setAttribute("Id", "putin");
+    //Putin IMG
+    const reagan = document.createElement("img");
+    reagan.setAttribute("src", "./assets/images/presidents/reagan.png");
+    reagan.setAttribute("class", "reagan");
+    reagan.setAttribute("Id", "reagan");
 //Generates a rock border on the top of the world
   if(i < 17) {
     tile.append(neutral);
@@ -520,6 +525,10 @@ for(let i = 0; i < 153; i++) {
   //Generates a Putin
   if(i === 78) {
     tile.append(putin);
+  };
+  //Generates a Reagan
+  if(i === 112) {
+    tile.append(reagan);
   };
 //Generates a border on the left side of the world
   if(i === 17 || i === 34 || i === 51 || i === 68 || i === 85 || i === 102 || i === 119) {
