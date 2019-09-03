@@ -3,10 +3,13 @@
 
 
 .backgroundDisplay{
-    width: 80%;
+    width: 90%;
     height: 75%;
     margin-left: 145px;
     font-size: 72;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 90px;  
     align-content: center;
     text-align: center;
     border-style: solid;
@@ -14,18 +17,19 @@
     overflow: hidden;
     background-size: cover;
     background-position: center;
-    background-image: url("../got-milk/endgamebackground2.gif");
+    background-image: url("../endgamecontent/endgamebackground2.gif");
     background-repeat: no-repeat;
 
 }
 
 #startoverbtn {
-    width: 80%;
+    width: 90%;
     height: 75%;
     margin-left: 145px;
-    margin-top: 20px;
-    background: black;
     font-size: 72;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 90px;  
     align-content: center;
     text-align: center;
     border-style: solid;
@@ -33,7 +37,7 @@
     overflow: hidden;
     background-size: cover;
     background-position: center;
-    background-image: url("../got-milk/endgame1.gif");
+    background-image: url("../endgamecontent/endgame1.gif");
     background-repeat: no-repeat;
 
 }
