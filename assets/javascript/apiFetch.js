@@ -266,6 +266,7 @@ function colorDetect() {
   console.log(expBar);
   let queryURL = "https://apicloud-colortag.p.rapidapi.com/tag-url.json?palette=simple&sort=relevance&url=" + expBar.getAttribute("src");
   console.log(queryURL);
+  console.log(expBar.getAttribute("src"));
 
   fetch(queryURL, {
     "method": "GET",
@@ -285,4 +286,41 @@ function colorDetect() {
 
   // })
 }
-// colorDetect();
+colorDetect();
+
+
+
+
+// This is the original snippet from Rapid API.com
+fetch("http://apicloud.me/assets/colortag/image1.jpg", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "apicloud-colortag.p.rapidapi.com",
+		"x-rapidapi-key": "b9267a6a9amshfb545e24443f3ccp1fffcajsn9e0cf027b636",
+		"content-type": "application/x-www-form-urlencoded"
+	},
+	"body": {
+		"palette": {},
+		"sort": {}
+	}
+}).then(response => {
+	console.log(response);
+})
+.catch(err => {
+  console.log(err);
+  
+  // const imgTestDiv = document.createElement("div");
+  // const imgTestHouse = docuemnt.createElement("img");
+});
+
+// const gifDiv = document.createElement("div");
+//       const gifImg = document.createElement("img");
+    
+//       gifImg.setAttribute("src", totalGifArray[gifChoice]);
+//       console.log(totalGifArray[gifChoice]);
+//       gifDiv.setAttribute("class", "DynamicGif");
+    
+//       gifDiv.append(gifImg);
+//       console.log(gifDiv);
+//       document.querySelector(".giphy").append(gifDiv);
+
