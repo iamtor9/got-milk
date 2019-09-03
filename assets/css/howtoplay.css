@@ -1,4 +1,4 @@
-/* directions for how to play the game css file*/
+/* intro css file*/
 
 #wanttoplay {
   font-family: menufont;
@@ -12,6 +12,7 @@
     z-index: 0;
     
 }
+
 body, html {
     height: 100%;
     margin: 0;

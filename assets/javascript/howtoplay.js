@@ -4,7 +4,7 @@ var age;
 
 //Function to show Play Game Button
   function showButton() {
-    document.getElementById("start").style.display = "block";
+    document.getElementById("start").style.display = "inline-block";
   }
 
 //Create a submit function
