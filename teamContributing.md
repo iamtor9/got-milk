@@ -7,7 +7,7 @@ Implementation branch (all other branches feed into this branch for knitting/tes
 # Steps for creating good pull requests:
 
 1. Create my new branch
-	- git checkout *implementation*
+	- git checkout *Implementation*
 	- git pull
 	- git checkout -b my-new-branch-name
 
@@ -15,7 +15,7 @@ Implementation branch (all other branches feed into this branch for knitting/tes
 	- git add .
 	- git commit -m "my notes on changes"
 1. When done with the coding work
-	- git pull origin *implementation*
+	- git pull origin *Implementation*
 1. Resolve Conflicts by repeating the following 2 steps 
 	- git add .
 	- git commit -m "my notes and if co-authored with another team member"
