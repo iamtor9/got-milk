@@ -25,12 +25,15 @@
         <div class="bg-text">
           <h2>Wanna Play a Game?</h2>
           <br>
-          <form>
+          <form id=userinput>
             How old are you? <input type="number" id="age" name="age" min=1 max=100>
             <input type="submit" value="Submit" id="submit" onclick="play()">
-          </form><br>
+          </form>
+          <br>
+          <p id="tooyoung"></p>
           <button style="display: none;" id="start" onclick="window.location.href = './intro.html';"> <h1 style="font-size:80px; font-family: 'menufont'">Play the Game</h1> </button>
         </div>
+        
 
         <!-- Local Forage File-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/localforage/1.7.3/localforage.min.js"

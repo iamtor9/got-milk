@@ -17,8 +17,9 @@ function submitInfo() {
     //If player is under 8 then give them an alert and re-route to a different url
     console.log(age);
     if (age < 8) {
-        alert("Please come back when you are a little bit older!");
-        window.location = "window-location.html";
+        //window.location = "window-location.html";
+        document.getElementById("userinput").style.display = "none";
+        document.getElementById("tooyoung").innerHTML = "Please come back when you are a little bit older!"
     }
         else {
         showButton();
