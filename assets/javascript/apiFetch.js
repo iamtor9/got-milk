@@ -277,42 +277,36 @@ function colorDetect() {
     return response.json();
   }).then(function (img) {
     console.log(img);
+    levelChecker();
   })
   .catch(function err() {
     console.log(err);
   })
 }
-colorDetect();
+// colorDetect();
 
 
 
 
-// This is the original snippet from Rapid API.com
-fetch("https://apicloud-colortag.p.rapidapi.com/tag-url.json?palette=simple&sort=relevance&url=http%3A%2F%2Fapicloud.me%2Fassets%2Fcolortag%2Fimage1.jpg", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "apicloud-colortag.p.mashape.com/tag-url.json",
-		"x-rapidapi-key": "b9267a6a9amshfb545e24443f3ccp1fffcajsn9e0cf027b636"
-	}
-})
-.then(response => {
-  return response.json();
-	console.log(response);
-}).then(function(newresponse) {
-  console.log(newresponse);
-})
-.catch(err => {
-	console.log(err);
-});
+// This is the original snippet from Rapid API.com that Daniel Modified in order to get it working
+// ================================================================================================
+// ================================================================================================
+// fetch("https://apicloud-colortag.p.rapidapi.com/tag-url.json?palette=simple&sort=relevance&url=http%3A%2F%2Fapicloud.me%2Fassets%2Fcolortag%2Fimage1.jpg", {
+// 	"method": "GET",
+// 	"headers": {
+// 		"x-rapidapi-host": "apicloud-colortag.p.mashape.com/tag-url.json",
+// 		"x-rapidapi-key": "b9267a6a9amshfb545e24443f3ccp1fffcajsn9e0cf027b636"
+// 	}
+// })
+// .then(response => {
+//   return response.json();
+// 	console.log(response);
+// }).then(function(newresponse) {
+//   console.log(newresponse);
+// })
+// .catch(err => {
+// 	console.log(err);
+// });
 
-// const gifDiv = document.createElement("div");
-//       const gifImg = document.createElement("img");
-    
-//       gifImg.setAttribute("src", totalGifArray[gifChoice]);
-//       console.log(totalGifArray[gifChoice]);
-//       gifDiv.setAttribute("class", "DynamicGif");
-    
-//       gifDiv.append(gifImg);
-//       console.log(gifDiv);
-//       document.querySelector(".giphy").append(gifDiv);
-
+// ================================================================================================
+// ================================================================================================
