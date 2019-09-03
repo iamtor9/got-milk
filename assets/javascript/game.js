@@ -254,17 +254,11 @@ var top = document.getElementById("stickfigure").offsetTop;
 //console.log(top)
 var player = document.getElementById("stickfigure");
 
-<<<<<<< HEAD
-document.getElementById("php").innerHTML = hp + "/100";
-document.getElementById("pdef").innerHTML = "Defense: " + def;
-document.getElementById("patk").innerHTML = "Attack: " + atk;
-=======
 
 document.getElementById("php").innerHTML = hp + "/100";
 document.getElementById("pdef").innerHTML = "Defense: " + def;
 document.getElementById("patk").innerHTML = "Attack: " + atk;
 
->>>>>>> eca978a268f2132532fc37af0dca6d68f7475454
 //document.getElementById("pexp").innerHTML = "EXP: " + exp;
 
 
