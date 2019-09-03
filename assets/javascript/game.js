@@ -484,7 +484,7 @@ for(let i = 0; i < 153; i++) {
   lava.setAttribute("class", "hide");
   //Pole IMG
   const pole = document.createElement("img");
-  pole.setAttribute("src", "./assets/images/neutrals/pole.png");
+  pole.setAttribute("src", "./assets/images/neutrals/poles.png");
   pole.setAttribute("class", "hide");
 //Trump IMG
   const trump = document.createElement("img");
@@ -613,7 +613,7 @@ tile.append(pole);
       }
       else if(worldsector === 7){
         img.setAttribute("src", "./assets/images/tiles/dirt.jpg");
-        neutral.setAttribute("src", "./assets/images/neutrals/pole.png");
+        neutral.setAttribute("src", "./assets/images/neutrals/poles.png");
         neutral.setAttribute("class", "pole");
         pole.setAttribute("class", "pole");
         lava.setAttribute("class", "hide");
