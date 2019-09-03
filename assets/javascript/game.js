@@ -4,7 +4,6 @@ hp = 100
 atk = 1
 def = 1
 exp = 0
-php
 putinhealth = 50
 
 
@@ -89,7 +88,7 @@ function TrumpFunction() {
   document.getElementById("trumptextbox").style.display = "none";
   trumpbox = false;
   lock = false;
-  exp = exp + 5;
+  exp = exp + 1;
 };
 
 //Function to disable reactivation of obamas textbox
@@ -97,7 +96,7 @@ function ObamaFunction() {
   document.getElementById("obamatextbox").style.display = "none";
   obamabox = false;
   lock = false;
-  exp = exp + 10;
+  exp = exp + 1;
 };
 
 //Function to disable reactivation of putins textbox
@@ -105,7 +104,7 @@ function PutinFunction() {
   document.getElementById("putintextbox").style.display = "none";
   putinbox = false;
   lock = false;
-  exp = exp + 50;
+  exp = exp + 1;
 };
 
 //Function to fight putin
@@ -417,6 +416,37 @@ else if (left === 712 && top === 747 && worldsector === 6) {
 }
 else if (left === 1315 && top === 747 && worldsector === 6) {
   hp = hp-2;
+}
+//Walls for level 7
+else if (left === 210 && top >= 214 && top <= 748 && worldsector === 7) {
+  player.style.left = 109.6+"px";
+}
+else if (left === 311 && top >= 214 && top <= 748 && worldsector === 7) {
+  player.style.left = 410.8+"px";
+}
+else if (left === 511 && top >= 108 && top <= 641 && worldsector === 7) {
+  player.style.left = 410.8+"px";
+}
+else if (left === 611 && top >= 108 && top <= 641 && worldsector === 7) {
+  player.style.left = 712+"px";
+}
+else if (left === 813 && top >= 214 && top <= 748 && worldsector === 7) {
+  player.style.left = 712+"px";
+}
+else if (left === 913 && top >= 214 && top <= 748 && worldsector === 7) {
+  player.style.left = 1013.2+"px";
+}
+else if (left === 1113 && top >= 108 && top <= 641 && worldsector === 7) {
+  player.style.left = 1013.2+"px";
+}
+else if (left === 1214 && top >= 108 && top <= 641 && worldsector === 7) {
+  player.style.left = 1314.4+"px";
+}
+else if (left === 1415 && top >= 214 && top <= 748 && worldsector === 7) {
+  player.style.left = 1314.4+"px";
+}
+else if (left === 1515 && top >= 214 && top <= 748 && worldsector === 7) {
+  player.style.left = 1615.6+"px";
 };
                   }, 25);
 
@@ -452,6 +482,10 @@ for(let i = 0; i < 153; i++) {
   const lava = document.createElement("img");
   lava.setAttribute("src", "./assets/images/tiles/fulllava.png");
   lava.setAttribute("class", "hide");
+  //Pole IMG
+  const pole = document.createElement("img");
+  pole.setAttribute("src", "./assets/images/neutrals/pole.png");
+  pole.setAttribute("class", "hide");
 //Trump IMG
   const trump = document.createElement("img");
   trump.setAttribute("src", "./assets/images/presidents/trump.png");
@@ -467,6 +501,11 @@ for(let i = 0; i < 153; i++) {
   putin.setAttribute("src", "./assets/images/presidents/putin.png");
   putin.setAttribute("class", "hide");
   putin.setAttribute("Id", "putin");
+    //Putin IMG
+    const reagan = document.createElement("img");
+    reagan.setAttribute("src", "./assets/images/presidents/reagan.png");
+    reagan.setAttribute("class", "reagan");
+    reagan.setAttribute("Id", "reagan");
 //Generates a rock border on the top of the world
   if(i < 17) {
     tile.append(neutral);
@@ -486,6 +525,10 @@ for(let i = 0; i < 153; i++) {
   //Generates a Putin
   if(i === 78) {
     tile.append(putin);
+  };
+  //Generates a Reagan
+  if(i === 112) {
+    tile.append(reagan);
   };
 //Generates a border on the left side of the world
   if(i === 17 || i === 34 || i === 51 || i === 68 || i === 85 || i === 102 || i === 119) {
@@ -512,6 +555,10 @@ if(i >= 69 && i <= 84 ||
     i === 86 || i === 92 || i === 98 || i === 120 || i === 126 || i === 132) {
   tile.append(lava);
   };
+    //Generates poles for the sixth world
+if(i === 36 || i === 53 || i === 70 || i === 87 || i === 104 || i === 121 || i === 37 || i === 54 || i === 71 || i === 88 || i === 105 || i === 122 || i === 22 || i === 39 || i === 56 || i === 73 || i === 90 || i === 107 || i === 23 || i === 40 || i === 57 || i === 74 || i === 91 || i === 108 || i === 42 || i === 59 || i === 76 || i === 93 || i === 110 || i === 127 || i === 43 || i === 60 || i === 77 || i === 94 || i === 111 || i === 128 || i === 28 || i === 45 || i === 62 || i === 79 || i === 96 || i === 113 || i === 29 || i === 46 || i === 63 || i === 80 || i === 97 || i === 114 || i === 48 || i === 65 || i === 82 || i === 99 || i === 116 || i === 133 || i === 49 || i === 66 || i === 83 || i === 100 || i === 117 || i === 134   ) {
+tile.append(pole);
+};
 
   function myFunction() {
     setInterval(function(){
@@ -563,6 +610,13 @@ if(i >= 69 && i <= 84 ||
         neutral.setAttribute("class", "fulllava");
         fish.setAttribute("class", "hide");
         lava.setAttribute("class", "fulllava");
+      }
+      else if(worldsector === 7){
+        img.setAttribute("src", "./assets/images/tiles/dirt.jpg");
+        neutral.setAttribute("src", "./assets/images/neutrals/pole.png");
+        neutral.setAttribute("class", "pole");
+        pole.setAttribute("class", "pole");
+        lava.setAttribute("class", "hide");
       };
     }, 10);
   }
