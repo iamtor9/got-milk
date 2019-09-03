@@ -160,7 +160,7 @@ function move(e) {
 
 
 //global variable to determine what sector of the world the player is in
-let worldsector = 1;
+let worldsector = 7;
 //Variables for text boxes. True means they can be activated.
 let trumpbox = true;
 let obamabox = true;
@@ -417,6 +417,10 @@ else if (left === 712 && top === 747 && worldsector === 6) {
 }
 else if (left === 1315 && top === 747 && worldsector === 6) {
   hp = hp-2;
+}
+//Walls for level 7
+else if (left === 311 && top === 322 && worldsector === 7) {
+  player.style.left = 410.8+"px";
 };
                   }, 25);
 
@@ -452,6 +456,10 @@ for(let i = 0; i < 153; i++) {
   const lava = document.createElement("img");
   lava.setAttribute("src", "./assets/images/tiles/fulllava.png");
   lava.setAttribute("class", "hide");
+  //Pole IMG
+  const pole = document.createElement("img");
+  pole.setAttribute("src", "./assets/images/neutrals/pole.png");
+  pole.setAttribute("class", "hide");
 //Trump IMG
   const trump = document.createElement("img");
   trump.setAttribute("src", "./assets/images/presidents/trump.png");
@@ -512,6 +520,10 @@ if(i >= 69 && i <= 84 ||
     i === 86 || i === 92 || i === 98 || i === 120 || i === 126 || i === 132) {
   tile.append(lava);
   };
+    //Generates poles for the sixth world
+if(i === 32 || i === 54) {
+tile.append(pole);
+};
 
   function myFunction() {
     setInterval(function(){
@@ -563,6 +575,13 @@ if(i >= 69 && i <= 84 ||
         neutral.setAttribute("class", "fulllava");
         fish.setAttribute("class", "hide");
         lava.setAttribute("class", "fulllava");
+      }
+      else if(worldsector === 7){
+        img.setAttribute("src", "./assets/images/tiles/dirt.jpg");
+        neutral.setAttribute("src", "./assets/images/neutrals/pole.png");
+        neutral.setAttribute("class", "pole");
+        pole.setAttribute("class", "pole");
+        lava.setAttribute("class", "hide");
       };
     }, 10);
   }

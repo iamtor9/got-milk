@@ -227,6 +227,17 @@
   display: all;
 }
 
+.pole {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  height: 105px;
+  width: 98.5px;
+  background: transparent;
+  display: all;
+}
+
 .brock {
   position: absolute;
   top: 0;
