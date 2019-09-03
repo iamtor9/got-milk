@@ -4,7 +4,6 @@ hp = 100
 atk = 1
 def = 1
 exp = 0
-php
 putinhealth = 50
 
 
@@ -89,7 +88,7 @@ function TrumpFunction() {
   document.getElementById("trumptextbox").style.display = "none";
   trumpbox = false;
   lock = false;
-  exp = exp + 5;
+  exp = exp + 1;
 };
 
 //Function to disable reactivation of obamas textbox
@@ -97,7 +96,7 @@ function ObamaFunction() {
   document.getElementById("obamatextbox").style.display = "none";
   obamabox = false;
   lock = false;
-  exp = exp + 10;
+  exp = exp + 1;
 };
 
 //Function to disable reactivation of putins textbox
@@ -105,7 +104,7 @@ function PutinFunction() {
   document.getElementById("putintextbox").style.display = "none";
   putinbox = false;
   lock = false;
-  exp = exp + 50;
+  exp = exp + 1;
 };
 
 //Function to fight putin
@@ -160,7 +159,7 @@ function move(e) {
 
 
 //global variable to determine what sector of the world the player is in
-let worldsector = 7;
+let worldsector = 1;
 //Variables for text boxes. True means they can be activated.
 let trumpbox = true;
 let obamabox = true;
