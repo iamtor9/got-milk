@@ -73,6 +73,13 @@
   from {top: -300px; opacity: 0}
   to {top: 0; opacity: 1}
 }
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
   background-color: transparent;
@@ -134,17 +141,25 @@
   color: white; /* White text color */
 }
 
-/*GRUMPY BEAR SPECIFIC Health and Damage */
+/*GRUMPY BEAR SPECIFIC */
 .GBhealthPercent {width: 35%; background-color: #4CAF50;} /* Green */
 .GBdamagePercent {width: 65%; background-color: #f44336;} /* Red */
 
-/*PINK HEART BEAR SPECIFIC Health and Damage */
-.PHhealthPercent {width: 75%; background-color: #4CAF50;} /* Green */
-.PHdamagePercent {width: 35%; background-color: #f44336;} /* Red */
+/*Love-a-lot BEAR SPECIFIC */
+.LALBhealthPercent {width: 75%; background-color: #4CAF50;} /* Green */
+.LALBdamagePercent {width: 35%; background-color: #f44336;} /* Red */
 
-/*BIRTHDAY BEAR SPECIFIC Health and Damage */
-.BBhealthPercent {width: 40%; background-color: #4CAF50;} /* Green */
-.BBdamagePercent {width: 50%; background-color: #f44336;} /* Red */
+/*FUNSHINE BEAR SPECIFIC */
+.FSBhealthPercent {width: 40%; background-color: #4CAF50;} /* Green */
+.FSBdamagePercent {width: 50%; background-color: #f44336;} /* Red */
+
+/*FRIEND BEAR SPECIFIC*/
+.FBhealthPercent {width: 50%; background-color: #4CAF50;} /* Green */
+.FBdamagePercent {width: 40%; background-color: #f44336;} /* Red */
+
+/*CHEER BEAR SPECIFIC Health and Damage */
+.CBhealthPercent {width: 60%; background-color: #4CAF50;} /* Green */
+.CBdamagePercent {width: 20%; background-color: #f44336;} /* Red */
 
 #characterBtn:hover {
 cursor: pointer;
