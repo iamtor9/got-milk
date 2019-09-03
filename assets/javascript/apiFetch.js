@@ -274,17 +274,13 @@ function colorDetect() {
 		"x-rapidapi-host": "apicloud-colortag.p.rapidapi.com",
 		"x-rapidapi-key": "b9267a6a9amshfb545e24443f3ccp1fffcajsn9e0cf027b636"
 	}}).then(function(response) {
-    // return response.json();
-    console.log(response);
+    return response.json();
+  }).then(function (img) {
+    console.log(img);
   })
   .catch(function err() {
     console.log(err);
   })
-  // .then(function(responseJSON) {
-  //   const results = responseJSON.data;
-  //   console.log(results);
-
-  // })
 }
 colorDetect();
 
@@ -292,25 +288,21 @@ colorDetect();
 
 
 // This is the original snippet from Rapid API.com
-fetch("http://apicloud.me/assets/colortag/image1.jpg", {
+fetch("https://apicloud-colortag.p.rapidapi.com/tag-url.json?palette=simple&sort=relevance&url=http%3A%2F%2Fapicloud.me%2Fassets%2Fcolortag%2Fimage1.jpg", {
 	"method": "GET",
 	"headers": {
-		"x-rapidapi-host": "apicloud-colortag.p.rapidapi.com",
-		"x-rapidapi-key": "b9267a6a9amshfb545e24443f3ccp1fffcajsn9e0cf027b636",
-		"content-type": "application/x-www-form-urlencoded"
-	},
-	"body": {
-		"palette": {},
-		"sort": {}
+		"x-rapidapi-host": "apicloud-colortag.p.mashape.com/tag-url.json",
+		"x-rapidapi-key": "b9267a6a9amshfb545e24443f3ccp1fffcajsn9e0cf027b636"
 	}
-}).then(response => {
+})
+.then(response => {
+  return response.json();
 	console.log(response);
+}).then(function(newresponse) {
+  console.log(newresponse);
 })
 .catch(err => {
-  console.log(err);
-  
-  // const imgTestDiv = document.createElement("div");
-  // const imgTestHouse = docuemnt.createElement("img");
+	console.log(err);
 });
 
 // const gifDiv = document.createElement("div");
