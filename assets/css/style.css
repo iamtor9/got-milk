@@ -5,6 +5,7 @@
   position: absolute;
   z-index: -1;
   display: all;
+  /* height: fit-content; */
 }
 
 .grid-item {
@@ -115,6 +116,20 @@
   height: 300px;
   width: 703px;
   display: none;
+  z-index: 21;
+}
+
+#levelUpBox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: black;
+  /* display: ""; */
+  height: 100px;
+  width: 300px;
+  /* display: none; */
   z-index: 21;
 }
 
@@ -296,6 +311,17 @@
   display: all;
 }
 
+.ufo {
+  position: absolute;
+  top: 1.5px;
+  left: -0.75px;
+  z-index: 1;
+  height: 100px;
+  width: 100px;
+  background: transparent;
+  display: all;
+}
+
 .brock {
   position: absolute;
   top: 0;
@@ -373,4 +399,14 @@
 @font-face {
   font-family: menufont;
   src: url(./DTM-Sans.otf);
+}
+
+
+/* Daniel's version of getting boxes to pop up and disappear */
+.boxAppear {
+  display: block;
+}
+
+.boxDisappear {
+  display: none;
 }
