@@ -107,6 +107,7 @@ function levelChecker(img) {
       // console.log(document.querySelector("#levelUpBox"));
       // document.querySelector("#levelUpBox").removeAttribute("class", "boxDisappear");
       document.querySelector("#levelUpBox").setAttribute("class", "boxAppear");
+      document.querySelector(".expBar").setAttribute("src", imgURL.zeroExp)
       console.log(document.querySelector("#levelUpBox"));
 
     }
@@ -116,9 +117,9 @@ function levelChecker(img) {
     hideLevelUpBox();
 
     // This resets the exp bar back to gray
-    document.querySelector(".expBar").setAttribute("src", imgURL.zeroExp);
+    ;
 
-  }, 2500);
+  }, 3500);
   // setTimeout(clearInterval(levelCheckerInterval), 250)
 }
 // levelChecker();
@@ -174,7 +175,10 @@ function ReaganFunction() {
   reaganbox = false;
   lock = false;
   exp = exp + 1;
-  exp = exp + 50;
+  console.log(document.querySelector(".expBar"));
+  document.querySelector(".expBar").setAttribute("src", imgURL.oneExp);
+  console.log(document.querySelector(".expBar"));
+  colorDetect();
 };
 
 //Function to fight putin
@@ -237,7 +241,7 @@ function move(e) {
 
 
 //global variable to determine what sector of the world the player is in
-let worldsector = 8;
+let worldsector = 1;
 //Variables for text boxes. True means they can be activated.
 let trumpbox = true;
 let obamabox = true;
