@@ -44,7 +44,7 @@
     margin-top: 2px;
     /* background: black; */
     border: solid black 2px;
-    background: url("../images/carebears/grumpybear.png");
+    background: url("../images/carebears/grumpy-bear.png");
     background-size: 175px 265px;
     z-index: 2;
 
@@ -56,7 +56,7 @@
     margin-top: 2px;
     /* background: black; */
     border: solid black 2px;
-    background: url("../images/carebears/lovealotbear.png");
+    background: url("../images/carebears/lovealot-bear.png");
     background-size: 175px 265px;
     z-index: 2;
 
@@ -68,7 +68,7 @@
     margin-top: 2px;
     /* background: black; */
     border: solid black 2px;
-    background: url("../images/carebears/funshine.png");
+    background: url("../images/carebears/funshine-bear.png");
     background-size: 175px 265px;
     z-index: 2;
 
