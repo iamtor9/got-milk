@@ -123,6 +123,8 @@ function callGiphyCareSpaceBear() {
 
 
 
+
+// ====================================================================================
 function callGifAttack() {
   // first lets set our giphy's into an array so that we can call it later
   const totalGifArray = [];
@@ -316,9 +318,14 @@ function callGifAttack() {
 
 }
 // callGifAttack();
+// ==========================================
 
 
 
+
+
+
+// ====================================================================================
 function colorDetect() {
 
   // fetch("https://apicloud-colortag.p.rapidapi.com/tag-url.json?palette=simple&sort=relevance&url=http%3A%2F%2Fapicloud.me%2Fassets%2Fcolortag%2Fimage1.jpg", {
@@ -374,11 +381,15 @@ function colorDetect() {
   //   })
 }
 // colorDetect();
+// ==========================================
 
 
 
 
-// This is the original snippet from Rapid API.com that Daniel Modified in order to get it working
+
+
+
+// This is the original snippet from Rapid API.com that Daniel Modified in order to get it working for ColorTag API
 // ================================================================================================
 // ================================================================================================
 // fetch("https://apicloud-colortag.p.rapidapi.com/tag-url.json?palette=simple&sort=relevance&url=http%3A%2F%2Fapicloud.me%2Fassets%2Fcolortag%2Fimage1.jpg", {
