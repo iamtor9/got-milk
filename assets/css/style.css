@@ -119,6 +119,34 @@
   z-index: 21;
 }
 
+#kimtextbox {
+  position: fixed;
+  top: 50%;
+  left: 49.98%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: black;
+  display: "";
+  height: 300px;
+  width: 703px;
+  display: none;
+  z-index: 21;
+}
+
+#hillarytextbox {
+  position: fixed;
+  top: 50%;
+  left: 49.98%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: black;
+  display: "";
+  height: 300px;
+  width: 703px;
+  display: none;
+  z-index: 21;
+}
+
 #levelUpBox {
   position: fixed;
   top: 50%;
@@ -149,6 +177,22 @@
     margin-left: 590px;
 }
 
+#kimert {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+    margin-top: 5px;
+    margin-left: 590px;
+}
+
+#hillaryert {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+    margin-top: 5px;
+    margin-left: 590px;
+}
+
 #battlebear {
   height: 80px;
   width: 90px;
@@ -158,6 +202,54 @@
 }
 
 #battlebear2 {
+  height: 80px;
+  width: 90px;
+  position: absolute;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+#battlebear3 {
+  height: 80px;
+  width: 90px;
+  position: absolute;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+#battlebear4 {
+  height: 80px;
+  width: 90px;
+  position: absolute;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+#battlebear5 {
+  height: 80px;
+  width: 90px;
+  position: absolute;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+#battlebear6 {
+  height: 80px;
+  width: 90px;
+  position: absolute;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+#battlebear7 {
+  height: 80px;
+  width: 90px;
+  position: absolute;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+#battlebear8 {
   height: 80px;
   width: 90px;
   position: absolute;
@@ -177,6 +269,42 @@
     margin-left: 40px;
 }
 
+#health3 {
+  position: absolute;
+    margin-top: 110px;
+    margin-left: 40px;
+}
+
+#health4 {
+  position: absolute;
+    margin-top: 110px;
+    margin-left: 40px;
+}
+
+#health5 {
+  position: absolute;
+    margin-top: 110px;
+    margin-left: 40px;
+}
+
+#health6 {
+  position: absolute;
+    margin-top: 110px;
+    margin-left: 40px;
+}
+
+#health7 {
+  position: absolute;
+    margin-top: 110px;
+    margin-left: 40px;
+}
+
+#health8 {
+  position: absolute;
+    margin-top: 110px;
+    margin-left: 40px;
+}
+
 #attack {
   position: absolute;
     margin-top: 160px;
@@ -189,6 +317,42 @@
     margin-left: 25px;
 }
 
+#attack3 {
+  position: absolute;
+    margin-top: 160px;
+    margin-left: 25px;
+}
+
+#attack4 {
+  position: absolute;
+    margin-top: 160px;
+    margin-left: 25px;
+}
+
+#attack5 {
+  position: absolute;
+    margin-top: 160px;
+    margin-left: 25px;
+}
+
+#attack6 {
+  position: absolute;
+    margin-top: 160px;
+    margin-left: 25px;
+}
+
+#attack7 {
+  position: absolute;
+    margin-top: 160px;
+    margin-left: 25px;
+}
+
+#attack8 {
+  position: absolute;
+    margin-top: 160px;
+    margin-left: 25px;
+}
+
 #putinhealth {
   position: absolute;
     margin-top: 110px;
@@ -196,6 +360,18 @@
 }
 
 #reaganhealth {
+  position: absolute;
+    margin-top: 110px;
+    margin-left: 640px;
+}
+
+#kimhealth {
+  position: absolute;
+    margin-top: 110px;
+    margin-left: 640px;
+}
+
+#hillaryhealth {
   position: absolute;
     margin-top: 110px;
     margin-left: 640px;
@@ -227,6 +403,60 @@
   display: none;
 }
 
+#endbuttonfight3 {
+  position: absolute;
+  height: 40px;
+  z-index: 25;
+  margin-top: 260px;
+  margin-left: 658px;
+  display: none;
+}
+
+#endbuttonfight4 {
+  position: absolute;
+  height: 40px;
+  z-index: 25;
+  margin-top: 260px;
+  margin-left: 658px;
+  display: none;
+}
+
+#endbuttonfight5 {
+  position: absolute;
+  height: 40px;
+  z-index: 25;
+  margin-top: 260px;
+  margin-left: 658px;
+  display: none;
+}
+
+#endbuttonfight6 {
+  position: absolute;
+  height: 40px;
+  z-index: 25;
+  margin-top: 260px;
+  margin-left: 658px;
+  display: none;
+}
+
+#endbuttonfight7 {
+  position: absolute;
+  height: 40px;
+  z-index: 25;
+  margin-top: 260px;
+  margin-left: 658px;
+  display: none;
+}
+
+#endbuttonfight8 {
+  position: absolute;
+  height: 40px;
+  z-index: 25;
+  margin-top: 260px;
+  margin-left: 658px;
+  display: none;
+}
+
 .texter{
   position: absolute;
     margin-top: 25px;
@@ -239,6 +469,14 @@
     margin-top: 25px;
     margin-left: 0px;
     font-family: dialoguefont;
+}
+
+.texter3{
+  position: absolute;
+    margin-top: 15px;
+    margin-left: 65px;
+    font-family: menufont;
+    font-size: 40px
 }
 
 
@@ -311,6 +549,17 @@
   display: all;
 }
 
+.ufo {
+  position: absolute;
+  top: 1.5px;
+  left: -0.75px;
+  z-index: 1;
+  height: 100px;
+  width: 100px;
+  background: transparent;
+  display: all;
+}
+
 .brock {
   position: absolute;
   top: 0;
@@ -360,6 +609,24 @@
   margin-left: -10px;
   height: 125px;
   width: 120px;
+}
+
+.kim {
+  position: absolute;
+  z-index: 2;
+  margin-top: -2px;
+  margin-left: -10px;
+  height: 110px;
+  width: 120px;
+}
+
+.hillary {
+  position: absolute;
+  z-index: 2;
+  height: 115px;
+  width: 45px;
+  margin-left: 25px;
+  margin-top: -11px;
 }
 
 .grass {
