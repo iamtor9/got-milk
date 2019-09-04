@@ -1,3 +1,7 @@
+https://iamtor9.github.io/got-milk/howtoplay.html
+prezi https://prezi.com/p/m-j-yxljpghp/eevee-ensemble/
+
+
 # Minimum Viable Product:
 - Instructions when user enters the app
 - Able to move around
