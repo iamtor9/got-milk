@@ -286,10 +286,10 @@ let hillarybox = true;
 setInterval(function(){   
 //Players horizontal coordinate
 var left = document.getElementById("stickfigure").offsetLeft;
-// console.log(left)
+ console.log(left)
 //Players vertical coordinate
 var top = document.getElementById("stickfigure").offsetTop;
-// console.log(top)
+ console.log(top)
 var player = document.getElementById("stickfigure");
 
 
@@ -299,6 +299,10 @@ document.getElementById("patk").innerHTML = "Attack: " + atk;
 
 if (hp === 0) {
   window.location.replace("../got-milk/EndScreen/HTML/battle.html");
+};
+
+if (worldsector === 11) {
+  worldsector = 10;
 };
 
 
@@ -672,7 +676,33 @@ else if (left >= 1213 && left <= 1316 && top === 534 && worldsector === 8) {
   player.style.left = 1615.6+"px";
   worldsector = 7;
   hp = hp-10;
-};
+}
+//Walls for level 9
+else if (left >= 108 && left <= 1516 && top === 215 && worldsector === 9) {
+hp = 0;
+}
+else if (left >= 108 && left <= 1516 && top === 428 && worldsector === 9) {
+hp = 0;
+}
+else if (left >= 108 && left <= 1516 && top === 640 && worldsector === 9) {
+hp = 0;
+}
+//Walls for level 10
+else if (left === 511 && top >= 108 && top <= 323 && worldsector === 10) {
+  player.style.left = 410.8+"px";
+  }
+  else if (left === 511 && top >= 533 && top <= 748 && worldsector === 10) {
+    player.style.left = 410.8+"px";
+    }
+    else if (left === 611 && top >= 108 && top <= 323 && worldsector === 10) {
+      player.style.left = 712+"px";
+      }
+      else if (left === 611 && top >= 533 && top <= 748 && worldsector === 10) {
+        player.style.left = 712+"px";
+        }
+        else if (left === 1615 && top >= 108 && top <= 748 && worldsector === 10) {
+          player.style.left = 1515.2+"px";
+          }
                   }, 25);
 
 function tileSet() {
@@ -715,11 +745,24 @@ for(let i = 0; i < 153; i++) {
   const ufo = document.createElement("img");
   ufo.setAttribute("src", "./assets/images/neutrals/ufo.png");
   ufo.setAttribute("class", "hide");
+  //Tombstone IMG
+  const tombstone = document.createElement("img");
+  tombstone.setAttribute("src", "./assets/images/neutrals/tombstone.png");
+  tombstone.setAttribute("class", "hide");
+  //Pillar IMG
+  const pillar = document.createElement("img");
+  pillar.setAttribute("src", "./assets/images/neutrals/pillar.png");
+  pillar.setAttribute("class", "hide");
 //Trump IMG
   const trump = document.createElement("img");
   trump.setAttribute("src", "./assets/images/presidents/trump.png");
   trump.setAttribute("class", "politician");
   trump.setAttribute("Id", "trump");
+  //Trump2 IMG
+  const trump2 = document.createElement("img");
+  trump2.setAttribute("src", "./assets/images/presidents/trump.png");
+  trump2.setAttribute("class", "hide");
+  trump2.setAttribute("Id", "trump");
 //Obama IMG
   const obama = document.createElement("img");
   obama.setAttribute("src", "./assets/images/presidents/obama.png");
@@ -756,6 +799,10 @@ for(let i = 0; i < 153; i++) {
   //Generates a Trump
   if(i === 75) {
     tile.append(trump);
+  };
+  //Generates a Trump2
+  if(i === 81) {
+    tile.append(trump2);
   };
   //Generates a Obama
   if(i === 58) {
@@ -810,6 +857,15 @@ tile.append(pole);
   if(i === 0 || i === 136 || i === 17 || i === 34 || i === 51 || i === 68 || i === 85 || i === 102 || i === 119 || i === 52 || i === 53 || i === 54 || i === 55 || i === 72 || i === 86 || i === 87 || i === 88 || i === 89 || i === 73 || i === 40 || i === 41 ||i === 42 || i === 43 || i === 44 || i === 45 ||i === 57 || i === 74 || i === 91 || i == 108 || i === 109 || i === 110 || i === 111 || i === 112 || i === 113 || i === 96 || i === 79 || i === 62 || i === 80 || i === 81 || i === 65 || i === 66 || i === 67 || i === 82 || i === 83 || i === 84 || i === 99 || i === 100 || i === 101) {
   tile.append(ufo);
   };
+  //Generates tombstones for the ninth world
+  if(i >= 35 && i <= 49 || i >= 69 && i <= 83 || i >= 103 && i <= 117) {
+  tile.append(tombstone);
+    };
+  //Generates pillar for the final world
+  if(i === 33 || i === 50 || i === 67 || i === 84 || i === 101 || i === 118 || i === 135 || i === 22 || i === 23 || i === 39 || i === 40 || i === 56 || i === 57 || i === 90 || i === 91  || i === 107 || i === 108 || i === 124 || i === 125) {
+    tile.append(pillar);
+      };  
+    
 
   function myFunction() {
     setInterval(function(){
@@ -871,6 +927,7 @@ tile.append(pole);
         lava.setAttribute("class", "fulllava");
         kim.setAttribute("class", "hide");
         hillary.setAttribute("class", "hillary");
+        pole.setAttribute("class", "hide");
       }
       else if(worldsector === 7){
         img.setAttribute("src", "./assets/images/tiles/dirt.jpg");
@@ -883,10 +940,27 @@ tile.append(pole);
       }
       else if(worldsector === 8){
         img.setAttribute("src", "./assets/images/tiles/space.jpg");
-        neutral.setAttribute("src", "./assets/images/neutrals/poles.png");
         neutral.setAttribute("class", "hide");
         pole.setAttribute("class", "hide");
         ufo.setAttribute("class", "ufo");
+        tombstone.setAttribute("class", "hide");
+      }
+      else if(worldsector === 9){
+        img.setAttribute("src", "./assets/images/tiles/moss.png");
+        neutral.setAttribute("src", "./assets/images/neutrals/tombstone.png");
+        neutral.setAttribute("class", "pole");
+        tombstone.setAttribute("class", "pole");
+        ufo.setAttribute("class", "hide");
+        trump2.setAttribute("class", "hide");
+        pillar.setAttribute("class", "hide");
+      }
+      else if(worldsector === 10){
+        img.setAttribute("src", "./assets/images/tiles/checker.jpg");
+        neutral.setAttribute("src", "./assets/images/neutrals/pillar.png");
+        neutral.setAttribute("class", "pillar");
+        tombstone.setAttribute("class", "hide");
+        trump2.setAttribute("class", "politician");
+        pillar.setAttribute("class", "pole");
       };
     }, 10);
   }
@@ -923,7 +997,8 @@ span.onclick = function () {
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
-  if (event.target == modal) {
+  if (event.target === modal) {
     modal.style.display = "none";
+    lock = false;
   }
 }
