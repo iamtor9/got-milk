@@ -1,19 +1,3 @@
-// ====================================================================================
-// ====================================================================================
-// API Keys & Codes
-
-// Deezer API (a music catalog)
-//  https://developers.deezer.com/api Link to the documentation
-// Audio get
-
-
-// Tronald Dump (API with all the dumb things that He has ever said)
-// https://docs.tronalddump.io/#quotes Link to Documentation
-
-
-// Giphy API (Using it for the attack animations that we will have)
-// https://developers.giphy.com/docs/api/endpoint#search Link to Documentation
-
 function callGiphyCareBear() {
 
   // ====================================================================================
@@ -21,7 +5,7 @@ function callGiphyCareBear() {
   let gif = "carebear"
   // ====================================================================================
 
-  const APIKey = "SF5z5yrS08Hg6RXmKUUTuAVDOH4j0GqG";
+  const APIKey = "SF5z5yrS08Hg6RXmKUUTuAVDOH4j0GqG";  // =========== Daniel's API Key -- Might wanna add your own keys if mines doesn't work in the future or if things get hacked ===========
   let amount = 100;
   // We want to create a const that is equal to the query that we are going to reference
   const queryURL = "https://api.giphy.com/v1/gifs/search?q=" + gif + "&api_key=" + APIKey + "&limit=" + amount;
@@ -129,7 +113,13 @@ function callGiphyCareSpaceBear() {
 
 // callGiphyCareSpaceBear();
 
-// ====================================================================================
+
+
+// WHAT WE ARE ACTUALLY USING IN INDEX.HTML
+// =========================================================================================================================================================================================================
+// =========================================================================================================================================================================================================
+// =========================================================================================================================================================================================================
+
 
 
 
@@ -139,7 +129,7 @@ function callGifAttack() {
 
   // Do this loop 2 times
   for (let i = 0; i < 2; i++) {
-    const APIKey = "SF5z5yrS08Hg6RXmKUUTuAVDOH4j0GqG";
+    const APIKey = "SF5z5yrS08Hg6RXmKUUTuAVDOH4j0GqG"; // =========== Daniel's API Key -- Might wanna add your own keys if mines doesn't work in the future or if things get hacked ===========
     let amount = 100;
     let gif;
     // console.log(totalGifArray);
@@ -340,8 +330,8 @@ function colorDetect() {
   console.log(expBar.getAttribute("src"));
 
   // AXIOS JS GET FETCH
-  // =====================================================================================================================================
-  // =====================================================================================================================================
+  // ==================================================================
+  // ==================================================================
 
   axios.get(queryURL, {
     "headers": {
