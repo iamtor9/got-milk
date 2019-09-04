@@ -94,7 +94,8 @@ function levelChecker(img) {
             // console.log(document.querySelector("#levelUpBox"));
             // document.querySelector("#levelUpBox").removeAttribute("class", "boxDisappear");
             document.querySelector("#levelUpBox").setAttribute("class", "boxAppear");
-
+            maxhp = maxhp + 20;
+            hp = maxhp;
             // ======================
             // This resets the tracker number back to zero
             expTracker = 0;

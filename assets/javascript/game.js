@@ -1,6 +1,7 @@
 //game variables
 let lock = false
 let hp = 100
+let maxhp = 100
 let atk = 1
 let def = 1
 let exp = 0
@@ -188,7 +189,6 @@ function HillaryFunction() {
   lock = false;
   exp = exp + 1;
   genWin();
-  // fhasjkbdsjkadoaw
 };
 
 //Function to fight putin
@@ -293,7 +293,7 @@ var top = document.getElementById("stickfigure").offsetTop;
 var player = document.getElementById("stickfigure");
 
 
-document.getElementById("php").innerHTML = hp + "/100";
+document.getElementById("php").innerHTML = hp + "/" + maxhp;
 document.getElementById("pdef").innerHTML = "Defense: " + def;
 document.getElementById("patk").innerHTML = "Attack: " + atk;
 
