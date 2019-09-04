@@ -758,7 +758,7 @@ tile.append(pole);
       }
       else if(worldsector === 8){
         img.setAttribute("src", "./assets/images/tiles/space.jpg");
-        neutral.setAttribute("src", "./assets/images/neutrals/pole.png");
+        neutral.setAttribute("src", "./assets/images/neutrals/poles.png");
         neutral.setAttribute("class", "hide");
         pole.setAttribute("class", "hide");
         ufo.setAttribute("class", "ufo");
