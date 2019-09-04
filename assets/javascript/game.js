@@ -1,6 +1,7 @@
 //game variables
 let lock = false
 let hp = 100
+let maxhp = 100
 let atk = 1
 let def = 1
 let exp = 0
@@ -144,10 +145,7 @@ function TrumpFunction() {
   trumpbox = false;
   lock = false;
   exp = exp + 1;
-  console.log(document.querySelector(".expBar"));
-  document.querySelector(".expBar").setAttribute("src", imgURL.oneExp);
-  console.log(document.querySelector(".expBar"));
-  colorDetect();
+  genWin();
 };
 
 //Function to disable reactivation of obamas textbox
@@ -156,10 +154,7 @@ function ObamaFunction() {
   obamabox = false;
   lock = false;
   exp = exp + 1;
-  console.log(document.querySelector(".expBar"));
-  document.querySelector(".expBar").setAttribute("src", imgURL.twoExp);
-  console.log(document.querySelector(".expBar"));
-  colorDetect();
+  genWin();
 };
 
 //Function to disable reactivation of putins textbox
@@ -168,10 +163,7 @@ function PutinFunction() {
   putinbox = false;
   lock = false;
   exp = exp + 1;
-  console.log(document.querySelector(".expBar"));
-  document.querySelector(".expBar").setAttribute("src", imgURL.threeExp);
-  console.log(document.querySelector(".expBar"));
-  colorDetect();
+  genWin();
 };
 
 //Function to disable reactivation of Reagans textbox
@@ -180,10 +172,7 @@ function ReaganFunction() {
   reaganbox = false;
   lock = false;
   exp = exp + 1;
-  console.log(document.querySelector(".expBar"));
-  document.querySelector(".expBar").setAttribute("src", imgURL.fourExp);
-  console.log(document.querySelector(".expBar"));
-  colorDetect();
+  genWin();
 };
 
 function KimFunction() {
@@ -191,10 +180,7 @@ function KimFunction() {
   kimbox = false;
   lock = false;
   exp = exp + 1;
-  console.log(document.querySelector(".expBar"));
-  document.querySelector(".expBar").setAttribute("src", imgURL.fiveExp);
-  console.log(document.querySelector(".expBar"));
-  colorDetect();
+  genWin();
 };
 
 function HillaryFunction() {
@@ -202,10 +188,7 @@ function HillaryFunction() {
   hillarybox = false;
   lock = false;
   exp = exp + 1;
-  console.log(document.querySelector(".expBar"));
-  document.querySelector(".expBar").setAttribute("src", imgURL.fiveExp);
-  console.log(document.querySelector(".expBar"));
-  colorDetect();
+  genWin();
 };
 
 //Function to fight putin
@@ -310,7 +293,7 @@ var top = document.getElementById("stickfigure").offsetTop;
 var player = document.getElementById("stickfigure");
 
 
-document.getElementById("php").innerHTML = hp + "/100";
+document.getElementById("php").innerHTML = hp + "/" + maxhp;
 document.getElementById("pdef").innerHTML = "Defense: " + def;
 document.getElementById("patk").innerHTML = "Attack: " + atk;
 
