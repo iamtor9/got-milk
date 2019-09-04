@@ -150,32 +150,24 @@ h1 {font-family: menufont;}
 }
 
 /*GRUMPY BEAR SPECIFIC */
-.char1Defense {width: 30%; background-color: #4CAF50;} /* Green */
-.char1Attack {width: 60%; background-color: #f44336;} /* Red */
+.char1Defense {width: 42%; background-color: #4CAF50;} /* Green */
+.char1Attack {width: 70%; background-color: #f44336;} /* Red */
 
 /*Love-a-lot BEAR SPECIFIC */
 .char2Defense {width: 70%; background-color: #4CAF50;} /* Green */
-.char2Attack {width: 30%; background-color: #f44336;} /* Red */
+.char2Attack {width: 42%; background-color: #f44336;} /* Red */
 
 /*FUNSHINE BEAR SPECIFIC */
-.char3Defense {width: 40%; background-color: #4CAF50;} /* Green */
+.char3Defense {width: 45%; background-color: #4CAF50;} /* Green */
 .char3Attack {width: 50%; background-color: #f44336;} /* Red */
 
 /*FRIEND BEAR SPECIFIC*/
 .char4Defense {width: 50%; background-color: #4CAF50;} /* Green */
-.char4Attack {width: 40%; background-color: #f44336;} /* Red */
+.char4Attack {width: 45%; background-color: #f44336;} /* Red */
 
 /*CHEER BEAR SPECIFIC Health and Damage */
 .char5Defense {width: 60%; background-color: #4CAF50;} /* Green */
-.char5Attack {width: 20%; background-color: #f44336;} /* Red */
-
-/*FRIEND BEAR SPECIFIC Health and Damage */
-.SBhealthPercent {width: 60%; background-color: #4CAF50;} /* Green */
-.SBdamagePercent {width: 30%; background-color: #f44336;} /* Red */
-
-/*CHEER BEAR SPECIFIC Health and Damage */
-.CBhealthPercent {width: 60%; background-color: #4CAF50;} /* Green */
-.CBdamagePercent {width: 30%; background-color: #f44336;} /* Red */
+.char5Attack {width: 42%; background-color: #f44336;} /* Red */
 
 #characterBtn:hover {
 cursor: pointer;
