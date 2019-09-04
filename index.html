@@ -107,6 +107,24 @@
         <button id="attack2" onclick="reaganfight()" type="button">Attack</button>
         <button id="endbuttonfight2" onclick="ReaganFunction()" type="button">Exit</button>
     </div>
+    <!--Kim Battle-->
+    <div id=kimtextbox>
+      <img id="kimert" src="./assets/images/presidents/kimert.png">
+      <p id="health3"></p>
+      <p id="kimhealth"></p>
+      <img id="battlebear3" src="./assets/images/carebears/carebare.png">
+      <button id="attack3" onclick="kimfight()" type="button">Attack</button>
+      <button id="endbuttonfight3" onclick="KimFunction()" type="button">Exit</button>
+  </div>
+  <!--Hillary Battle-->
+  <div id=hillarytextbox>
+    <img id="hillaryert" src="./assets/images/presidents/hillaryert.png">
+    <p id="health4"></p>
+    <p id="hillaryhealth"></p>
+    <img id="battlebear4" src="./assets/images/carebears/carebare.png">
+    <button id="attack4" onclick="hillaryfight()" type="button">Attack</button>
+    <button id="endbuttonfight4" onclick="HillaryFunction()" type="button">Exit</button>
+</div>
 
   <!-- stats box -->
   <div class="statsBox">
@@ -132,7 +150,7 @@
 
       <div id="levelUpBox" class="boxDisappear">
         <!-- <img id="obamert" src="./assets/images/presidents/obamert.png"> -->
-        <p class="texter">Level Up!</p>
+        <p class="texter3">Level Up!</p>
     </div>
 
      <!----> 
@@ -161,27 +179,25 @@
           <span class="close">&times;</span>
           <h2></h2>
         </div>
-        <!-- Modal Card Row -->
-        <div class="w3-row-padding">
+        <!-- Modal clearfix -->
+        <div class="clearfix">
           
         <!-- GRUMPY BEAR CARD -->
-        <div class="modal-body w3-container w3-third">
+        <div class="modal-body img-container">
           <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img src="assets/images/carebears/grumpybear.png" alt="GrumpyBearAvatar" style="width:300px;height:300px;">
+                <img src="assets/images/carebears/grumpy-bear.png" alt="GrumpyBearAvatar" style="width:100%">
               </div>
               <div class="flip-card-back">
-                <h1>Grumpy Bear</h1> 
-                <p>Something about grumpy....some other things that are cool about him.....maybe he blasts presidents with doom and gloom?</p> 
-                <p>We love that guy</p>
-                <p></p>
+                <p><strong>Grumpy Bear</strong> blasts presidents with doom and gloom</p> 
+                <p>We love that guy!</p>
                 <div class="container">
-                  <div class="skills GBhealthPercent">Defense: 3</div>
+                  <div class="char1Defense">Defense: 2</div>
                 </div>
                 <p></p>
                 <div class="container">
-                  <div class="skills GBdamagePercent">Attack: 6</div>
+                  <div class="char1Attack">Attack: 7</div>
                 </div>
                 <button class="character1">Click Here</button>
               </div>
@@ -189,95 +205,91 @@
           </div>
         </div>
         <!-- LOVE-A-LOT BEAR CARD-->
-        <div class="modal-body w3-container w3-third">
+        <div class="modal-body img-container">
           <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img src="assets/images/carebears/lovealotbear.png" alt="LovealotBearAvatar" style="width:300px;height:300px;">
+                <img src="assets/images/carebears/lovealot-bear.png" alt="LovealotBearAvatar" style="width:100%">
               </div>
               <div class="flip-card-back">
-                <h1>Love-a-lot Bear</h1> 
-                <p>Something about love-a-lot bear....some other things that are cool about him.....maybe he blasts enemies with overwhelming love??</p> 
-                <p>We love that guy</p>
-                <p></p>
+                <p><strong>Love-a-lot Bear</strong> squeezes his enemy to death with his overwhelming love</p> 
+                <p>We love that guy!</p>
                 <div class="container">
-                  <div class="skills PHhealthPercent">Defense: 7</div>
+                  <div class="char2Defense">Defense: 7</div>
                 </div>
                 <p></p>
                 <div class="container">
-                  <div class="skills PHdamagePercent">Attack: 3</div>
+                  <div class="char2Attack">Attack: 2</div>
                 </div>
+                <br>
                 <button class="character2">Click Here</button>
               </div>
             </div>
           </div>
         </div>
         <!-- FUNSHINE BEAR CARD-->
-        <div class="modal-body w3-container w3-third">
+        <div class="modal-body img-container">
           <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img src="assets/images/carebears/funshine.png" alt="FunshineBearAvatar" style="width:300px;height:300px;">
+                <img src="assets/images/carebears/funshine-bear.png" alt="FunshineBearAvatar" style="width:100%">
               </div>
               <div class="flip-card-back">
-                <h1>Funshine Bear</h1> 
-                <p>Something about Funshine bear....some other things that are cool about him.....maybe he blasts enemies with cupcakes in the face??</p> 
-                <p>We love that guy</p>
-                <p></p>
+                <p><strong>Funshine Bear</strong> will burn his enemies if they get too close</p> 
+                <p>We love that guy!</p>
                 <div class="container">
-                  <div class="skills BBhealthPercent">Defense: 4</div>
+                  <div class="char3Defense">Defense: 4</div>
                 </div>
                 <p></p>
                 <div class="container">
-                  <div class="skills BBdamagePercent">Attack: 5</div>
+                  <div class="char3Attack">Attack: 5</div>
                 </div>
+                <br>
                 <button class="character3">Click Here</button>
               </div>
             </div>
           </div>
         </div>
          <!-- FRIEND BEAR CARD-->
-         <div class="modal-body w3-container w3-third">
+         <div class="modal-body img-container">
           <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img src="assets/images/carebears/friend-bear.png" alt="FriendBearAvatar" style="width:300px;height:300px;">
+                <img src="assets/images/carebears/friend-bear.png" alt="FriendBearAvatar" style="width:100%">
               </div>
               <div class="flip-card-back">
-                <h1>Friend Bear</h1> 
-                <p>Something about Friend bear....some other things that are cool about him.....maybe he blasts enemies with overwhelming love??</p> 
-                <p>We love that guy</p>
-                <p></p>
+                <p><strong>Friend Bear</strong> keeps his enemies REAL close</p> 
+                <p>We love that guy!</p>
                 <div class="container">
-                  <div class="skills SBhealthPercent">Defense: 4</div>
+                  <div class="char4Defense">Defense: 5</div>
                 </div>
                 <p></p>
                 <div class="container">
-                  <div class="skills SBdamagePercent">Attack: 5</div>
+                  <div class="char4Attack">Attack: 4</div>
                 </div>
+                <br>
                 <button class="character4">Click Here</button>
               </div>
             </div>
           </div>
         </div>
         <!-- CHEER BEAR CARD-->
-        <div class="modal-body w3-container w3-third">
+        <div class="modal-body img-container">
           <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img src="assets/images/carebears/cheer-bear.png" alt="CheerBearAvatar" style="width:300px;height:300px;">
+                <img src="assets/images/carebears/cheer-bear.png" alt="CheerBearAvatar" style="width:100%">
               </div>
               <div class="flip-card-back">
-                <h1>Cheer Bear </h1> 
-                <p>Something about Cheer bear....some other things that are cool about him.....maybe he blasts enemies with overwhelming love??</p> 
-                <p>We love that guy</p>
+                <p><strong>Cheer Bear</strong> can turn at any moment....</p> 
+                <p>We love that guy!</p>
                 <p></p>
                 <div class="container">
-                  <div class="skills SBhealthPercent">Defense: 6</div>
+                  <div class="char5Defense">Defense: 6</div>
                 </div>
                 <p></p>
                 <div class="container">
-                  <div class="skills SBdamagePercent">Attack: 2</div>
+                  <div class="char5Attack">Attack: 3</div>
                 </div>
                 <button class="character5">Click Here</button>
               </div>
@@ -293,9 +305,14 @@
 
 
 <!------------------------------------------------------------------------------------------------------>
+
+        <!-- This is the axios js script -->
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
         <!--Overworld javascript-->  
         <script src="./assets/javascript/game.js"></script>
         <script src="assets/javascript/apiFetch.js"></script>
+        <script src="assets/javascript/battle.js"></script>
 
 </body>
 </html>
