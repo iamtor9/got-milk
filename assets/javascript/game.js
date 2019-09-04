@@ -188,6 +188,7 @@ function HillaryFunction() {
   lock = false;
   exp = exp + 1;
   genWin();
+  // fhasjkbdsjkadoaw
 };
 
 //Function to fight putin
