@@ -36,6 +36,8 @@
     background-image: url("../endgamecontent/endgame1.gif");
     background-repeat: no-repeat;
 
+    background-image: url("../EndScreen/HTML/battle.html");
+
 }
 
 #startoverbtn:hover {

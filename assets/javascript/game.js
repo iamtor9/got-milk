@@ -315,7 +315,7 @@ document.getElementById("pdef").innerHTML = "Defense: " + def;
 document.getElementById("patk").innerHTML = "Attack: " + atk;
 
 if (hp === 0) {
-  window.location.replace("../got-milk/endgamecontent/battle.html");
+  window.location.replace("../got-milk/EndScreen/HTML/battle.html");
 };
 
 
