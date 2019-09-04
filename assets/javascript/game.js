@@ -252,10 +252,10 @@ let reaganbox = true
 setInterval(function(){   
 //Players horizontal coordinate
 var left = document.getElementById("stickfigure").offsetLeft;
-console.log(left)
+// console.log(left)
 //Players vertical coordinate
 var top = document.getElementById("stickfigure").offsetTop;
-console.log(top)
+// console.log(top)
 var player = document.getElementById("stickfigure");
 
 
