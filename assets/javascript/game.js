@@ -122,55 +122,10 @@ let hillaryhealth = 50
   });
 
 
-// This is the object-array for the exp bars
-let imgURL = {
-  zeroExp: "https://i.ibb.co/CVDM471/0-7-Exp-copy.png",
-  oneExp: "https://i.ibb.co/cc0D9yM/1-7-Exp-copy.png",
-  twoExp: "https://i.ibb.co/LPggxW2/2-7-Exp-copy.png",
-  threeExp: "https://i.ibb.co/xsPJqcb/4-7-Exp-copy.png",
-  fourExp: "https://i.ibb.co/Wtmb5Jz/5-7-Exp-copy.png",
-  fiveExp: "https://i.ibb.co/FwRS1hj/6-7-Exp-copy.png",
-}
+// ==============================
+// IF WE REALLY WANT TO add back in the JS used for exp and battling, we can insert it right here(Daniel's Portion)
+// ==============================
 
-// This is an interval timer that is always checking to see if the exp bar is full
-function levelChecker(img) {
-  // console.log(img);
-  setTimeout(function() {
-    console.log(img)
-    if(img.tags.length === 7 && 
-      img.tags[0].label === "Green" &&
-      img.tags[1].label === "Cyan" &&
-      img.tags[2].label === "Purple" &&
-      img.tags[3].label === "Red" &&
-      img.tags[4].label === "Orange" &&
-      img.tags[5].label === "Yellow" &&
-      img.tags[6].label === "Blue") {
-      console.log("hey you leveled up!");
-      // console.log(document.querySelector("#levelUpBox"));
-      // document.querySelector("#levelUpBox").removeAttribute("class", "boxDisappear");
-      document.querySelector("#levelUpBox").setAttribute("class", "boxAppear");
-      document.querySelector(".expBar").setAttribute("src", imgURL.zeroExp)
-      console.log(document.querySelector("#levelUpBox"));
-
-    }
-  }, 100);
-
-  setTimeout(function() {
-    hideLevelUpBox();
-
-    // This resets the exp bar back to gray
-    ;
-
-  }, 3500);
-  // setTimeout(clearInterval(levelCheckerInterval), 250)
-}
-// levelChecker();
-
-function hideLevelUpBox() {
-  document.querySelector("#levelUpBox").removeAttribute("class", "boxAppear");
-  document.querySelector("#levelUpBox").setAttribute("class", "boxDisappear");
-  console.log(document.querySelector("#levelUpBox"));
-};
 
 //Function to show controls
 function showcontrols() {
@@ -256,6 +211,8 @@ function HillaryFunction() {
 //Function to fight putin
 function putinfight() {
   putinhealth = putinhealth - Math.floor(Math.random() * 10) - atk;
+
+  // Can be found in battle.js
   callGifAttack();
 
 
@@ -265,6 +222,8 @@ function putinfight() {
 //Function to fight reagan
 function reaganfight() {
   reaganhealth = reaganhealth - Math.floor(Math.random() * 9) - atk;
+
+  // Can be found in battle.js
   callGifAttack();
   
   
@@ -344,10 +303,10 @@ let hillarybox = true;
 setInterval(function(){   
 //Players horizontal coordinate
 var left = document.getElementById("stickfigure").offsetLeft;
-console.log(left)
+// console.log(left)
 //Players vertical coordinate
 var top = document.getElementById("stickfigure").offsetTop;
-console.log(top)
+// console.log(top)
 var player = document.getElementById("stickfigure");
 
 
@@ -767,7 +726,7 @@ for(let i = 0; i < 153; i++) {
   lava.setAttribute("class", "hide");
   //Pole IMG
   const pole = document.createElement("img");
-  pole.setAttribute("src", "./assets/images/neutrals/pole.png");
+  pole.setAttribute("src", "./assets/images/neutrals/poles.png");
   pole.setAttribute("class", "hide");
   //Pole IMG
   const ufo = document.createElement("img");
@@ -932,7 +891,7 @@ tile.append(pole);
       }
       else if(worldsector === 7){
         img.setAttribute("src", "./assets/images/tiles/dirt.jpg");
-        neutral.setAttribute("src", "./assets/images/neutrals/pole.png");
+        neutral.setAttribute("src", "./assets/images/neutrals/poles.png");
         neutral.setAttribute("class", "pole");
         pole.setAttribute("class", "pole");
         lava.setAttribute("class", "hide");
@@ -941,7 +900,7 @@ tile.append(pole);
       }
       else if(worldsector === 8){
         img.setAttribute("src", "./assets/images/tiles/space.jpg");
-        neutral.setAttribute("src", "./assets/images/neutrals/pole.png");
+        neutral.setAttribute("src", "./assets/images/neutrals/poles.png");
         neutral.setAttribute("class", "hide");
         pole.setAttribute("class", "hide");
         ufo.setAttribute("class", "ufo");
@@ -949,18 +908,6 @@ tile.append(pole);
     }, 10);
   }
   myFunction();
-
-  //let rng = Math.floor(Math.random() * 41);
-
-  //let neutralGenerator = rng
-  //if(neutralGenerator === 15 && neutralGenerator !== 17) {
-    //tile.append(neutral);
-    //};
-
-    //let trumpGenerator = rng
-    //if(trumpGenerator === 17 && trumpGenerator !== 15) {
-    //tile.append(trump);
-    //};
 
     tile.append(img);
     document.querySelector(".grid-container").append(tile);
