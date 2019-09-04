@@ -107,6 +107,24 @@
         <button id="attack2" onclick="reaganfight()" type="button">Attack</button>
         <button id="endbuttonfight2" onclick="ReaganFunction()" type="button">Exit</button>
     </div>
+    <!--Kim Battle-->
+    <div id=kimtextbox>
+      <img id="kimert" src="./assets/images/presidents/kimert.png">
+      <p id="health3"></p>
+      <p id="kimhealth"></p>
+      <img id="battlebear3" src="./assets/images/carebears/carebare.png">
+      <button id="attack3" onclick="kimfight()" type="button">Attack</button>
+      <button id="endbuttonfight3" onclick="KimFunction()" type="button">Exit</button>
+  </div>
+  <!--Hillary Battle-->
+  <div id=hillarytextbox>
+    <img id="hillaryert" src="./assets/images/presidents/hillaryert.png">
+    <p id="health4"></p>
+    <p id="hillaryhealth"></p>
+    <img id="battlebear4" src="./assets/images/carebears/carebare.png">
+    <button id="attack4" onclick="hillaryfight()" type="button">Attack</button>
+    <button id="endbuttonfight4" onclick="HillaryFunction()" type="button">Exit</button>
+</div>
 
   <!-- stats box -->
   <div class="statsBox">
@@ -132,7 +150,7 @@
 
       <div id="levelUpBox" class="boxDisappear">
         <!-- <img id="obamert" src="./assets/images/presidents/obamert.png"> -->
-        <p class="texter">Level Up!</p>
+        <p class="texter3">Level Up!</p>
     </div>
 
      <!----> 
@@ -175,14 +193,13 @@
                 <p><strong>Grumpy Bear</strong> blasts presidents with doom and gloom</p> 
                 <p>We love that guy!</p>
                 <div class="container">
-                  <div class="char1Defense">Defense: 3</div>
+                  <div class="skills GBhealthPercent">Defense: 2</div>
                 </div>
                 <p></p>
                 <div class="container">
-                  <div class="char1Attack">Attack: 6</div>
+                  <div class="skills GBdamagePercent">Attack: 7</div>
                 </div>
-                <br>
-                <button class="character1">Click Here</button>
+                <button onclick="functionchar1();" class="character1">Click Here</button>
               </div>
             </div>
           </div>
@@ -202,7 +219,7 @@
                 </div>
                 <p></p>
                 <div class="container">
-                  <div class="char2Attack">Attack: 3</div>
+                  <div class="skills PHdamagePercent">Attack: 2</div>
                 </div>
                 <br>
                 <button class="character2">Click Here</button>
@@ -244,11 +261,11 @@
                 <p><strong>Friend Bear</strong> keeps his enemies REAL close</p> 
                 <p>We love that guy!</p>
                 <div class="container">
-                  <div class="char4Defense">Defense: 5</div>
+                  <div class="skills SBhealthPercent">Defense: 6</div>
                 </div>
                 <p></p>
                 <div class="container">
-                  <div class="char4Attack">Attack: 4</div>
+                  <div class="skills SBdamagePercent">Attack: 3</div>
                 </div>
                 <br>
                 <button class="character4">Click Here</button>
@@ -268,11 +285,11 @@
                 <p>We love that guy!</p>
                 <p></p>
                 <div class="container">
-                  <div class="char5Defense">Defense: 6</div>
+                  <div class="skills CBhealthPercent">Defense: 6</div>
                 </div>
                 <p></p>
                 <div class="container">
-                  <div class="char5Attack">Attack: 2</div>
+                  <div class="skills CBdamagePercent">Attack: 3</div>
                 </div>
                 <button class="character5">Click Here</button>
               </div>

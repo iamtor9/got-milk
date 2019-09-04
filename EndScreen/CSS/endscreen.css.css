@@ -37,6 +37,10 @@
     background-position: center;
     background-image: url("../ImagesGifs/playAgain.gif");
 }
+
+.topsection:hover {
+    cursor: pointer;
+}
     
     
 .topsection {   
@@ -76,6 +80,8 @@
 
 }
 
+
+
 .btn {   
     animation:blinkingText 0.8s infinite; 
 }  
@@ -91,4 +97,8 @@
 
 .btn {
     opacity: .5;
+}
+
+.btn:hover {
+    cursor: pointer;
 }

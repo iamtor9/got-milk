@@ -1,3 +1,5 @@
+h1 {font-family: menufont;}
+
 /* Characards Modal (background) */
 .modal {
   display: none; /* Hidden by default - remember to change to none after we get a button connected */
@@ -11,11 +13,22 @@
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  font-family: menufont;
+}
+
+/* Characards Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  font-family: menufont;
 }
 
 /* The Close Button */
 .close {
-  color: #aaaaaa;
+  color: #000;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -23,7 +36,7 @@
 
 .close:hover,
 .close:focus {
-  color: #000;
+  color: #aaaaaa;
   text-decoration: none;
   cursor: pointer;
 }
@@ -34,6 +47,7 @@
   background-color: red; /* For browsers that do not support gradients */
   background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); /* Standard syntax (must be last) */
   color: white;
+  font-family: menufont;
 }
 
 /* Modal Body */
@@ -57,7 +71,8 @@
   width: 80%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   animation-name: animatetop;
-  animation-duration: 0.4s
+  animation-duration: 0.4s;
+  font-family: menufont;
 }
 
 /* Add Animation */
@@ -124,7 +139,7 @@
 
 /* Health and Damage skills bars */
 .skills {
-  text-align: right; /* Right-align text */
+  text-align: center; /* Right-align text */
   padding-top: 10px; /* Add top padding */
   padding-bottom: 10px; /* Add bottom padding */
   color: white; /* White text color */
@@ -153,6 +168,14 @@
 /*CHEER BEAR SPECIFIC Health and Damage */
 .char5Defense {width: 60%; background-color: #4CAF50;} /* Green */
 .char5Attack {width: 20%; background-color: #f44336;} /* Red */
+
+/*FRIEND BEAR SPECIFIC Health and Damage */
+.SBhealthPercent {width: 60%; background-color: #4CAF50;} /* Green */
+.SBdamagePercent {width: 30%; background-color: #f44336;} /* Red */
+
+/*CHEER BEAR SPECIFIC Health and Damage */
+.CBhealthPercent {width: 60%; background-color: #4CAF50;} /* Green */
+.CBdamagePercent {width: 30%; background-color: #f44336;} /* Red */
 
 #characterBtn:hover {
 cursor: pointer;
