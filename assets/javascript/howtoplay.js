@@ -22,6 +22,7 @@ function submitInfo() {
         document.getElementById("tooyoung").innerHTML = "Please come back when you are a little bit older!"
     }
         else {
+        document.getElementById("userinput").style.display = "none";
         showButton();
         }
 }

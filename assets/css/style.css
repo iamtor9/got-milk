@@ -15,6 +15,7 @@
   font-size: 30px;
   text-align: center;
   position: relative;
+  z-index: 0;
 }
 
 #stickfigure {
@@ -69,7 +70,29 @@
     margin-top: -10px;
 }
 
+#final {
+  height: 175px;
+  width: 175px;
+  position: absolute;
+    margin-top: -35px;
+    margin-left: 570px;
+}
+
 #obamatextbox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: black;
+  display: "";
+  height: 105px;
+  width: 300px;
+  display: none;
+  z-index: 21;
+}
+
+#lincolntextbox {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -86,6 +109,14 @@
 #obamert {
   height: 100px;
   width: 100px;
+  position: absolute;
+    margin-top: 0px;
+    margin-left: -5px;
+}
+
+#lincolnert {
+  height: 100px;
+  width: 95px;
   position: absolute;
     margin-top: 0px;
     margin-left: -5px;
@@ -147,6 +178,61 @@
   z-index: 21;
 }
 
+#boristextbox {
+  position: fixed;
+  top: 50%;
+  left: 49.98%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: black;
+  display: "";
+  height: 300px;
+  width: 703px;
+  display: none;
+  z-index: 21;
+}
+
+#duttextbox {
+  position: fixed;
+  top: 50%;
+  left: 49.98%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: black;
+  height: 300px;
+  width: 703px;
+  display: none;
+  z-index: 21;
+}
+
+#miketextbox {
+  position: fixed;
+  top: 50%;
+  left: 49.98%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: black;
+  display: "";
+  height: 300px;
+  width: 703px;
+  display: none;
+  z-index: 21;
+}
+
+#trump2textbox {
+  position: fixed;
+  top: 50%;
+  left: 49.98%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: black;
+  display: "";
+  height: 300px;
+  width: 703px;
+  display: none;
+  z-index: 21;
+}
+
 #levelUpBox {
   position: fixed;
   top: 50%;
@@ -186,6 +272,30 @@
 }
 
 #hillaryert {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+    margin-top: 5px;
+    margin-left: 590px;
+}
+
+#borisert {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+    margin-top: 5px;
+    margin-left: 590px;
+}
+
+#dutert {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+    margin-top: 5px;
+    margin-left: 590px;
+}
+
+#mikert {
   height: 100px;
   width: 100px;
   position: absolute;
@@ -257,6 +367,14 @@
     margin-left: 20px;
 }
 
+#battlebear9 {
+  height: 80px;
+  width: 90px;
+  position: absolute;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
 #health {
   position: absolute;
     margin-top: 110px;
@@ -300,6 +418,12 @@
 }
 
 #health8 {
+  position: absolute;
+    margin-top: 110px;
+    margin-left: 40px;
+}
+
+#health9 {
   position: absolute;
     margin-top: 110px;
     margin-left: 40px;
@@ -353,6 +477,12 @@
     margin-left: 25px;
 }
 
+#attack9 {
+  position: absolute;
+    margin-top: 160px;
+    margin-left: 25px;
+}
+
 #putinhealth {
   position: absolute;
     margin-top: 110px;
@@ -377,12 +507,36 @@
     margin-left: 640px;
 }
 
+#borishealth {
+  position: absolute;
+    margin-top: 110px;
+    margin-left: 640px;
+}
+
+#duthealth {
+  position: absolute;
+    margin-top: 110px;
+    margin-left: 640px;
+}
+
+#mikehealth {
+  position: absolute;
+    margin-top: 110px;
+    margin-left: 640px;
+}
+
+#trump2health {
+  position: absolute;
+    margin-top: 110px;
+    margin-left: 640px;
+}
+
 #endbutton {
   position: absolute;
   height: 40px;
   z-index: 25;
   margin-top: 65px;
-  margin-left: 255.6px;
+  margin-left: 267.5px;
 }
 
 #endbuttonfight {
@@ -390,7 +544,7 @@
   height: 40px;
   z-index: 25;
   margin-top: 260px;
-  margin-left: 658px;
+  margin-left: 670.5px;
   display: none;
 }
 
@@ -399,7 +553,7 @@
   height: 40px;
   z-index: 25;
   margin-top: 260px;
-  margin-left: 658px;
+  margin-left: 670.5px;
   display: none;
 }
 
@@ -408,7 +562,7 @@
   height: 40px;
   z-index: 25;
   margin-top: 260px;
-  margin-left: 658px;
+  margin-left: 670.5px;
   display: none;
 }
 
@@ -417,7 +571,7 @@
   height: 40px;
   z-index: 25;
   margin-top: 260px;
-  margin-left: 658px;
+  margin-left: 670.5px;
   display: none;
 }
 
@@ -426,7 +580,7 @@
   height: 40px;
   z-index: 25;
   margin-top: 260px;
-  margin-left: 658px;
+  margin-left: 670.5px;
   display: none;
 }
 
@@ -435,7 +589,7 @@
   height: 40px;
   z-index: 25;
   margin-top: 260px;
-  margin-left: 658px;
+  margin-left: 670.5px;
   display: none;
 }
 
@@ -444,7 +598,7 @@
   height: 40px;
   z-index: 25;
   margin-top: 260px;
-  margin-left: 658px;
+  margin-left: 670.5px;
   display: none;
 }
 
@@ -453,7 +607,16 @@
   height: 40px;
   z-index: 25;
   margin-top: 260px;
-  margin-left: 658px;
+  margin-left: 670.5px;
+  display: none;
+}
+
+#endbuttonfight9 {
+  position: absolute;
+  height: 40px;
+  z-index: 25;
+  margin-top: 260px;
+  margin-left: 670.5px;
   display: none;
 }
 
@@ -549,6 +712,17 @@
   display: all;
 }
 
+.pillar {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 666;
+  height: 105px;
+  width: 98.5px;
+  background: transparent;
+  display: all;
+}
+
 .ufo {
   position: absolute;
   top: 1.5px;
@@ -576,6 +750,23 @@
   z-index: 2;
   height: 100px;
   margin-left: 32.5px;
+  margin-top: 2.5px;
+}
+
+.mike {
+  position: absolute;
+  z-index: 2;
+  height: 100px;
+  margin-left: 2.5px;
+  margin-top: 2.5px;
+}
+
+.boris {
+  position: absolute;
+  z-index: 2;
+  height: 100px;
+  width: 110px;
+  margin-left: 0px;
   margin-top: 2.5px;
 }
 
