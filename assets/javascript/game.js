@@ -10,6 +10,10 @@ let putinhealth = 70
 let reaganhealth = 60
 let kimhealth = 40
 let hillaryhealth = 50
+let borishealth = 55
+let duthealth = 35
+let mikehealth = 75
+let trump2health = 150
 
 
   document.addEventListener("click", function (event){
@@ -20,10 +24,10 @@ let hillaryhealth = 50
       document.getElementById("battlebear2").src = "./assets/images/carebears/grumpy-bear.png";
       document.getElementById("battlebear3").src = "./assets/images/carebears/grumpy-bear.png";
       document.getElementById("battlebear4").src = "./assets/images/carebears/grumpy-bear.png";
-      //document.getElementById("battlebear5").src = "./assets/images/carebears/grumpy-bear.png";
-      // document.getElementById("battlebear6").src = "./assets/images/carebears/grumpy-bear.png";
-      // document.getElementById("battlebear7").src = "./assets/images/carebears/grumpy-bear.png";
-      // document.getElementById("battlebear8").src = "./assets/images/carebears/grumpy-bear.png";
+      document.getElementById("battlebear5").src = "./assets/images/carebears/grumpy-bear.png";
+      document.getElementById("battlebear6").src = "./assets/images/carebears/grumpy-bear.png";
+      document.getElementById("battlebear7").src = "./assets/images/carebears/grumpy-bear.png";
+      document.getElementById("battlebear8").src = "./assets/images/carebears/grumpy-bear.png";
       // document.getElementById("battlebear9").src = "./assets/images/carebears/grumpy-bear.png";
       // document.getElementById("battlebear10").src = "./assets/images/carebears/grumpy-bear.png";
       document.getElementById("profile").setAttribute("class", "icon1");
@@ -42,10 +46,10 @@ let hillaryhealth = 50
       document.getElementById("battlebear2").src = "./assets/images/carebears/lovealot-bear.png";
       document.getElementById("battlebear3").src = "./assets/images/carebears/lovealot-bear.png";
       document.getElementById("battlebear4").src = "./assets/images/carebears/lovealot-bear.png";
-      // document.getElementById("battlebear5").src = "./assets/images/carebears/lovealot-bear.png";
-      // document.getElementById("battlebear6").src = "./assets/images/carebears/lovealot-bear.png";
-      // document.getElementById("battlebear7").src = "./assets/images/carebears/lovealot-bear.png";
-      // document.getElementById("battlebear8").src = "./assets/images/carebears/lovealot-bear.png";
+      document.getElementById("battlebear5").src = "./assets/images/carebears/lovealot-bear.png";
+      document.getElementById("battlebear6").src = "./assets/images/carebears/lovealot-bear.png";
+      document.getElementById("battlebear7").src = "./assets/images/carebears/lovealot-bear.png";
+      document.getElementById("battlebear8").src = "./assets/images/carebears/lovealot-bear.png";
       // document.getElementById("battlebear9").src = "./assets/images/carebears/lovealot-bear.png";
       // document.getElementById("battlebear10").src = "./assets/images/carebears/lovealot-bear.png";
       document.getElementById("profile").setAttribute("class", "icon2");
@@ -63,11 +67,11 @@ let hillaryhealth = 50
       document.getElementById("battlebear").src = "./assets/images/carebears/funshine-bear.png";
       document.getElementById("battlebear2").src = "./assets/images/carebears/funshine-bear.png";
       document.getElementById("battlebear3").src = "./assets/images/carebears/funshine-bear.png";
-      // document.getElementById("battlebear4").src = "./assets/images/carebears/funshine-bear.png";
-      // document.getElementById("battlebear5").src = "./assets/images/carebears/funshine-bear.png";
-      // document.getElementById("battlebear6").src = "./assets/images/carebears/funshine-bear.png";
-      // document.getElementById("battlebear7").src = "./assets/images/carebears/funshine-bear.png";
-      // document.getElementById("battlebear8").src = "./assets/images/carebears/funshine-bear.png";
+      document.getElementById("battlebear4").src = "./assets/images/carebears/funshine-bear.png";
+      document.getElementById("battlebear5").src = "./assets/images/carebears/funshine-bear.png";
+      document.getElementById("battlebear6").src = "./assets/images/carebears/funshine-bear.png";
+      document.getElementById("battlebear7").src = "./assets/images/carebears/funshine-bear.png";
+      document.getElementById("battlebear8").src = "./assets/images/carebears/funshine-bear.png";
       // document.getElementById("battlebear9").src = "./assets/images/carebears/funshine-bear.png";
       // document.getElementById("battlebear10").src = "./assets/images/carebears/funshine-bear.png";
       document.getElementById("profile").setAttribute("class", "icon3");
@@ -86,10 +90,10 @@ let hillaryhealth = 50
       document.getElementById("battlebear2").src = "./assets/images/carebears/friend-bear.png";
       document.getElementById("battlebear3").src = "./assets/images/carebears/friend-bear.png";
       document.getElementById("battlebear4").src = "./assets/images/carebears/friend-bear.png";
-      // document.getElementById("battlebear5").src = "./assets/images/carebears/friend-bear.png";
-      // document.getElementById("battlebear6").src = "./assets/images/carebears/friend-bear.png";
-      // document.getElementById("battlebear7").src = "./assets/images/carebears/friend-bear.png";
-      // document.getElementById("battlebear8").src = "./assets/images/carebears/friend-bear.png";
+      document.getElementById("battlebear5").src = "./assets/images/carebears/friend-bear.png";
+      document.getElementById("battlebear6").src = "./assets/images/carebears/friend-bear.png";
+      document.getElementById("battlebear7").src = "./assets/images/carebears/friend-bear.png";
+      document.getElementById("battlebear8").src = "./assets/images/carebears/friend-bear.png";
       // document.getElementById("battlebear9").src = "./assets/images/carebears/friend-bear.png";
       // document.getElementById("battlebear10").src = "./assets/images/carebears/friend-bear.png";
       document.getElementById("profile").setAttribute("class", "icon4");
@@ -108,10 +112,10 @@ let hillaryhealth = 50
       document.getElementById("battlebear2").src = "./assets/images/carebears/cheer-bear.png";
       document.getElementById("battlebear3").src = "./assets/images/carebears/cheer-bear.png";
       document.getElementById("battlebear4").src = "./assets/images/carebears/cheer-bear.png";
-      // document.getElementById("battlebear5").src = "./assets/images/carebears/cheer-bear.png";
-      // document.getElementById("battlebear6").src = "./assets/images/carebears/cheer-bear.png";
-      // document.getElementById("battlebear7").src = "./assets/images/carebears/cheer-bear.png";
-      // document.getElementById("battlebear8").src = "./assets/images/carebears/cheer-bear.png";
+      document.getElementById("battlebear5").src = "./assets/images/carebears/cheer-bear.png";
+      document.getElementById("battlebear6").src = "./assets/images/carebears/cheer-bear.png";
+      document.getElementById("battlebear7").src = "./assets/images/carebears/cheer-bear.png";
+      document.getElementById("battlebear8").src = "./assets/images/carebears/cheer-bear.png";
       // document.getElementById("battlebear9").src = "./assets/images/carebears/cheer-bear.png";
       // document.getElementById("battlebear10").src = "./assets/images/carebears/cheer-bear.png";
       document.getElementById("profile").setAttribute("class", "icon5");
@@ -157,6 +161,14 @@ function ObamaFunction() {
   genWin();
 };
 
+function LincolnFunction() {
+  document.getElementById("lincolntextbox").style.display = "none";
+  lincolnbox = false;
+  lock = false;
+  exp = exp + 1;
+  genWin();
+};
+
 //Function to disable reactivation of putins textbox
 function PutinFunction() {
   document.getElementById("putintextbox").style.display = "none";
@@ -191,44 +203,110 @@ function HillaryFunction() {
   genWin();
 };
 
+function BorisFunction() {
+  document.getElementById("boristextbox").style.display = "none";
+  borisbox = false;
+  lock = false;
+  exp = exp + 1;
+  genWin();
+};
+
+function DutFunction() {
+  document.getElementById("duttextbox").style.display = "none";
+  dutbox = false;
+  lock = false;
+  exp = exp + 1;
+  genWin();
+};
+
+function MikeFunction() {
+  document.getElementById("miketextbox").style.display = "none";
+  mikebox = false;
+  lock = false;
+  exp = exp + 1;
+  genWin();
+};
+
+function Trump2Function() {
+  document.getElementById("trump2textbox").style.display = "none";
+  trump2box = false;
+  lock = false;
+  exp = exp + 1;
+  genWin();
+  window.location.replace("../got-milk/EndScreen/HTML/win.html");
+};
+
 //Function to fight putin
 function putinfight() {
-  putinhealth = putinhealth - Math.floor(Math.random() * 10) - atk;
+  putinhealth = putinhealth - Math.floor(Math.random() * 30) - (atk*3);
 
   // Can be found in battle.js
   callGifAttack();
 
 
-  hp = hp - Math.floor(Math.random() * (10 - def));
+  hp = hp - Math.floor(Math.random() * (30 - (def*2)));
 };
 
 //Function to fight reagan
 function reaganfight() {
-  reaganhealth = reaganhealth - Math.floor(Math.random() * 9) - atk;
+  reaganhealth = reaganhealth - Math.floor(Math.random() * 27) - (atk*3);
 
   // Can be found in battle.js
   callGifAttack();
   
   
-  hp = hp - Math.floor(Math.random() * (12-def));
+  hp = hp - Math.floor(Math.random() * (36-(def*2)));
   };
 
 //Function to fight kim
 function kimfight() {
-  kimhealth = kimhealth - Math.floor(Math.random() * 15) - atk;
+  kimhealth = kimhealth - Math.floor(Math.random() * 45) - (atk*3);
   callGifAttack();
     
     
-  hp = hp - Math.floor(Math.random() * (13-def));
+  hp = hp - Math.floor(Math.random() * (24-(def*2)));
   };
 
   //Function to fight hillary
 function hillaryfight() {
-  hillaryhealth = hillaryhealth - Math.floor(Math.random() * 15) - atk;
+  hillaryhealth = hillaryhealth - Math.floor(Math.random() * 39) - (atk*3);
   callGifAttack();
     
     
-  hp = hp - Math.floor(Math.random() * (13-def));
+  hp = hp - Math.floor(Math.random() * (27-(def*2)));
+  };
+
+  //Function to fight boris
+function borisfight() {
+  borishealth = borishealth - Math.floor(Math.random() * 42) - (atk*3);
+  callGifAttack();
+    
+    
+  hp = hp - Math.floor(Math.random() * (33-(def*2)));
+  };
+  //Function to fight dut
+function dutfight() {
+  duthealth = duthealth - Math.floor(Math.random() * 48) - (atk*3);
+  callGifAttack();
+    
+    
+  hp = hp - Math.floor(Math.random() * (21-(def*2)));
+  };
+  //Function to fight mike
+function mikefight() {
+  mikehealth = mikehealth - Math.floor(Math.random() * 30) - (atk*3);
+  callGifAttack();
+    
+    
+  hp = hp - Math.floor(Math.random() * (36-(def*2)));
+  };
+  //Function to fight trump2
+function trump2fight() {
+  trump2health = trump2health - Math.floor(Math.random() * 30) - (atk*3);
+  callGifAttack();
+    
+    
+  hp = hp - Math.floor(Math.random() * (55-(def*2)));
   };
 
 // JavaScript function that wraps controls
@@ -281,15 +359,20 @@ let putinbox = true;
 let reaganbox = true;
 let kimbox = true;
 let hillarybox = true;
+let borisbox = true;
+let dutbox = true;
+let mikebox = true;
+let trump2box = true;
+let lincolnbox = true;
 
 //Constantly record and update player coordinates every 25 ms
 setInterval(function(){   
 //Players horizontal coordinate
 var left = document.getElementById("stickfigure").offsetLeft;
- console.log(left)
+//console.log(left)
 //Players vertical coordinate
 var top = document.getElementById("stickfigure").offsetTop;
- console.log(top)
+//console.log(top)
 var player = document.getElementById("stickfigure");
 
 
@@ -350,6 +433,7 @@ else if (left === 1013 && top === 428 && worldsector === 3 && putinbox === true)
     document.getElementById("putinhealth").style.display = "none";
     document.getElementById("endbuttonfight").style.display = "block";
     document.getElementById("attack").style.display = "none";
+    document.getElementById("putinert").style.display = "none";
   };
 
 }
@@ -365,6 +449,7 @@ else if (left === 1013 && top === 640 && worldsector === 4 && reaganbox === true
     document.getElementById("reaganhealth").style.display = "none";
     document.getElementById("endbuttonfight2").style.display = "block";
     document.getElementById("attack2").style.display = "none";
+    document.getElementById("reaganert").style.display = "none";
   };
 
 }
@@ -380,6 +465,7 @@ else if (left === 813 && top === 534 && worldsector === 5 && kimbox === true) {
     document.getElementById("kimhealth").style.display = "none";
     document.getElementById("endbuttonfight3").style.display = "block";
     document.getElementById("attack3").style.display = "none";
+    document.getElementById("kimert").style.display = "none";
   };
 
 }
@@ -395,6 +481,77 @@ else if (left === 1315 && top === 215 && worldsector === 6 && hillarybox === tru
     document.getElementById("hillaryhealth").style.display = "none";
     document.getElementById("endbuttonfight4").style.display = "block";
     document.getElementById("attack4").style.display = "none";
+    document.getElementById("hillaryert").style.display = "none";
+  };
+
+}
+//Interaction for level 7
+else if (left === 1013 && top === 215 && worldsector === 7 && borisbox === true) {
+  document.getElementById("boristextbox").style.display = "block";
+  document.getElementById("boris").style.display = "none";
+  document.getElementById("health5").innerHTML = hp;
+  document.getElementById("borishealth").innerHTML = borishealth;
+  lock = true
+
+  if (borishealth <= 0) {
+    document.getElementById("borishealth").style.display = "none";
+    document.getElementById("endbuttonfight5").style.display = "block";
+    document.getElementById("attack5").style.display = "none";
+    document.getElementById("borisert").style.display = "none";
+  };
+
+}
+//Interaction for level 8
+else if (left === 1113 && top === 428 && worldsector === 8 && lincolnbox === true) {
+  document.getElementById("lincolntextbox").style.display = "block";
+  document.getElementById("lincoln").style.display = "none";
+  lock = true;
+}
+//Interaction for level 9
+else if (left === 712 && top === 322 && worldsector === 9 && dutbox === true) {
+  document.getElementById("duttextbox").style.display = "block";
+  document.getElementById("dut").style.display = "none";
+  document.getElementById("health6").innerHTML = hp;
+  document.getElementById("duthealth").innerHTML = duthealth;
+  lock = true
+
+  if (duthealth <= 0) {
+    document.getElementById("duthealth").style.display = "none";
+    document.getElementById("endbuttonfight6").style.display = "block";
+    document.getElementById("attack6").style.display = "none";
+    document.getElementById("dutert").style.display = "none";
+  };
+
+}
+//Interaction for level 10
+else if (left === 712 && top === 428 && worldsector === 10 && mikebox === true) {
+  document.getElementById("miketextbox").style.display = "block";
+  document.getElementById("mike").style.display = "none";
+  document.getElementById("health7").innerHTML = hp;
+  document.getElementById("mikehealth").innerHTML = mikehealth;
+  lock = true
+
+  if (mikehealth <= 0) {
+    document.getElementById("mikehealth").style.display = "none";
+    document.getElementById("endbuttonfight7").style.display = "block";
+    document.getElementById("attack7").style.display = "none";
+    document.getElementById("mikert").style.display = "none";
+  };
+
+}
+
+else if (left === 1315 && top === 428 && worldsector === 10 && trump2box === true) {
+  document.getElementById("trump2textbox").style.display = "block";
+  document.getElementById("trump2").style.display = "none";
+  document.getElementById("health8").innerHTML = hp;
+  document.getElementById("trump2health").innerHTML = trump2health;
+  lock = true
+
+  if (trump2health <= 0) {
+    document.getElementById("trump2health").style.display = "none";
+    document.getElementById("endbuttonfight8").style.display = "block";
+    document.getElementById("attack8").style.display = "none";
+    document.getElementById("final").style.display = "none";
   };
 
 }
@@ -760,9 +917,9 @@ for(let i = 0; i < 153; i++) {
   trump.setAttribute("Id", "trump");
   //Trump2 IMG
   const trump2 = document.createElement("img");
-  trump2.setAttribute("src", "./assets/images/presidents/trump.png");
+  trump2.setAttribute("src", "./assets/images/presidents/trump2.png");
   trump2.setAttribute("class", "hide");
-  trump2.setAttribute("Id", "trump");
+  trump2.setAttribute("Id", "trump2");
 //Obama IMG
   const obama = document.createElement("img");
   obama.setAttribute("src", "./assets/images/presidents/obama.png");
@@ -788,6 +945,26 @@ for(let i = 0; i < 153; i++) {
   hillary.setAttribute("src", "./assets/images/presidents/hillary.png");
   hillary.setAttribute("class", "hide");
   hillary.setAttribute("Id", "hillary");
+  //Dut IMG
+  const dut = document.createElement("img");
+  dut.setAttribute("src", "./assets/images/presidents/dut.png");
+  dut.setAttribute("class", "hide");
+  dut.setAttribute("Id", "dut");
+  //Mike IMG
+  const mike = document.createElement("img");
+  mike.setAttribute("src", "./assets/images/presidents/mike.png");
+  mike.setAttribute("class", "hide");
+  mike.setAttribute("Id", "mike");
+  //Boris IMG
+  const boris = document.createElement("img");
+  boris.setAttribute("src", "./assets/images/presidents/boris.png");
+  boris.setAttribute("class", "hide");
+  boris.setAttribute("Id", "boris");
+  //Lincoln IMG
+  const lincoln = document.createElement("img");
+  lincoln.setAttribute("src", "./assets/images/presidents/lincoln.png");
+  lincoln.setAttribute("class", "hide");
+  lincoln.setAttribute("Id", "lincoln");
 //Generates a rock border on the top of the world
   if(i < 17) {
     tile.append(neutral);
@@ -803,6 +980,22 @@ for(let i = 0; i < 153; i++) {
   //Generates a Trump2
   if(i === 81) {
     tile.append(trump2);
+  };
+  //Generates a Mike
+  if(i === 75) {
+    tile.append(mike);
+  };
+   //Generates a Dut
+   if(i === 58) {
+    tile.append(dut);
+  };
+  //Generates a Boris
+  if(i === 44) {
+    tile.append(boris);
+  };
+  //Generates a Lincoln
+  if(i === 79) {
+    tile.append(lincoln);
   };
   //Generates a Obama
   if(i === 58) {
@@ -928,6 +1121,7 @@ tile.append(pole);
         kim.setAttribute("class", "hide");
         hillary.setAttribute("class", "hillary");
         pole.setAttribute("class", "hide");
+        boris.setAttribute("class", "hide");
       }
       else if(worldsector === 7){
         img.setAttribute("src", "./assets/images/tiles/dirt.jpg");
@@ -937,6 +1131,8 @@ tile.append(pole);
         lava.setAttribute("class", "hide");
         ufo.setAttribute("class", "hide");
         hillary.setAttribute("class", "hide");
+        boris.setAttribute("class", "boris");
+        lincoln.setAttribute("class", "hide");
       }
       else if(worldsector === 8){
         img.setAttribute("src", "./assets/images/tiles/space.jpg");
@@ -944,6 +1140,9 @@ tile.append(pole);
         pole.setAttribute("class", "hide");
         ufo.setAttribute("class", "ufo");
         tombstone.setAttribute("class", "hide");
+        dut.setAttribute("class", "hide");
+        boris.setAttribute("class", "hide");
+        lincoln.setAttribute("class", "politician");
       }
       else if(worldsector === 9){
         img.setAttribute("src", "./assets/images/tiles/moss.png");
@@ -953,6 +1152,9 @@ tile.append(pole);
         ufo.setAttribute("class", "hide");
         trump2.setAttribute("class", "hide");
         pillar.setAttribute("class", "hide");
+        mike.setAttribute("class", "hide");
+        dut.setAttribute("class", "politician");
+        lincoln.setAttribute("class", "hide");
       }
       else if(worldsector === 10){
         img.setAttribute("src", "./assets/images/tiles/checker.jpg");
@@ -960,7 +1162,9 @@ tile.append(pole);
         neutral.setAttribute("class", "pillar");
         tombstone.setAttribute("class", "hide");
         trump2.setAttribute("class", "politician");
+        mike.setAttribute("class", "mike");
         pillar.setAttribute("class", "pole");
+        dut.setAttribute("class", "hide");
       };
     }, 10);
   }
